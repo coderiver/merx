@@ -1,0 +1,152 @@
+@import "base"
+//styles for main page(class with prefix "m-")
+.main
+	height: 100vh		
+	background-color: black
+	overflow: hidden
+.main__sl, .main__sl-item
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0 
+.main__sl-item
+	background-size: cover	 
+	+tr(opacity .4s linear)
+	opacity: 0
+	&.is-active
+		opacity: 1 
+.main__in
+	position: relative
+	width: 1188px
+	height: 100vh
+	margin: 0 auto
+.logo
+	position: absolute
+	top: 25px
+	padding-bottom: 22px
+	border-bottom: 2px solid #fff 
+	+ht
+	z-index: 20
+.logo__pic
+	display: block
+	+s(logo)
+.language
+	position: absolute
+	top: 40px
+	right: 35px
+	font-size: 0
+	z-index: 20
+	li
+		display: inline-block
+		margin-left: 15px
+		&.is-active
+			a
+				background: #FFF
+				color: $red  
+	a
+		display: block
+		height: 14px
+		padding: 0 7px
+		line-height: 14px
+		vertical-align: top
+		font-size: 9px 
+		color: #FFF
+		 
+.menu
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 75px
+	font-size: 0	
+	z-index: 10 
+	+gpu
+.menu__item
+	position: relative
+	display: inline-block
+	width: 20%		
+.menu__overlay
+	display: none
+	position: absolute
+	top: -2000px
+	bottom: -2000px
+	left: 0
+	right: 0		
+	background: rgba(0,0,0,.5)
+	z-index: 1  
+.menu__item-in
+	position: relative
+	height: 125px
+	padding: 0 20px	
+	+box
+	vertical-align: bottom
+	color: #FFF
+	cursor: default
+	z-index: 2	
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		width: 2px 
+		border: 1px solid rgba(255,255,255,.55)
+		border-width: 0 1px
+		+tr(opacity .4s linear)
+		opacity: 1 		
+	&.is-hover
+		&:before
+			opacity: 0 					 
+.menu__numner
+	display: inline-block
+	width: 14px 
+	padding-bottom: 5px
+	font-size: 11px
+	font-weight: bold
+	color: #FFF
+	text-align: center
+	border-bottom: 3px solid #fff 
+.menu__title
+	height: 70px
+	line-height: 70px
+	span
+		display: inline-block		
+		text-transform: uppercase 
+		line-height: 1.2
+		vertical-align: middle
+		font-size: 16px
+		font-weight: bold
+		color: #FFF
+.main__btn-down
+	position: absolute
+	left: 50%
+	bottom: 0
+	width: 68px
+	height: 48px
+	padding-top: 10px
+	background: rgb(0,0,0)  
+	background: rgba(0,0,0,.6) 
+	font-size: 0
+	z-index: 20 
+	+gpu
+	i
+		display: inline-block
+		+s(arr-down-white)
+
+
+//m-sl
+.m-sl
+	position: relative
+.m-sl__item
+	position: relative
+	img
+		display: block
+.m-sl__title
+	position: absolute
+	top: 20px
+	left: 20px
+	padding: 10px 13px
+	background: $red
+	font-size: 29px
+	color: #FFF	  
+	z-index: 200   

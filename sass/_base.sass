@@ -1,0 +1,94 @@
+// this one just agregates all the libs
+@import "compass/css3"
+//variables
+$red: #c52d1c
+
+
+//fonts
+@mixin f
+	font-family: Arial, Tahoma, sans-serif 
+//sprites
+$icons: sprite-map("icons/*.png", $spacing: 10px)
+@mixin image-size($path)
+	width: image-width($path)
+	height: image-height($path)
+@mixin s($sprite, $map: $icons)
+	background: sprite($map, $sprite) no-repeat
+	@include image-size(sprite-file($map, $sprite))
+@mixin si($map, $sprite)
+	background: sprite($map, $sprite) no-repeat
+//svg
+$svg: "svg/"
+@mixin svg($name, $width, $height)
+	width: $width + px
+	height: $height + px
+	background-image: inline-image($svg + $name + ".svg")
+	-webkit-background-size: 100% 100%
+	background-size: 100% 100%	
+//gpu
+@mixin gpu
+	+transform(translate3d(0,0,0))
+//mixin
+@mixin ht
+	font: 0/0 a
+	text-shadow: none
+	color: transparent
+@mixin clr
+	&:before, &:after
+		content: ""
+		display: table
+	&:after
+		clear: both
+//transition
+@mixin tr($what)
+	-moz-transition: $what
+	-o-transition: $what
+	-webkit-transition: $what
+	-ms-transition: $what
+	transition: $what
+// placeholder color
+@mixin ph($color)
+	&.placeholder
+		color: $color
+	&:-moz-placeholder
+		color: $color
+	&::-webkit-input-placeholder
+		color: $color
+//no-select
+@mixin no-sel
+	-moz-user-select: none
+	-webkit-user-select: none
+	user-select: none
+//selection
+@mixin sel($color, $val)
+	::selection
+		background: ($val)
+		color: ($color)
+	::-moz-selection
+		background: ($val)
+		color: ($color)
+//gradient
+@mixin g($color1, $color2)
+	@include background-image(linear-gradient($color1, $color2))
+@mixin gh($color1, $color2)
+	@include background-image(linear-gradient(left, $color1, $color2))
+//styles
+@mixin br($br)
+	border-radius: ($br + px)
+//box-sizing
+@mixin box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+//custom mix
+@mixin bsize
+	background-repeat: no-repeat
+	background-size: cover 
+	background-position: 50% 50%
+//media query
+@mixin rt($media)
+	@if $media == 1920
+		@media only screen and (max-width: 1920px)
+			@content
+	@else if $media == 1600
+		@media only screen and (max-width: 1600px)
+			@content
