@@ -52,7 +52,21 @@
 		vertical-align: top
 		font-size: 9px 
 		color: #FFF
-		 
+.find-salon
+	position: absolute
+	left: 255px
+	top: 40px
+	font-size: 0
+	i, span
+		display: inline-block
+		vertical-align: top		 
+	span
+		font-size: 11px
+		text-transform: uppercase
+		color: #FFF
+	i
+		margin-right: 12px 
+		+s(map-point)
 .menu
 	position: absolute
 	left: 0
@@ -147,19 +161,72 @@
 		+s(arr-down-white)
 
 
-//m-sl
-.m-sl
+//slider
+.slider
 	position: relative
-.m-sl__item
-	position: relative
+.slider__item
+	position: relative !important
 	img
 		display: block
-.m-sl__title
+.slider__title
 	position: absolute
 	top: 20px
 	left: 20px
 	padding: 10px 13px
 	background: $red
+	+fl
 	font-size: 29px
+	font-weight: 100 
 	color: #FFF	  
-	z-index: 200   
+	z-index: 200 
+.slider__description
+	position: absolute
+	left: 140px
+	bottom: 40px
+	right: 40px
+	min-height: 50px 
+	padding: 10px 20px 
+	background: rgb(0,0,0)    
+	background: rgba(0,0,0,.6)   
+	+fl 
+	font-size: 22px
+	color: #fff 
+	line-height: 1.1
+.slider__prev, .slider__next
+	position: absolute
+	left: 20px
+	bottom: 40px
+	width: 60px
+	height: 70px
+	background: $red
+	z-index: 200 
+	font-size: 0
+	i
+		display: inline-block
+		+s(arr-slider-prev-white)
+.slider__next
+	left: 80px
+	i
+		+s(arr-slider-next-white)
+//
+.slider_people	
+	min-height: 456px
+	text-align: center
+	.slider__in
+		position: relative
+		display: inline-block
+	.slider__link	
+		height: 60px
+		background: #FFF 
+		line-height: 60px
+		a
+			text-decoration: underline
+			color: $red
+			font-size: 13px 
+	.slider__prev, .slider__next
+		top: 130px
+		left: 0
+		bottom: auto
+	.slider__next
+		left: auto
+		right: 0

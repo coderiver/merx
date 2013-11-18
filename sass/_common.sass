@@ -5,7 +5,7 @@
 html, body 
 	height: 100%
 body
-	font-family: "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif
+	+f
 	font-weight: normal 
 	font-size: 14px
 	line-height: 1.4
@@ -13,10 +13,7 @@ body
 a img, fieldset 
 	border: none
 a
-	color: #2c2c2c 
 	text-decoration: none
-	&:hover
-
 p
 	line-height: 1.2
 li 
@@ -24,8 +21,9 @@ li
 textarea, button, select, input
 	border: none
 	outline: none
-	font-family: "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif
+	+f
 button 
+	background: none 
 	line-height: 1
 	cursor: pointer
 	&::-moz-focus-inner
@@ -35,11 +33,86 @@ table
 	border-spacing: 0
 	border-collapse: collapse
 // common styles
-.wrap
-
-.container, .footer__in
+.color-red
+	.header
+		background: $red
+	.header__category
+		background: #9a1a0b 
+	.more
+		button
+			background: $red
+			+fl
+			color: #FFF
+			text-transform: uppercase  
+.container, .footer__in, .header__in
 	width: 1188px
 	margin: 0 auto
+.container
+	position: relative
+	z-index: 10 
+.title
+	margin-bottom: 28px
+	padding-bottom: 15px
+	border-bottom: 1px solid #d5dbdf 
+	color: #363432 
+	+fl
+	font-weight: 100
+	font-size: 44px 
+	letter-spacing: -3px 
+//header
+.header
+	.logo
+		top: 30px
+		left: 27px
+		padding: 0
+		border: none
+	.language
+		top: 45px
+	.find-salon
+		top: 47px
+		left: 625px
+.header__in
+	position: relative
+	height: 110px 
+.header__category
+	position: absolute
+	top: 0
+	left: 270px
+	height: 110px
+	span
+		display: table-cell
+		width: 205px
+		height: 110px
+		padding: 0 75px 0 35px 
+		vertical-align: middle
+		+fl
+		text-transform: uppercase
+		color: #FFF 
+	i
+		position: absolute
+		top: 45px
+		right: 28px
+		+s(header-category)
+.header__phone
+	position: absolute
+	top: 25px
+	left: 765px
+	padding: 0 30px
+	height: 60px
+	border:  1px solid rgba(255,255,255,.23)
+	border-width: 0 1px
+	span
+		display: block
+		padding-top: 8px
+		+fl
+		font-size: 24px
+		line-height: 1
+		color: #FFF 
+	a
+		border-bottom: 1px dotted
+		font-size: 9px		
+		text-transform: uppercase
+		color: #FFF  
 //nav
 .nav
 	margin-bottom: 40px
@@ -74,21 +147,106 @@ table
 .nav__list-last
 	width: 100%
 	height: 0
-	
+//footer	
 .footer
 	padding-top: 27px
 	background: #363432 
 .footer__row
-	padding-bottom: 74px
+	padding: 35px 0 74px
 	+clr
 .footer__cell
 	float: left
 	min-height: 50px
 	padding: 10px 70px 0 20px
 	border-left: 1px solid #474544
+	font-size: 12px
+	span, strong
+		display: block
+	span
+		color: #989797
+	strong, a
+		color: #dadada
+		font-weight: normal
 	&:first-child
 		border: none
 		padding: 10px 20px 0 0 
+.footer__cell_right
+	float: right
+	padding: 5px 0 0 0
+	border: none
 .footer__logo
 	float: left	
 	+s(logo-small)
+.footer__social
+	padding: 5px 0 0 15px
+	font-size: 0
+	a
+		display: inline-block
+		margin-left: 10px
+		&:first-child
+			margin: 0
+.footer__fb
+	+s(fb)
+.footer__tw
+	+s(tw)
+.footer__enter
+	button
+		+s(footer-enter)
+.footer__created
+	span
+		font-size: 11px
+	a
+		display: block
+		+s(vintage)
+		+ht
+.footer__top
+	padding-bottom: 30px
+	border-bottom: 1px solid #474544 
+	+clr
+.search-form
+	float: right
+	height: 38px
+	border: 1px solid #5b5a58
+	font-size: 0
+	white-space: nowrap
+	input
+		width: 210px
+		height: 38px
+		padding-left: 15px
+		background: none
+		font-size: 11px
+		color: #BEBDBD
+		+ph(#bebdbd)
+	button
+		width: 40px 
+		height: 38px
+		i
+			display: inline-block
+			+s(search-btn)
+.footer__map
+	float: left
+.footer__map-title
+	float: left
+	height: 40px
+	margin-right: 50px
+	line-height: 40px
+	+fl
+	font-size: 29px
+	color: #989797 
+.footer__map-btn
+	position: relative
+	float: left
+	width: 138px
+	height: 35px
+	padding: 0 35px 0 15px
+	border: 1px solid #5b5a58
+	text-align: left
+	font-size: 11px
+	color: #BEBDBD
+	overflow: visible
+	&:after
+		content: ""
+		position: absolute
+		top: 15px
+		right: 15px 
+		+arr(8,4,#BEBDBD,b) 
