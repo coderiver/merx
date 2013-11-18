@@ -71,18 +71,21 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .menu { position: absolute; left: 0; right: 0; bottom: 75px; font-size: 0; z-index: 10; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 
-.menu__item { position: relative; display: inline-block; width: 20%; }
+.menu__item { position: relative; display: inline-block; width: 20%; vertical-align: top; }
 
 .menu__overlay { display: none; position: absolute; top: -2000px; bottom: -2000px; left: 0; right: 0; background: rgba(0, 0, 0, 0.5); z-index: 1; }
 
 .menu__item-in { position: relative; height: 125px; padding: 0 20px; -moz-box-sizing: border-box; box-sizing: border-box; vertical-align: bottom; color: white; cursor: default; z-index: 2; }
 .menu__item-in:before { content: ""; position: absolute; top: 0; left: 0; bottom: 0; width: 2px; border: 1px solid rgba(255, 255, 255, 0.55); border-width: 0 1px; -moz-transition: opacity 0.4s linear; -o-transition: opacity 0.4s linear; -webkit-transition: opacity 0.4s linear; -ms-transition: opacity 0.4s linear; transition: opacity 0.4s linear; opacity: 1; }
 .menu__item-in.is-hover:before { opacity: 0; }
+.menu__item-in.is-hover .menu__link { opacity: 1; }
 
 .menu__numner { display: inline-block; width: 14px; padding-bottom: 5px; font-size: 11px; font-weight: bold; color: white; text-align: center; border-bottom: 3px solid white; }
 
 .menu__title { height: 70px; line-height: 70px; }
 .menu__title span { display: inline-block; text-transform: uppercase; line-height: 1.2; vertical-align: middle; font-size: 16px; font-weight: bold; color: white; }
+
+.menu__link { display: inline-block; height: 29px; line-height: 29px; padding: 0 15px; -moz-transition: opacity 0.4s linear; -o-transition: opacity 0.4s linear; -webkit-transition: opacity 0.4s linear; -ms-transition: opacity 0.4s linear; transition: opacity 0.4s linear; background: #c52d1c; color: white; font-size: 12px; opacity: 0; }
 
 .main__btn-down { position: absolute; left: 50%; bottom: 0; width: 68px; height: 48px; padding-top: 10px; background: black; background: rgba(0, 0, 0, 0.6); font-size: 0; z-index: 20; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .main__btn-down i { display: inline-block; background: url('../img/icons-s4fd4e4a5c3.png') 0 -172px no-repeat; width: 39px; height: 21px; }
