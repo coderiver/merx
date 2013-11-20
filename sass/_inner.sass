@@ -83,7 +83,7 @@
 	margin-bottom: 60px
 	overflow: hidden
 .designers__in
-	margin: 0 -30px 45px
+	margin: 0 -30px 45px 0
 	li
 		position: relative
 		float: left
@@ -112,3 +112,77 @@
 	button
 		width: 100%
 		height: 54px  
+		
+.content
+	margin-bottom: 30px
+	font-size: 13px
+	ul
+		li
+			position: relative
+			padding-left: 13px
+			&:before
+				content: ""
+				position: absolute
+				top: 5px
+				left: 0
+				+s(content-list-arr)
+
+.share
+	margin-bottom: 60px
+	font-size: 0
+.share__title, .share__list
+	display: inline-block
+	vertical-align: top
+.share__title	
+	margin: 5px 20px 0 0 
+	font-size: 10px
+	text-transform: uppercase
+.share__list
+	li
+		display: inline-block
+		margin-right: 2px
+		vertical-align: top
+	a
+		display: block
+		width: 18px
+		height: 21px
+		line-height: 21px 
+		text-align: center
+	i
+		display: inline-block
+		vertical-align: middle
+.share__fb
+	+s(share-fb)
+.share__tw
+	+s(share-tw)
+.share__gp
+	+s(share-gp)
+
+.pagination
+	margin-bottom: 30px
+	+clr	
+	text-align: center
+	a
+		height: 38px
+		line-height: 38px
+		color: $red
+		text-transform: uppercase
+		font-size: 10px 
+.pagination__prev, .pagination__next
+	h
+	i
+		float: left
+.pagination__prev
+	float: left
+	i
+		float: left
+		margin-right: 30px
+		+s(pagination-prev)
+.pagination__next
+	float: right
+	i
+		float: right
+		margin-left: 30px
+		+s(pagination-next)
+.pagination__link
+	display: inline-block
