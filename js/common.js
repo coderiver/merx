@@ -17,4 +17,34 @@ function menu() {
 }
 menu();
 
+//select
+function select() {
+	var el = $('.js-select');
+	var el_title = el.find('.select__value');
+	var item = el.find('.select__options li');
+	var list = el.find('.select__options');
+	el_title.click(function() {
+		el.removeClass('is-open');
+		list.hide();
+		$(this).parent().toggleClass('is-open');
+		$(this).next().toggle();
+	});
+	item.click(function() {
+		var val = $(this).text();
+		$(this).parent().prev().html(val);
+		$(this).parent().next().val(val);
+		$(this).parent().hide();
+		el.removeClass('is-open');
+	});
+	el.click(function(event){
+	  event.stopPropagation();
+	});
+};
+select();
+
+//click document
+$(document).click(function() {
+	$('.js-select').removeClass('is-open');
+});
+
 });

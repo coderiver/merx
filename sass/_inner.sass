@@ -11,6 +11,11 @@
 .substrate__top
 	height: 64px
 	background: #DBE5EA  
+.substrate_about
+	+cover
+	.substrate__top
+		background: rgb(0,0,0) 
+		background: rgba(0,0,0,.3) 
 	
 .nav-inner
 	margin-bottom: 30px
@@ -55,29 +60,42 @@
 		margin: 0 10px 5px
 		+arr(4,6,#607782,r)
 		vertical-align: bottom
+.bc_white
+	a, span
+		color: #FFF 
+	i
+		border-color: transparent transparent transparent #fff
 		
-.nav-types
+.btn-list
 	margin-bottom: 30px
 	+clr
 	li
 		float: left
 		width: 49%
-		background: #DBE5EA 	
+		background: #DBE5EA 			
 		&:first-child
 			margin-right: 2%
 		&.is-active
 			background: #607782
-			a
+			span
 				color: #fff  
 	a
 		display: block
 		height: 74px
+		font-size: 0		 
+		line-height: 74px
+		text-align: center
+	.ico
+		margin-right: 12px 
+	span
+		display: inline-block
+		vertical-align: middle
 		+fl
 		font-size: 20px
 		color: #363432
-		text-transform: uppercase 
-		line-height: 74px
-		text-align: center
+		text-transform: uppercase
+.btn-list_down
+	margin: 30px 0 0 0
 		
 .designers
 	margin-bottom: 60px
@@ -112,6 +130,10 @@
 	button
 		width: 100%
 		height: 54px  
+		background: $red
+		+fl
+		color: #FFF
+		text-transform: uppercase
 		
 .content
 	margin-bottom: 30px
@@ -186,3 +208,62 @@
 		+s(pagination-next)
 .pagination__link
 	display: inline-block
+	
+.about
+	height: 560px - 175px
+	padding-top: 175px 
+	margin-bottom: 30px 
+.about__title
+	position: relative
+	padding: 0 0 5px 25px 
+	border-left: 1px solid rgb(255,255,255) 
+	border-left: 1px solid rgba(255,255,255,.55) 
+	font-weight: bold
+	color: #FFF 
+	text-transform: uppercase
+	line-height: 1
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 2px
+		bottom: 0
+		border-left: 1px solid rgb(255,255,255) 
+		border-left: 1px solid rgba(255,255,255,.55) 
+.about__title-name
+	font-size: 90px
+.about__title-desc
+	font-size: 24px 
+	
+.box-wrap
+	overflow: hidden
+.box-wrap__in
+	margin: 0 -40px 10px 0
+	overflow: hidden
+.box
+	float: left
+	margin: 0 20px 20px 0
+	img
+		display: block
+.box_width_1
+	width: 280
+.box_width_2
+	width: 580
+.box_height_1
+	width: 240
+.box_height_2
+	width: 500
+.box__content
+	width: 220px
+	height: 180px
+	padding: 30px
+	background: #e9f0f4 
+.box__content_less
+	width: 210px
+.box__title
+	margin-bottom: 25px
+	line-height: 1
+	font-size: 25px
+	color: #302E8A
+.box__text
+	color: #333 
