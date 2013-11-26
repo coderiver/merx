@@ -33,8 +33,12 @@
 	</header>
 	<!-- END .header -->
 	<!-- BEGIN .substrate -->
-	<div class="substrate">
-		<div class="substrate__top"></div>
+	<div class="substrate js-sl-category">
+		<div class="substrate__top substrate__top-mod"></div>
+		<div class="sl-category">
+			<div class="sl-category__item sl-category__item_1 is-active" style="background-image: url(img/main-pic-2.jpg)"></div>
+			<div class="sl-category__item sl-category__item-2" style="background-image: url(img/main-pic-3.jpg)"></div>
+		</div>			
 	</div>
 	<!-- END .substrate -->
 	<!-- BEGIN .container -->
@@ -69,10 +73,23 @@
 					</div>
 				</div>
 				<!-- END .slider -->
+				<!-- BEGIN .subscribe -->
+				<div class="subscribe">
+					<div class="subscribe__title">Поделитесь этой страницей</div>
+					<ul class="subscribe__social">
+						<li><a class="subscribe__fb" href="#"></a></li>
+						<li><a class="subscribe__tw" href="#"></a></li>
+					</ul>
+					<div class="subscribe__form">
+						<input type="text" placeholder="или введите Email">
+						<button class="btn">отправить</button>
+					</div>
+				</div>
+				<!-- END .subscribe -->
 			</div>
 			<div class="l__col-4">
 				<!-- BEGIN .bc -->
-				<div class="bc">
+				<div class="bc bc_white">
 					<ul>
 						<li><a href="#">Главная</a><i></i></li>
 						<li><a href="#">Кухни</a><i></i></li>
@@ -81,90 +98,36 @@
 					</ul>
 				</div>
 				<!-- END .bc -->
-				<div class="title">Мебель для HoReCa и магазинов</div>
-				<!-- BEGIN .sorting -->
-				<div class="sorting">
-					<div class="sorting__item">
-						<div class="sorting__label">Раздел</div>
-						<div class="select js-select">
-							<div class="select__value">Option</div>
-							<ul class="select__options">
-								<li>Option 1</li>
-								<li>Option 2</li>
-								<li>Option 3</li>
-								<li>Option 4</li>
-								<li>Option 5</li>
-								<li>Option 6</li>
-								<li>Option 7</li>
-							</ul>
-							<input class="select__input" type="hidden">
-						</div>
-					</div>					
-					<div class="sorting__item">
-						<div class="sorting__label">Тип предриятия</div>
-						<div class="select js-select">
-							<div class="select__value">Option</div>
-							<ul class="select__options">
-								<li>Option 1</li>
-								<li>Option 2</li>
-								<li>Option 3</li>
-								<li>Option 4</li>
-							</ul>
-							<input type="hidden">
-						</div>
-					</div>
-					<div class="sorting__item">
-						<div class="sorting__label">Подраздел</div>
-						<div class="select js-select">
-							<div class="select__value">Option</div>
-							<ul class="select__options">
-								<li>Option 1</li>
-								<li>Option 2</li>
-								<li>Option 3</li>
-								<li>Option 4</li>
-							</ul>
-							<input type="hidden">
-						</div>
-					</div>
+				<!-- BEGIN .menu -->
+				<div class="menu-sl">				
+					<ul class="menu">
+						<li class="menu__item">
+							<div class="menu__item-in" data-item="sl-category__item_1" alt=""/>">
+								<div class="menu__numner">01</div>
+								<div class="menu__title">
+									<span>Кухни</span>
+								</div>	
+								<a class="menu__link" href="#">Смотреть</a>					
+							</div>
+							<div class="menu__overlay"></div>
+						</li>
+						<li class="menu__item">
+							<div class="menu__item-in" data-item="sl-category__item-2" alt=""/>">
+								<div class="menu__numner">02</div>
+								<div class="menu__title">
+									<span>Мебель для дома</span>
+								</div>
+								<a class="menu__link" href="#">Смотреть</a>
+							</div>
+							<div class="menu__overlay"></div>
+						</li>
+					</ul>
 				</div>
-				<!-- END .sorting -->
+				<!-- END .menu -->
+				<div class="title">Мебель для HoReCa и магазинов</div>
 				<!-- BEGIN .box -->
 				<div class="box-wrap">
 					<div class="box-wrap__in">
-						<div class="box box_width_2 box_height_2">
-							<a href="#">
-								<img src="http://placehold.it/580x500" alt=""/>
-								<div class="box__in">
-									<div class="box__in-title">Кухня Орхидея</div>
-									<div class="box__category">Чудесное сочетвание класических линий с раскошным минимализмом</div>
-									<div class="box__place">Выставочный образец в салноне: <br> Киев, Соломянская 1</div> 
-									<div class="box__price">45 900<span>грн</span></div>
-								</div>
-							</a>
-						</div>
-						<div class="box box_width_1 box_height_2">
-							<a href="#">
-								<img src="http://placehold.it/280x500" alt=""/>
-							</a>
-						</div>
-						<div class="box box_width_1 box_height_1">
-							<a href="#">
-								<img src="http://placehold.it/280x240" alt=""/>
-							</a>
-						</div>
-						<div class="box box_width_1 box_height_1">
-							<a href="#">
-								<img src="http://placehold.it/280x240" alt=""/>
-							</a>
-						</div>
-						<div class="box box_width_1 box_height_1">
-							<a href="#">
-								<div class="box__content">
-									<div class="box__title">Комплексные решения для вашего бизнеса</div>
-									<div class="box__text">Наше направление поможет полностью обустроить или обновить ресторан, гостинницу или магазин</div>
-								</div>
-							</a>
-						</div>
 						<div class="box box_width_1 box_height_2">
 							<a href="#">
 								<img src="http://placehold.it/280x500" alt=""/>
@@ -188,26 +151,31 @@
 								<img src="http://placehold.it/280x240" alt=""/>
 							</a>
 						</div>
-						<div class="box box_width_2 box_height_2">
+						<div class="box box_width_1 box_height_1">
 							<a href="#">
-								<img src="http://placehold.it/580x500" alt=""/>
+								<img src="http://placehold.it/280x240" alt=""/>
 							</a>
 						</div>
-						<div class="box box_width_1 box_height_2">
+						<div class="box box_width_1 box_height_1">
 							<a href="#">
-								<img src="http://placehold.it/280x500" alt=""/>
+								<img src="http://placehold.it/280x240" alt=""/>
 							</a>
 						</div>
-					</div>
-					<div class="more">
-						<button>Показать еще</button>
+						<div class="box box_width_1 box_height_1">
+							<a href="#">
+								<div class="box__content">
+									<div class="box__title">Комплексные решения для вашего бизнеса</div>
+									<div class="box__text">Наше направление поможет полностью обустроить или обновить ресторан, гостинницу или магазин</div>
+								</div>
+							</a>
+						</div>						
 					</div>
 				</div>
 				<!-- END .box -->
 				<!-- BEGIN .btn-list -->
-				<ul class="btn-list btn-list_down">
-					<li><a href="#"><i class="ico ico_point"></i><span>НАЙТИ САЛОН</span></a></li>
-					<li><a href="#"><i class="ico ico_pdf"></i><span>СКАЧАТЬ КАТАЛОГ</span></a></li>
+				<ul class="btn-list">
+					<li><a href="#"><span>Интернет-магазин оборудования</span></a></li>
+					<li><a href="#"><span>КАТАЛОГ мебели</span></a></li>
 				</ul>
 				<!-- END .btn-list -->
 			</div>

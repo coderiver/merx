@@ -4,13 +4,13 @@
 	height: 100vh		
 	background-color: black
 	overflow: hidden
-.main__sl, .main__sl-item
+.sl-category, .sl-category__item
 	position: absolute
 	top: 0
 	left: 0
 	right: 0
 	bottom: 0 
-.main__sl-item
+.sl-category__item
 	background-size: cover	 
 	+tr(opacity .4s linear)
 	opacity: 0
@@ -88,6 +88,18 @@
 		cursor: pointer
 		&:before
 			border-color: #e2e2e2
+.menu-sl
+	position: relative
+	height: 645px 
+	margin: -84px 0 10px -38px
+	overflow: hidden
+	.menu__item
+		width: 315px - 30px
+		padding-left: 30px
+	.menu__item-in
+		&.is-hover
+			&:before
+				opacity: 1
 .menu__item
 	position: relative
 	display: inline-block

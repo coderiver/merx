@@ -10,6 +10,23 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.hoverIntent.js"></script>
 	<script src="js/common.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	<script>
+	function initialize() {
+	  var mapOptions = {
+	    zoom: 13,
+	    center: new google.maps.LatLng(59.939950, 30.322811),
+	    disableDefaultUI: true,
+	 		zoomControl: true,
+			zoomControlOptions: {
+	      style: google.maps.ZoomControlStyle.DEFAULT
+	    },
+	    mapTypeId: google.maps.MapTypeId.ROADMAP
+	  }
+	  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
 </head>
 <body>
 <!-- BEGIN .wrap -->
@@ -38,35 +55,23 @@
 	</div>
 	<!-- END .substrate -->
 	<!-- BEGIN .container -->
-	<div class="container">
+	<div class="container container_mod">
 		<div class="l">
 			<div class="l__col-3">
 				<!-- BEGIN .nav-inner -->
-				<nav class="nav-inner">
-					<ul>
+				<nav class="nav-inner nav-inner_drop">
+					<div class="nav-inner__title">меню<i></i></div>
+					<ul class="nav-inner__list">
 						<li><a href="#">О компании</a></li>
 						<li><a href="#">Производство</a></li>
 						<li><a href="#">Салоны</a></li>
-						<li class="is-active"><a href="#">Сотрудничество</a></li>
+						<li><a href="#">Сотрудничество</a></li>
 						<li><a href="#">Социальная ответственность</a></li>
 						<li><a href="#">События</a></li>
 						<li><a href="#">Контакты</a></li>    
 					</ul>
 				</nav>
 				<!-- END .nav-inner -->
-				<!-- BEGIN .slider -->
-				<div class="slider slider_asks">
-					<button class="slider__prev"><i></i></button>
-					<button class="slider__next"><i></i></button>
-					<div class="slider__title">Частые вопросы</div>
-					<div class="slider__in">
-						<div class="slider__item">
-							<div class="slider__text">Что можно делать на столешне из кварца и чем она лучше дсп и акриловых?</div>
-							<a class="btn" href="#">Прочитать ответ</a>
-						</div>						
-					</div>
-				</div>
-				<!-- END .slider -->
 			</div>
 			<div class="l__col-4">
 				<!-- BEGIN .bc -->
@@ -78,74 +83,105 @@
 						<li><span>Дизайнеры и архитекторы</span></li>
 					</ul>
 				</div>
-				<!-- END .bc -->
-				<div class="title">Сергей Махно</div>
-				<!-- BEGIN .slider -->
-				<div class="slider slider_people">
-					<button class="slider__prev"><i></i></button>
-					<button class="slider__next"><i></i></button>
-					<div class="slider__in">
-						<div class="slider__item">
-							<img src="http://placehold.it/560x330" alt=""/>
-						</div>
-						<div class="slider__link">
-							<a href="#">makhno.com.ua</a>
-						</div>
-					</div>
-				</div>
-				<!-- END .slider -->
-				<!-- BEGIN .content -->
-				<div class="content">
-					<p>Сергей Махно – художник, архитектор, руководитель проектов студии. Выпускник Киевского Национального Университета Строительства и Архитектуры и Академической Школы Дизайна (Москва). Его творческий путь обладает любопытной геометрией. С раннего возраста интересуясь дизайном, Сергей, тем не менее прошел путь от тренера по киокушинкай карате до проффесионального райтера и дизайнера авторской мебели. В 1999 году основал "Мастерскую Махно". Тогда это было стремление одного человека, сейчас с Сергеем работает большая, талантливая команда.</p>
-				</div>
-				<!-- END .content -->
-				<div class="title-border">
-					<div class="title-border__in">Стили в которых работает</div>
-				</div>
-				<!-- BEGIN .content -->
-				<div class="content">
-					<ul>
-						<li>минимализм</li>
-						<li>минимализм</li>
-						<li>минимализм</li>
-					</ul>
-				</div>
-				<!-- END .content -->
-				<div class="title-border">
-					<div class="title-border__in">Примеры работ</div>
-				</div>
-				<!-- BEGIN .slider -->
-				<div class="slider slider_works">
-					<button class="slider__prev"><i></i></button>
-					<button class="slider__next"><i></i></button>
-					<div class="slider__in">
-						<div class="slider__item">
-							<img src="http://placehold.it/880x390" alt="">
-						</div>
-					</div>
-				</div>
-				<!-- END .slider -->
-				<!-- BEGIN .share -->
-				<div class="share">
-					<div class="share__title">Поделиться:</div>
-					<ul class="share__list">
-						<li><a href="#"><i class="share__fb"></i></a></li>
-						<li><a href="#"><i class="share__tw"></i></a></li>
-						<li><a href="#"><i class="share__gp"></i></a></li>
-					</ul>
-				</div>				
-				<!-- END .share -->
-				<!-- BEGIN .pagination -->
-				<div class="pagination">
-					<a class="pagination__prev" href="#"><i></i>Предыдущий</a>
-					<a class="pagination__link" href="#">Все дизайнеры и архитекторы</a>
-					<a class="pagination__next" href="#"><i></i>Следующий</a>
-				</div>
-				<!-- END .pagination -->
+				<!-- END .bc -->							
 			</div>
 		</div>
+		<div class="title">Салоны</div>
+		<!-- BEGIN .sorting -->
+		<div class="sorting">
+			<div class="sorting__item">
+				<div class="sorting__label">Раздел</div>
+				<div class="select js-select">
+					<div class="select__value">Option</div>
+					<ul class="select__options">
+						<li>Option 1</li>
+						<li>Option 2</li>
+						<li>Option 3</li>
+						<li>Option 4</li>
+						<li>Option 5</li>
+						<li>Option 6</li>
+						<li>Option 7</li>
+					</ul>
+					<input class="select__input" type="hidden">
+				</div>
+			</div>					
+			<div class="sorting__item">
+				<div class="sorting__label">Тип предриятия</div>
+				<div class="select js-select">
+					<div class="select__value">Option</div>
+					<ul class="select__options">
+						<li>Option 1</li>
+						<li>Option 2</li>
+						<li>Option 3</li>
+						<li>Option 4</li>
+					</ul>
+					<input type="hidden">
+				</div>
+			</div>
+			<div class="sorting__item">
+				<div class="sorting__label">Подраздел</div>
+				<div class="select js-select">
+					<div class="select__value">Option</div>
+					<ul class="select__options">
+						<li>Option 1</li>
+						<li>Option 2</li>
+						<li>Option 3</li>
+						<li>Option 4</li>
+					</ul>
+					<input type="hidden">
+				</div>
+			</div>
+		</div>
+		<!-- END .sorting -->	
 	</div>
 	<!-- END .container -->
+	<!-- BEGIN .map -->
+	<div class="map">
+		<div id="map-canvas" style="width: 100%; height: 670px"></div>
+	</div>
+	<!-- END .map -->
+	<div class="container">
+		<div class="title">Перейти в каталог</div>
+		<!-- BEGIN .menu -->
+		<ul class="menu menu_inner">
+			<li class="menu__item">
+				<a class="menu__item-in" href="#">
+					<div class="menu__title">
+						<span>Кухни</span>
+					</div>				
+				</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__item-in" href="#">
+					<div class="menu__title">
+						<span>Мебель для дома</span>
+					</div>
+				</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__item-in" href="#">
+					<div class="menu__title">
+						<span>Кабинет и Офис</span>
+					</div>
+				</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__item-in" href="#">
+					<div class="menu__title">
+						<span>МЕБЕЛЬ И ОБОРУДОВАНИЕ для HORECA и магазинов</span>
+					</div>
+				</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__item-in" href="#">
+					<div class="menu__title">
+						<span>Мебели с Италии и Франции</span>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<!-- END .menu -->
+	</div>
 	<!-- BEGIN .footer -->
 	<footer class="footer">
 		<div class="footer__in">

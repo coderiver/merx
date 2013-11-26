@@ -72,39 +72,20 @@
 //
 .slider_asks
 	padding: 65px 15px 20px 
-	.slider__link
+	.btn
 		position: absolute
 		bottom: 0
 		right: 0
-		a
-			display: block
-			height: 42px
-			padding: 0 20px
-			background: #363432 
-			line-height: 42px
-			text-align: center
-			+fl
-			font-size: 11px
-			text-transform: uppercase
-			color: #fff 
-.slider_asks, .slider_events
-	background: $red
-	.slider__item
-		padding-bottom: 70px
-	.slider__text
+		height: 42px
+		padding: 0 20px
+		background: #363432 
+		line-height: 42px
+		text-align: center
 		+fl
-		font-size: 16px 
-		color: #FFF 
-		line-height: 1.1
-	.slider__title	
-		top: 0
-		left: 0
-		height: 48px
-		padding: 0 15px
-		background: #FFF
-		line-height: 48px  
-		font-size: 22px
-		color: #333 
+		font-size: 11px
+		text-transform: uppercase
+		color: #fff 
+.slider_asks, .slider_events, .slider_product
 	.slider__prev, .slider__next
 		bottom: 20px
 		width: 38px
@@ -122,6 +103,25 @@
 	.slider__next
 		i
 			+s(arr-slider-next-red)
+.slider_asks, .slider_events
+	margin-bottom: 30px
+	background: $red
+	.slider__item
+		padding-bottom: 70px
+	.slider__text
+		+fl
+		font-size: 16px 
+		color: #FFF 
+		line-height: 1.1
+	.slider__title	
+		top: 0
+		left: 0
+		height: 48px
+		padding: 0 15px
+		background: #FFF
+		line-height: 48px  
+		font-size: 22px
+		color: #333 	
 .slider_events
 	.slider__text
 		padding: 15px 20px 
@@ -162,3 +162,14 @@
 		display: inline-block
 		margin-right: 25px
 		vertical-align: top
+		
+//slider_product
+.slider_product
+	width: 515px
+	height: 410px
+	.slider__prev, .slider__next
+		bottom: 30px
+	.slider__prev
+		left: 30px
+	.slider__next
+		left: 69px 

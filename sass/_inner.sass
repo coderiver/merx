@@ -7,20 +7,21 @@
 	right: 0
 	height: 645px
 	background: #e9f0f4
+	+cover
 	z-index: 5 
 .substrate__top
+	position: relative
 	height: 64px
-	background: #DBE5EA  
-.substrate_about
-	+cover
-	.substrate__top
-		background: rgb(0,0,0) 
-		background: rgba(0,0,0,.3) 
-	
+	background: #dbe5ea 	 
+	z-index: 20 
+.substrate__top-mod
+	background: rgb(0,0,0) 
+	background: rgba(0,0,0,.3) 
+
 .nav-inner
 	margin-bottom: 30px
 	li
-		margin-bottom: 1px
+		border-bottom: 1px solid #e9f0f4 
 		&.is-active
 			a
 				background: #333
@@ -34,10 +35,45 @@
 		vertical-align: middle
 		text-transform: uppercase
 		color: #333
-		+fl  
+		+fl
+.nav-inner_drop
+	position: relative
+	margin: 0
+	.nav-inner__list
+		position: absolute
+		top: 65px
+		left: 0
+		right: 0
+		z-index: 100 		
+		li
+			height: 0
+			overflow: hidden
+			+tr(height .2s linear)
+	&:hover
+		.nav-inner__list
+			li
+				height: 64px
+
+.nav-inner__title
+	position: relative
+	height: 64px
+	padding: 0 80px 0 35px
+	background: #363432
+	text-transform: uppercase
+	color: #fff   
+	font-size: 14px
+	line-height: 64px
+	cursor: pointer
+	i
+		position: absolute
+		top: 20px
+		right: 35px
+		+s(nav-inner-ico) 
 		
 .bc
+	position: relative
 	margin-bottom: 20px
+	z-index: 20 
 	ul
 		display: table-cell
 		width: 100%
@@ -138,10 +174,13 @@
 .content
 	margin-bottom: 30px
 	font-size: 13px
+	p, ul
+		margin-bottom: 15px
 	ul
 		li
 			position: relative
 			padding-left: 13px
+			margin-bottom: 5px
 			&:before
 				content: ""
 				position: absolute
@@ -241,6 +280,7 @@
 	margin: 0 -40px 10px 0
 	overflow: hidden
 .box
+	position: relative
 	float: left
 	margin: 0 20px 20px 0
 	img
@@ -267,25 +307,58 @@
 	color: #302E8A
 .box__text
 	color: #333 
+.box__in
+	position: absolute
+	left: 45px
+	bottom: 35px
+	right: 45px
+	padding: 20px
+	background: #FFF  
+	text-align: center
+.box__in-title
+	+fl
+	font-size: 60px 
+	color: $red 
+.box__category, .box__place
+	font-size: 10px
+	text-transform: uppercase
+	color: #363432 
+.box__category
+	position: relative
+	margin-bottom: 10px
+	padding: 0 85px
+	&:after, &:before
+		content: ""
+		position: absolute
+		top: 5px
+		width: 70px
+		border-bottom: 1px solid #dbe5ea 
+	&:after
+		left: 0
+	&:before
+		right: 0
+.box__place
+	margin-bottom: 10px
+	padding: 0 7px
+.box__price
+	font-size: 17px
+	color: $red 
+	span
+		margin-left: 5px
+		font-size: 12px
 
 //sorting
 .sorting
 	margin-bottom: 30px
 	+clr
 .sorting__item
-	float: right
+	float: left
+	width: 280px
 	margin-left: 20px
 	&:first-child
-		float: left
 		margin: 0
-	.select
-		float: left
-		width: 190px
 .sorting__label
-	float: left
-	margin-right: 20px
-	height: 36px
-	line-height: 36px
+	margin-bottom: 10px
 	font-size: 11px
 	color: #617883
 	text-transform: uppercase 
@@ -495,11 +568,245 @@
 	color: #617883 
 .search-prod__head
 	padding-bottom: 20px
+	font-size: 11px
+	text-transform: uppercase
+	color: #617883
 	+clr
 .search-prod__title
 	float: left
 	margin-right: 60px 
 	border-bottom: 2px solid 
-	font-size: 11px
-	text-transform: uppercase
 	color: #233c48 
+.search-prod__type
+	float: left
+	li, a, span
+		float: left			
+	a
+		border-bottom: 1px solid
+		color: #617883
+		&.is-active
+			border: none
+			color: #8ca4b0 
+			cursor: default
+	span
+		margin: 0 10px
+.search-prod__slide	
+	position: relative
+	float: right
+	padding-right: 40px
+	cursor: pointer
+	i
+		position: absolute
+		top: 2px
+		right: 2px
+		+tr(all .2s linear)
+		+s(select-arr)
+	&.is-active
+		i
+			+rotate(-180deg)
+.search-prod__form
+	padding-bottom: 20px
+	+clr
+	input
+		float: left
+		width: 500px
+		height: 36px
+		padding: 0 35px
+		+ph(#8ca4b0)
+		font-size: 13px
+	button
+		float: left
+		width: 270px
+		
+.subscribe
+	padding: 15px
+	margin-bottom: 30px
+	background: #DBE5EA  
+.subscribe__title
+	margin-bottom: 10px
+	text-transform: uppercase
+	font-size: 11px
+	color: #607782 
+.subscribe__social
+	margin-bottom: 12px
+	+clr
+	li
+		float: left
+		margin-right: 12px
+	a
+		display: block
+.subscribe__fb
+	+s(subscribe-fb)
+.subscribe__tw
+	+s(subscribe-tw)
+.subscribe__form
+	input
+		float: left
+		width: 125px
+		height: 36px
+		padding: 0 15px
+	.btn
+		width: 85px
+		padding: 0
+		font-size: 11px
+		
+//product
+.product
+	+clr
+.product__slider
+	float: left
+	margin-right: 30px
+.product__info
+	overflow: hidden
+.product__price
+	margin-bottom: 30px
+	padding-left: 30px
+	text-align: center
+	strong, span
+		display: inline-block
+		vertical-align: middle
+	i
+		vertical-align: top
+	strong
+		position: relative
+		height: 66px
+		padding: 0 15px
+		line-height: 66px
+		background: #FFF
+		font-size: 36px
+		+fl
+		color: $red  
+		font-weight: normal
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: -30px
+			+arr(30,66,white,l)
+		i
+			margin-left: 15px
+			font-style: normal
+			font-size: 10px
+			text-transform: uppercase
+			color: #333 
+	span
+		margin-left: 50px
+		font-size: 16px
+		text-transform: uppercase
+		color: #302e8a 
+.product__buy
+	margin-bottom: 35px
+	.btn
+		width: 100%
+.product__parameters
+	padding: 15px 30px 
+	background: #FFF 
+.product__table
+	width: 100%
+	margin-bottom: 30px
+	tr
+		&:first-child
+			td
+				border: none
+	td
+		padding: 7px 5px
+		border-top: 1px solid #d5dbdf 
+		font-size: 12px
+		text-transform: uppercase
+		
+.video
+	margin-bottom: 30px
+	
+.back-link
+	height: 12px
+	margin-bottom: 50px
+	border-bottom: 1px solid #dce0e3 
+	font-size: 0
+	a
+		display: inline-block
+		position: relative
+		height: 23px
+		background: #fff 
+		line-height: 23px
+		padding: 0 20px 0 26px
+		font-size: 12px
+		text-transform: uppercase
+		color: #363432 
+	i
+		position: absolute
+		top: 0
+		left: 0
+		+s(arr-slider-prev-red)
+
+
+.brands
+	margin-bottom: 60px
+	overflow: hidden
+.brands__in
+	margin: 0 -30px 20px 0
+	overflow: hidden
+	li
+		position: relative
+		float: left
+		width: 276px
+		height: 276px
+		margin: 0 26px 26px 0
+		background: #fff 
+		box-shadow: 0 0 0 1px #dce0e3 inset
+		text-align: center
+		line-height: 276px - 58px 
+		+gpu
+		a
+			display: block
+		span
+			position: absolute
+			left: 1px
+			right: 1px
+			bottom: 1px
+			height: 58px
+			background: #DBE5EA
+			line-height: 58px   
+			text-transform: uppercase
+			color: #607782
+			font-size: 10px 
+			+tr(all .2s linear)
+		img
+			filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")
+			filter: gray
+			-webkit-filter: grayscale(100%)
+			vertical-align: middle
+		&:hover
+			img
+				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale")
+				-webkit-filter: grayscale(0%)
+			span
+				background: $red 
+				color: #FFF 
+
+.partnership
+	width: 420px
+	margin-bottom: 30px
+.partnership__title
+	margin-bottom: 15px
+	font-size: 16px
+	text-transform: uppercase
+.partnership__select-head
+	position: relative
+	height: 68px 
+	padding: 0 70px 0 25px
+	background: $red 
+	font-size: 12px
+	line-height: 68px
+	color: #FFF 
+	&:after
+		content: ""
+		position: absolute
+		top: 29px
+		right: 29px
+		+s(partnership-select-arr)
+
+//map
+.map
+	position: relative
+	margin-bottom: 20px
+	z-index: 8
