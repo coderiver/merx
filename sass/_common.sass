@@ -90,6 +90,38 @@ table
 .header__in
 	position: relative
 	height: 110px 
+.header_diller
+	.header__category
+		left: 405px
+.header__route
+	position: absolute
+	top: 48px
+	left: 260px
+	font-size: 11px
+	text-transform: uppercase
+	color: #FFF 
+.header__user	
+	position: absolute
+	top: 0
+	right: 0
+.header__user-in
+	display: table-cell
+	height: 110px 
+	vertical-align: middle
+	a
+		position: relative
+		display: inline-block
+		padding-left: 20px
+		margin-right: 60px 
+		font-size: 12px
+		color: #FFF 
+	a, .btn
+		vertical-align: middle
+	i
+		position: absolute
+		top: 0
+		left: 0
+		+s(header-user)
 .header__category
 	position: absolute
 	top: 0
@@ -320,6 +352,33 @@ table
 	+fl
 	text-transform: uppercase
 	color: #FFF  
+	span, i
+		display: inline-block
+		vertical-align: middle
+	i
+		margin-right: 12px
 .btn_big
 	height: 56px 
 	font-size: 23px 
+	
+//form
+.field__input
+	display: block
+	input
+		width: 100%
+		height: 36px
+		padding: 0 15px
+		background: #dbe5ea 
+		+box
+.field__area
+	display: block
+	textarea
+		display: block
+		width: 100%
+		height: 102px
+		padding: 10px 15px
+		background: #dbe5ea 
+		resize: vertical
+		+box
+.field__label	
+	display: block

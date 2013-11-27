@@ -41,7 +41,7 @@
 	margin: 0
 	.nav-inner__list
 		position: absolute
-		top: 65px
+		top: 64px
 		left: 0
 		right: 0
 		z-index: 100 		
@@ -133,10 +133,10 @@
 .btn-list_down
 	margin: 30px 0 0 0
 		
-.designers
+.design
 	margin-bottom: 60px
 	overflow: hidden
-.designers__in
+.design__people
 	margin: 0 -30px 45px 0
 	li
 		position: relative
@@ -161,7 +161,135 @@
 		line-height: 60px
 		color: #FFF 
 		+tr(all .2s linear)
-		
+.design__article
+	margin: 0 -30px 45px 0
+	font-size: 0
+.design__article-box
+	display: inline-block
+	width: 300px
+	margin: 0 20px 30px 0
+	vertical-align: top
+	&:hover
+		.design__article-pic
+			opacity: .7 
+.design__article-box_width_2
+	width: 560px
+.design__article-pic
+	height: 240px 
+	+tr(opacity .2s linear)
+	img
+		display: block
+.design__article-in
+	min-height: 60px 
+	padding: 15px 20px 
+	background: #dbe5ea 
+.design__article-title
+	margin-bottom: 10px
+	+fl
+	font-size: 16px
+	line-height: 1
+	color: #333 
+.design__article-date
+	font-size: 10px
+	color: #A0A7AB
+	
+//cart
+.cart__table
+	margin-bottom: 40px
+	width: 100%
+	td
+		padding: 0 0 15px 20px
+		vertical-align: top
+		&:first-child
+			padding: 0 0 15px 
+	.field__input, .field__label
+		display: inline-block
+		vertical-align: middle
+	.field__input
+		margin-right: 5px
+		input
+			width: 40px
+			height: 24px
+			padding: 0 5px
+			background: #DBE5EA
+	.field__label
+		font-size: 10px
+		text-transform: uppercase
+.cart__pic
+	width: 190px
+	border: 1px solid #dce0e3
+	img
+		display: block
+.cart__title
+	a
+		+fl
+		font-size: 22px
+		color: $red 
+		text-decoration: underline
+.cart__label
+	margin-bottom: 10px
+	text-transform: uppercase
+	font-size: 12px 
+.cart__price 
+	font-size: 0
+	strong, span
+		display: inline-block
+		vertical-align: middle
+	strong
+		margin-right: 5px
+		font-weight: normal 
+		line-height: 1.1
+		+fl
+		font-size: 22px
+	span
+		font-size: 10px
+		text-transform: uppercase
+.cart__price-total
+	strong
+		color: $red 
+.cart__btn-delete
+	+s(cart-delete)
+.cart__btns
+	margin-bottom: 60px
+	+clr
+	.btn
+		height: 54px
+.cart__btn-catalog
+	position: relative
+	float: left
+	width: 425px
+	overflow: visible
+	i
+		position: absolute
+		top: 15px
+		left: 45px 
+		+s(cart-back) 
+.cart__btn-recalc
+	float: right
+	i
+		+s(cart-recalc) 
+.cart__order
+	margin-bottom: 40px
+	+clr
+.cart__order-column
+	float: left
+	width: 425px
+	&:first-child
+		margin-right: 30px
+	.field
+		margin-bottom: 15px
+	.btn
+		width: 100%
+		height: 54px
+		margin-top: 10px
+.cart__order-help
+	font-size: 11px
+	color: #607782
+	span
+		color: $red 
+
+
+//more	 
 .more
 	button
 		width: 100%
@@ -187,6 +315,21 @@
 				top: 5px
 				left: 0
 				+s(content-list-arr)
+	table
+		width: 100%
+		margin: 30px 0
+		td, th
+			padding: 10px
+			border: 1px solid #dbe5ea
+			font-size: 11px
+			text-transform: uppercase
+		th
+			background: $red
+			color: #fff  
+			font-weight: normal
+			text-align: left
+		td, a
+			color: #617883 
 
 .share
 	margin-bottom: 60px
@@ -351,12 +494,29 @@
 .sorting
 	margin-bottom: 30px
 	+clr
+.sorting_salons
+	.sorting__item
+		width: auto
+	.sorting__label	
+		float: left
+		margin: 0 20px 0 0
+		height: 36px
+		line-height: 36px
+	.select
+		float: left
+		width: 270px
 .sorting__item
 	float: left
 	width: 280px
 	margin-left: 20px
 	&:first-child
 		margin: 0
+.sorting__item_link
+	float: right
+	a
+		color: #233C48 
+		line-height: 1
+		border-bottom: 2px solid 
 .sorting__label
 	margin-bottom: 10px
 	font-size: 11px
@@ -810,3 +970,265 @@
 	position: relative
 	margin-bottom: 20px
 	z-index: 8
+.map__el
+	position: absolute
+	min-width: 32px
+	z-index: 100 
+.map__point
+	margin: 0 auto
+	+s(map-point)
+.map__el-in
+	width: 530px 
+	margin-bottom: -30px
+	background: #e52914 
+.map__el-head
+	background: #FFF 
+	font-size: 0
+.map__el-pic, .map__el-title
+	display: inline-block
+	width: 50%
+	vertical-align: top
+.map__el-pic
+	img
+		width: 100%
+.map__el-title
+	span
+		display: block
+		padding: 14px 18px
+		+fl	
+		font-size: 22px
+		color: #5E5D5B  
+.map__el-body
+	padding: 20px 20px 30px
+.map__address
+	margin-top: 15px
+	padding-top: 15px 
+	border-top: 1px solid rgb(255,255,255)
+	border-top: 1px solid rgba(255,255,255,.4)
+	font-size: 0
+	&:first-child
+		margin: 0
+		padding: 0
+		border: none
+.map__address-column
+	display: inline-block
+	vertical-align: top
+	width: 50%	
+	font-size: 13px
+	color: #FFF 
+	a
+		color: #FFF 
+.map__address-title
+	margin-bottom: 5px
+	text-transform: uppercase
+	font-size: 13px
+	color: #fff 
+
+.contacts__row
+	margin-bottom: 30px
+	font-size: 0
+	&:first-child
+		margin-bottom: 10px
+.contacts__span
+	display: inline-block
+	width: 48%
+	vertical-align: top
+	font-size: 13px
+	&:first-child
+		margin-right: 4%
+	.title-border
+		margin-bottom: 10px
+	.title-border__in
+		padding-bottom: 10px
+.contacts__item-bg
+	padding: 15px 20px
+	background: #dbe5ea 
+.contacts__item
+	padding: 15px 20px 15px 0
+.contacts__mail
+	a
+		color: #617883
+		text-decoration: underline 
+.contacts__section
+	margin-bottom: 2px
+	font-size: 16px
+	text-transform: uppercase
+	color: #363432 
+.contacts__category
+	color: #617883 
+.contacts__phone
+	margin-bottom: 6px
+	
+//callback
+.callback
+	font-size: 0
+.callback__column
+	display: inline-block
+	width: 580px
+	vertical-align: top
+	&:first-child
+		width: 270px
+		margin-right: 30px  
+	.field
+		margin-bottom: 30px
+.callback__footer
+	+clr
+	.field, .field__label, .field__input
+		float: left
+	.field__label
+		height: 36px
+		margin-right: 10px
+		line-height: 32px
+		text-transform: uppercase
+		color: #607782
+		+fl
+		font-size: 20px 
+	.field__input
+		width: 90px
+	.btn
+		float: right
+		
+//diller
+.diller
+	& > .title
+		padding-top: 15px
+	.l
+		margin: 0
+.diller__discount
+	margin-bottom: 35px
+	+clr
+	li
+		float: left
+		width: 280px
+		padding: 15px 45px 
+		background: #dae5ec 
+		&:first-child
+			margin-right: 40px 
+	strong
+		display: block
+		margin-bottom: 5px
+		font-weight: normal
+		font-size: 20px
+		text-transform: uppercase
+		+fl
+	span
+		font-size: 13px
+		color: #617883
+.diller__content
+	padding: 30px 50px
+	background: #fff 
+.diller__block
+	padding: 25px 40px 
+	margin-bottom: 35px
+	background: #FFF 
+.diller__reminder
+	p
+		font-size: 13px
+		margin-bottom: 10px
+		color: #617883 
+.diller__table
+	width: 100%
+	td, th
+		vertical-align: top		 
+		&:first-child
+			border-right: 1px solid #ecf2f5 
+	th
+		padding: 0 0 10px 10px
+		font-weight: normal		
+		text-align: left
+		text-transform: uppercase
+		font-size: 11px
+		&:first-child
+			padding: 0 0 10px 
+	td, a
+		color: #617883 
+		font-size: 13px
+	td
+		min-width: 115px
+		padding: 10px 0 10px 10px
+		border-top: 1px solid #ecf2f5
+		&:first-child
+			padding: 10px 10px 10px 0
+.diller__nav
+	margin-bottom: 40px
+	overflow: hidden
+	ul
+		overflow: hidden
+		margin-right: -50px
+	li
+		float: left
+		width: 370px 
+		margin: 0 40px 35px 0
+	a
+		display: table-cell
+		width: 300px
+		height: 66px
+		padding: 0 35px
+		font-size: 20px
+		text-align: center
+		vertical-align: middle
+		line-height: 1.1  
+.diller__tabs-nav
+	display: table
+	width: 100%
+	margin-bottom: 10px
+	ul
+		display: table-row
+	li
+		display: table-cell
+		border-left: 1px solid #c2cfd5
+		&:first-child
+			border: none
+	a
+		display: block
+		height: 64px
+		padding: 0 25px
+		line-height: 64px
+		font-size: 12px
+		color: #233C48
+		text-transform: uppercase 
+		text-align: center
+		&.is-active
+			background: #E9F0F4 
+			color: #607782
+			cursor: default
+.diller__tabs-date
+	margin-bottom: 30px
+	span
+		display: block
+		width: 168px
+		height: 38px
+		background: #e9f0f4 
+		border: 1px solid #cfd6da
+		line-height: 38px
+		text-align: center
+		font-size: 13px
+		color: #363432 
+.diller__tabs-info	
+	margin-bottom: 60px
+	
+//pager
+.pager
+	height: 17px
+	margin-bottom: 80px
+	border-bottom: 1px solid #e9f0f4 
+	text-align: right
+.pager__in
+	display: inline-block
+	padding-left: 35px
+	background: #fff 
+	vertical-align: top
+	a
+		display: inline-block
+		height: 35px
+		padding: 0 7px
+		line-height: 35px
+		vertical-align: middle
+		color: $red 
+		&.is-active
+			background: $red
+			color: #fff  
+	.pager__prev
+		+s(arr-slider-prev-red)
+	.pager__next
+		+s(arr-slider-next-red)
