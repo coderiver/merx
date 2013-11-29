@@ -1,7 +1,6 @@
 @import "base"
 //styles for main page(class with prefix "m-")
 .main
-	height: 100vh		
 	background-color: black
 	overflow: hidden
 .sl-category, .sl-category__item
@@ -19,8 +18,14 @@
 .main__in
 	position: relative
 	width: 1188px
-	height: 100vh
-	margin: 0 auto
+	margin: 0 auto 
+	.find-salon
+		&:hover
+			background: #FFF
+			span
+				color: #333 
+			i
+				+s(map-point-sm-h)
 .logo
 	position: absolute
 	top: 25px
@@ -51,20 +56,31 @@
 		line-height: 14px
 		vertical-align: top
 		font-size: 9px 
+		+tr(all .2s linear)
 		color: #FFF
+		&:hover
+			background: #fff
+			color: $redh  
 .find-salon
 	position: absolute
-	left: 255px
-	top: 40px
+	left: 238px
+	top: 33px
+	width: 138px
+	height: 40px 
+	line-height: 40px
+	text-align: center
+	+tr(background .2s linear)
 	font-size: 0
 	i, span
 		display: inline-block
-		vertical-align: top		 
+		vertical-align: middle		 
 	span
 		font-size: 11px
 		text-transform: uppercase
 		color: #FFF
 	i
+		position: relative
+		top: -1px
 		margin-right: 12px 
 		+s(map-point-sm)
 .menu
@@ -91,7 +107,7 @@
 .menu-sl
 	position: relative
 	height: 645px 
-	margin: -84px 0 10px -38px
+	margin: -84px 0 25px -38px
 	overflow: hidden
 	.menu__item
 		width: 315px - 30px
@@ -169,6 +185,9 @@
 	color: #FFF
 	font-size: 12px  
 	opacity: 0 
+	+tr(background .2s linear)
+	&:hover
+		background: $redh 
 .main__btn-down
 	position: absolute
 	left: 50%

@@ -47,9 +47,7 @@
 	i
 		+s(arr-slider-next-white)
 //
-.slider_people	
-	min-height: 455px
-	margin-bottom: 30px
+.slider_category	
 	text-align: center
 	.slider__in
 		position: relative
@@ -63,12 +61,27 @@
 			color: $red
 			font-size: 13px 
 	.slider__prev, .slider__next
-		top: 130px
+		top: 50%
 		left: 0
+		margin-top: -35px
 		bottom: auto
 	.slider__next
 		left: auto
 		right: 0
+	.slider__article
+		min-height: 60px 
+		padding: 15px 20px 
+		background: #dbe5ea 
+		text-align: left
+	.slider__article-title
+		margin-bottom: 10px
+		+fl
+		font-size: 16px
+		line-height: 1
+		color: #333 
+	.slider__article-date
+		font-size: 10px
+		color: #A0A7AB
 //
 .slider_asks
 	padding: 65px 15px 20px 
@@ -85,7 +98,7 @@
 		font-size: 11px
 		text-transform: uppercase
 		color: #fff 
-.slider_asks, .slider_events, .slider_product
+.slider_asks, .slider_events, .slider_product, .slider__big
 	.slider__prev, .slider__next
 		bottom: 20px
 		width: 38px
@@ -173,3 +186,86 @@
 		left: 30px
 	.slider__next
 		left: 69px 
+		
+//slider_section
+.slider_section
+	position: relative
+	margin-bottom: 25px
+	.slider__in
+		position: relative
+	.slider__item
+		height: 560px
+	.slider__section
+		position: absolute
+		left: 0
+		bottom: 125px 
+		max-width: 450px 
+		padding: 20px
+		background: #FFF  
+		text-align: center
+	.slider__section-el
+		margin-bottom: 20px
+		+fl
+		font-size: 60px 
+		color: $red 
+		line-height: 1
+	.slider__section-sub
+		position: relative
+		font-size: 10px
+		text-transform: uppercase
+		color: #363432 
+		padding: 0 85px
+		&:after, &:before
+			content: ""
+			position: absolute
+			top: 5px
+			width: 70px
+			border-bottom: 1px solid #dbe5ea 
+		&:after
+			left: 0
+		&:before
+			right: 0
+	.slider__pager
+		position: absolute
+		left: 0
+		bottom: 55px 		
+		+ht
+		span
+			display: inline-block
+			width: 10px
+			height: 10px
+			margin-right: 6px
+			border: 1px solid #fff
+			background: #FFF 
+			vertical-align: top
+			border-radius: 50%
+			cursor: pointer
+			&.is-active
+				background: none  
+				cursor: default
+	.slider__show-all
+		position: absolute
+		bottom: 50px
+		left: 275px
+		a
+			display: block
+			padding-bottom: 2px
+			border-bottom: 2px solid 
+			text-transform: uppercase
+			color: #FFF
+			font-size: 12px 
+
+.slider_big
+	position: relative
+	height: 580px
+	margin: -15px 0 25px 0
+	.slider__prev, .slider__next
+		top: 50%
+		bottom: auto
+		margin-top: -35px
+	.slider__prev
+		left: 0
+	.slider__next
+		left: auto
+		right: 0
+	

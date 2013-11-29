@@ -39,17 +39,19 @@
 .nav-inner_drop
 	position: relative
 	margin: 0
+	overflow: hidden
 	.nav-inner__list
 		position: absolute
 		top: 64px
 		left: 0
 		right: 0
-		z-index: 100 		
+		z-index: 500 		
 		li
 			height: 0
 			overflow: hidden
 			+tr(height .2s linear)
 	&:hover
+		overflow: visible
 		.nav-inner__list
 			li
 				height: 64px
@@ -133,6 +135,10 @@
 .btn-list_down
 	margin: 30px 0 0 0
 		
+
+.designer
+	min-height: 560px
+	margin-bottom: 30px 		
 .design
 	margin-bottom: 60px
 	overflow: hidden
@@ -161,35 +167,53 @@
 		line-height: 60px
 		color: #FFF 
 		+tr(all .2s linear)
-.design__article
-	margin: 0 -30px 45px 0
+		
+//article
+.article
+	overflow: hidden
+.article__wrap
+	margin: 0 -30px 0 0
 	font-size: 0
-.design__article-box
+.article__box
+	position: relative
 	display: inline-block
 	width: 300px
 	margin: 0 20px 30px 0
 	vertical-align: top
 	&:hover
-		.design__article-pic
+		.article__pic
 			opacity: .7 
-.design__article-box_width_2
+.article__box_width_2
 	width: 560px
-.design__article-pic
+	.article__category
+		max-width: 540px
+.article__pic
 	height: 240px 
 	+tr(opacity .2s linear)
 	img
 		display: block
-.design__article-in
+.article__category
+	position: absolute
+	top: 10px
+	left: 10px
+	max-width: 280px
+	padding: 10px 15px 8px
+	background: #FFF
+	text-transform: uppercase
+	color: #333
+	font-size: 11px    
+	line-height: 1
+.article__in
 	min-height: 60px 
 	padding: 15px 20px 
 	background: #dbe5ea 
-.design__article-title
+.article__title
 	margin-bottom: 10px
 	+fl
 	font-size: 16px
 	line-height: 1
 	color: #333 
-.design__article-date
+.article__date
 	font-size: 10px
 	color: #A0A7AB
 	
@@ -302,7 +326,18 @@
 .content
 	margin-bottom: 30px
 	font-size: 13px
-	p, ul
+	h1, h2, h3
+		text-transform: uppercase
+		font-weight: normal
+		line-height: 1.2
+	h1
+		+fl	
+		font-size: 18px
+	h2
+		font-size: 16px
+	h3
+		font-size: 14px
+	p, ul, h1, h2, h3
 		margin-bottom: 15px
 	ul
 		li
@@ -372,6 +407,8 @@
 		color: $red
 		text-transform: uppercase
 		font-size: 10px 
+.pagination + .title-border
+	margin-top: 50px
 .pagination__prev, .pagination__next
 	h
 	i
@@ -459,9 +496,11 @@
 	background: #FFF  
 	text-align: center
 .box__in-title
+	margin-bottom: 20px
 	+fl
 	font-size: 60px 
 	color: $red 
+	line-height: 1
 .box__category, .box__place
 	font-size: 10px
 	text-transform: uppercase
@@ -528,7 +567,7 @@
 	margin-bottom: 10px
 	overflow: hidden
 .catalog__in
-	margin-right: -25px
+	margin: 0 -25px 20px 0
 	font-size: 0
 .catalog__item
 	position: relative
@@ -779,6 +818,7 @@
 		width: 270px
 		
 .subscribe
+	width: 245px
 	padding: 15px
 	margin-bottom: 30px
 	background: #DBE5EA  
@@ -950,6 +990,12 @@
 	margin-bottom: 15px
 	font-size: 16px
 	text-transform: uppercase
+.partnership__select
+	position: relative
+	&:hover
+		.partnership__list
+			li
+				height: 68px
 .partnership__select-head
 	position: relative
 	height: 68px 
@@ -964,6 +1010,30 @@
 		top: 29px
 		right: 29px
 		+s(partnership-select-arr)
+.partnership__list
+	position: absolute
+	top: 100% 
+	left: 0
+	right: 0
+	height: 68px
+	z-index: 500
+	li
+		height: 0
+		+tr(height .2s linear)
+		overflow: hidden
+	a
+		display: table-cell
+		width: 420px
+		height: 68px
+		border-top: 1px solid #c52d1c 
+		background: #9A1A0B 
+		padding: 0 25px
+		vertical-align: middle
+		color: #FFF 
+		overflow: hidden
+		+tr(background-color .2s linear)
+		&:hover
+			background: #C52D1C
 
 //map
 .map
@@ -1232,3 +1302,138 @@
 		+s(arr-slider-prev-red)
 	.pager__next
 		+s(arr-slider-next-red)
+
+//
+.info-salons
+	margin-bottom: 30px
+	.btn-list
+		li
+			width: 100%
+			margin: 0
+			&:first-child
+				margin: 0
+		a
+			background: $red 
+.info-salons__in
+	padding: 20px
+	background: #dbe5ea  
+	font-size: 16px
+	color: #617883 
+
+//
+.calculate
+	margin-bottom: 30px
+.calculate__in	
+	padding: 20px
+	background: #dbe5ea
+	font-size: 13px
+	color: #617883 
+	.btn
+		width: 100%
+		margin-top: 20px	
+.calculate__form
+	display: none
+	padding: 15px 20px
+	background: #ebf1f4
+	border-top: 1px solid #fff  
+	.field
+		margin-bottom: 15px
+	.field__input
+		input
+			background: #FFF 
+	.btn
+		width: 100%
+		margin-top: 15px
+		
+//
+.info-example
+	padding: 20px
+	margin-bottom: 30px
+	background: #ebf1f4
+	font-size: 15px
+	color: #617883 
+	p
+		margin-bottom: 10px
+	a
+		text-decoration: underline
+		color: #617883
+.info-example__price
+	padding-top: 10px
+	font-size: 18px
+	color: $red 
+	
+//faq
+.faq
+	margin-bottom: 30px
+.faq__item	
+	&.is-active
+		.faq__head
+			text-decoration: none
+			&:before
+				background: #9c2618 
+			&:after
+				+rotate(88deg)
+.faq__head
+	position: relative
+	padding: 0 0 20px 40px
+	cursor: pointer	
+	text-decoration: underline
+	+fl
+	font-size: 19px
+	color: $red 	
+	&:before, &:after
+		content: ""
+		position: absolute
+	&:before
+		top: 3px
+		left: 0
+		width: 23px
+		height: 19px
+		background: $red
+	&:after
+		top: 8px
+		left: 9px
+		+s(faq-arr) 
+		+tr(all .2s linear)
+.faq__content
+	padding: 0 0 20px 40px
+	overflow: hidden
+	font-size: 13px	
+	+clr
+	img
+		float: left
+		margin: 0 30px 0 0
+		
+
+//portfolio
+.portfolio
+	margin-bottom: 30px
+.portfolio__item
+	margin-bottom: 50px
+	+clr
+.portfolio__slider
+	float: left
+	width: 420px 
+	margin-right: 40px
+	.slider
+		margin: 0
+.portfolio__details
+	float: left
+	width: 420px
+	.content
+		margin: 0
+.portfolio__title
+	padding: 10px 0
+	+fl
+	font-size: 19px
+	line-height: 1.2
+.portfolio__logo
+	display: table-cell
+	width: 210px
+	height: 100px
+	vertical-align: middle
+	text-align: center
+	background: #FFF
+	border: 1px solid #d6dce0
+	img
+		vertical-align: middle

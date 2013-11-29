@@ -2,6 +2,7 @@
 @import "compass/css3"
 //variables
 $red: #c52d1c
+$redh: #9a1a0b
 
 
 //fonts
@@ -116,6 +117,19 @@ $svg: "svg/"
 	background-repeat: no-repeat
 	background-size: cover 
 	background-position: 50% 50%
+//
+@mixin scrollbar 
+	&::-webkit-scrollbar
+		@content
+@mixin scrollbar-track
+	&::-webkit-scrollbar-track
+		@content
+@mixin scrollbar-thumb
+	&::-webkit-scrollbar-thumb
+		@content
+@mixin scrollbar-track-piece
+	&::-webkit-scrollbar-track-piece
+		@content
 //media query
 @mixin rt($media)
 	@if $media == 1920
@@ -124,3 +138,4 @@ $svg: "svg/"
 	@else if $media == 1600
 		@media only screen and (max-width: 1600px)
 			@content
+

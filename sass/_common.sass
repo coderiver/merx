@@ -2,6 +2,7 @@
 * 
 	margin: 0
 	padding: 0 
+	//box-shadow: 0 0 0 1px red
 html, body 
 	height: 100%
 body
@@ -9,6 +10,15 @@ body
 	font-weight: normal 
 	font-size: 14px
 	line-height: 1.4
+	&::-webkit-scrollbar
+		width: 10px
+		background: red
+	&::-webkit-scrollbar-track
+		background: green
+	&::-webkit-scrollbar-thumb
+		background: $red
+	&::-webkit-scrollbar-track-piece
+		background: white
 // resets
 a img, fieldset 
 	border: none
@@ -53,8 +63,30 @@ table
 	font-weight: 100
 	font-size: 44px 
 	letter-spacing: -3px 
+	line-height: 1.1
 .title__level-2
 	font-size: 36px 
+.title__types
+	float: right
+	margin-top: 15px
+	li
+		float: left
+		margin-left: 30px 
+		&.is-active
+			a
+				border: none
+				color: #7f96a2 
+	a
+		display: block
+		padding-bottom: 8px
+		border-bottom: 2px solid #627983 
+		font-family: Arial, Tahoma, sans-serif 
+		font-size: 12px
+		text-transform: uppercase
+		color: #233C48 
+		letter-spacing: 0		
+.title__in
+	display: table
 .title-border
 	margin-bottom: 30px
 	border-bottom: 1px solid #e9e9e8
@@ -85,8 +117,12 @@ table
 	.language
 		top: 45px
 	.find-salon
-		top: 47px
-		left: 625px
+		top: 0
+		left: 590px
+		width: 180px
+		height: 110px
+		line-height: 110px
+		text-align: center 
 .header__in
 	position: relative
 	height: 110px 
@@ -126,6 +162,17 @@ table
 	position: absolute
 	top: 0
 	left: 270px
+	width: 320px
+	height: 110px
+	+fl
+	text-transform: uppercase
+	color: #FFF 
+	&:hover
+		.header__category-list
+			li
+				height: 110px
+.header__category-current
+	width: 320px
 	height: 110px
 	background: #9a1a0b
 	span
@@ -134,47 +181,101 @@ table
 		height: 110px
 		padding: 0 75px 0 35px 
 		vertical-align: middle
-		+fl
-		text-transform: uppercase
-		color: #FFF 
 	i
 		position: absolute
 		top: 45px
 		right: 28px
 		+s(header-category)
+.header__category-list
+	position: absolute
+	top: 100%
+	left: 0
+	right: 0
+	z-index: 500
+	li
+		height: 0
+		+tr(height .2s linear)
+		overflow: hidden
+	a
+		display: table-cell
+		width: 250px
+		height: 110px
+		border-top: 1px solid #c52d1c 
+		background: #9A1A0B 
+		padding: 0 35px
+		vertical-align: middle
+		color: #FFF 
+		overflow: hidden
+		+tr(background-color .2s linear)
+		&:hover
+			background: #C52D1C 
 .header__phone
 	position: absolute
-	top: 25px
-	left: 765px
-	padding: 0 30px
-	height: 60px
+	top: 0
+	left: 770px
+	height: 110px
+	line-height: 110px
+	font-size: 0
+	cursor: default
+	&:hover
+		.header__phone-form
+			height: 198px 
+.header__phone-in
+	display: inline-block
+	padding: 5px 30px 10px
 	border:  1px solid rgba(255,255,255,.23)
 	border-width: 0 1px
+	line-height: 1.4
+	vertical-align: middle
 	span
 		display: block
-		padding-top: 8px
 		+fl
 		font-size: 24px
-		line-height: 1
 		color: #FFF 
-	a
+	strong
 		border-bottom: 1px dotted
+		font-weight: normal
 		font-size: 9px		
 		text-transform: uppercase
 		color: #FFF  
+.header__phone-form
+	position: absolute
+	top: 100%
+	right: 0
+	width: 330px
+	height: 0
+	+tr(height .2s linear)
+	overflow: hidden
+	z-index: 500 
+.header__phone-form-in
+	padding: 25px 30px
+	background: #9A1A0B
+	line-height: 1		 		
+	.field
+		margin-bottom: 15px
+	.field__input
+		input
+			background: #fff 
+	.btn
+		width: 100%
+		height: 46px
+		background: $red
+
 //nav
 .nav
-	margin-bottom: 40px
 	background: $red
 .nav__list
+	display: table
 	width: 1188px
-	margin: 0 auto
-	white-space: nowrap
+	margin: 0 auto 40px	
+	ul
+		display: table-row
+		white-space: nowrap
 	li
 		position: relative
-		display: inline-block
-		padding-left: 79px
-		vertical-align: top
+		display: table-cell
+		vertical-align: middle
+		text-align: center
 		&:before
 			content: ""
 			position: absolute
@@ -360,6 +461,17 @@ table
 .btn_big
 	height: 56px 
 	font-size: 23px 
+.btn_file
+	padding: 0
+	background: #617883 
+	font-size: 0
+	text-align: center
+	span
+		font-size: 12px
+		text-transform: none
+	i
+		margin: 0 0 0 20px 
+		+s(btn-file)
 	
 //form
 .field__input
