@@ -3,7 +3,6 @@
 .slider
 	position: relative
 .slider__item
-	position: relative !important
 	img
 		display: block
 .slider__title
@@ -98,7 +97,7 @@
 		font-size: 11px
 		text-transform: uppercase
 		color: #fff 
-.slider_asks, .slider_events, .slider_product, .slider__big
+.slider_asks, .slider_events, .slider_product, .slider__big, .slider_events-main
 	.slider__prev, .slider__next
 		bottom: 20px
 		width: 38px
@@ -116,16 +115,18 @@
 	.slider__next
 		i
 			+s(arr-slider-next-red)
-.slider_asks, .slider_events
+.slider_asks, .slider_events, .slider_events-main
 	margin-bottom: 30px
 	background: $red
 	.slider__item
 		padding-bottom: 70px
 	.slider__text
+		background: #E9F0F4 
 		+fl
 		font-size: 16px 
 		color: #FFF 
 		line-height: 1.1
+		color: #333 
 	.slider__title	
 		top: 0
 		left: 0
@@ -135,10 +136,23 @@
 		line-height: 48px  
 		font-size: 22px
 		color: #333 	
-.slider_events
+.slider_events, .slider_events-main
 	.slider__text
 		padding: 15px 20px 
-
+.slider_events-main
+	height: 420px 
+	margin: 0 
+	background: #E9F0F4
+	.slider__title
+		top: 15px
+		left: 10px
+	.slider__prev, .slider__next
+		bottom: 130px 
+	.slider__text-date
+		padding-top: 5px
+		+f
+		font-size: 10px
+		color: #AAAFB2 
 //slider_works
 .slider_works
 	margin-bottom: 40px

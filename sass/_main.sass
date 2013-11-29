@@ -199,8 +199,14 @@
 	background: rgba(0,0,0,.6) 
 	font-size: 0
 	z-index: 20 
+	+tr(background .2s linear)
 	+gpu
 	i
 		display: inline-block
 		+s(arr-down-white)
+	&:hover
+		background: #fff 
+		i
+			+s(arr-down-red)
+
 

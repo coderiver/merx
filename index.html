@@ -9,6 +9,7 @@
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.hoverIntent.js"></script>
+	<script src="js/jquery.cycle2.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -89,17 +90,15 @@
 	<!-- END .main -->
 	<!-- BEGIN .nav -->
 	<nav class="nav">
-		<div class="nav__list">
-			<ul>
-				<li><a href="#">О компании</a></li>
-				<li><a href="#">Производство</a></li>
-				<li><a href="#">Салоны</a></li>
-				<li><a href="#">Сотрудничество</a></li>
-				<li><a href="#">Социальная ответственность</a></li>
-				<li><a href="#">События</a></li>
-				<li><a href="#">Контакты</a></li>    
-			</ul>
-		</div>		
+		<ul class="nav__list">
+			<li><a href="#">О компании</a></li>
+			<li><a href="#">Производство</a></li>
+			<li><a href="#">Салоны</a></li>
+			<li><a href="#">Сотрудничество</a></li>
+			<li><a href="#">Социальная ответственность</a></li>
+			<li><a href="#">События</a></li>
+			<li><a href="#">Контакты</a></li>    
+		</ul>
 	</nav>
 	<!-- END .nav -->
 	<!-- BEGIN .container -->
@@ -107,7 +106,7 @@
 		<div class="l">
 			<div class="l__col-1">
 				<!-- BEGIN .slider -->
-				<div class="slider slider_main">
+				<div class="slider slider_main js-slider">
 					<button class="slider__prev"><i></i></button>
 					<button class="slider__next"><i></i></button>
 					<div class="slider__in">
@@ -116,11 +115,58 @@
 							<div class="slider__description">Это высокотехнологичноепроизводство мебели экологически чистые материалы и компоненты для работы</div>			
 							<img src="http://placehold.it/895x420" alt=""/>
 						</div>
+						<div class="slider__item">	
+							<div class="slider__title">MERX tomorrow</div>			
+							<div class="slider__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, veniam, delectus.</div>			
+							<img src="http://placehold.it/895x420" alt=""/>
+						</div>
+						<div class="slider__item">	
+							<div class="slider__title">MERX yesterday</div>			
+							<div class="slider__description">Lacere sunt excepturi accusantium dolores delectus deserunt ducimus consectetur iste similique facilis quos cum voluptatibus.</div>			
+							<img src="http://placehold.it/895x420" alt=""/>
+						</div>
 					</div>
 				</div>
 				<!-- END .sliderider -->
 			</div>
-			<div class="l__col-2"></div>
+			<div class="l__col-2">
+				<!-- BEGIN .slider -->
+				<div class="slider slider_events-main js-slider">
+					<button class="slider__prev"><i></i></button>
+					<button class="slider__next"><i></i></button>
+					<div class="slider__title">События</div>
+					<div class="slider__in">
+						<div class="slider__item">
+							<a href="#">
+								<div class="slider__pic"><img src="http://placehold.it/275x300" alt=""></div>
+								<div class="slider__text">
+									<div class="slider__text-in">Выставка в Милане 15.07.2013</div>
+									<div class="slider__text-date">24 Сентября 2013</div>
+								</div>
+							</a>							
+						</div>
+						<div class="slider__item">
+							<a href="#">
+								<div class="slider__pic"><img src="http://placehold.it/275x300" alt=""></div>
+								<div class="slider__text">
+									<div class="slider__text-in">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, eius error adipisci.</div>
+									<div class="slider__text-date">24 Сентября 2013</div>
+								</div>
+							</a>							
+						</div>
+						<div class="slider__item">
+							<a href="#">
+								<div class="slider__pic"><img src="http://placehold.it/275x300" alt=""></div>
+								<div class="slider__text">
+									<div class="slider__text-in">Molestiae, eius, animi iste mollitia excepturi cupiditate nemo! Fugiat, nisi dolorem dignissimos.</div>
+									<div class="slider__text-date">24 Сентября 2013</div>
+								</div>
+							</a>							
+						</div>
+					</div>
+				</div>
+				<!-- END .slider -->
+			</div>
 		</div>
 	</div>
 	<!-- END .container -->
