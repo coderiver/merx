@@ -1,5 +1,18 @@
 $(document).ready(function() {
 
+function classwitch() {
+	$('body').append('<div class="sss" style="position: fixed; top: 0; left: 0; z-index: 100000;"><button data-class="blue-style">blue </button><button data-class="red-style">red </button><button data-class="green-style">green </button></div>')
+	$('.sss button').bind('click', function(){
+		$('body').removeClass('red-style');
+		$('body').removeClass('blue-style');
+		$('body').removeClass('green-style');
+		var s = $(this).attr('data-class');
+		$('body').addClass(s);
+	});
+}
+classwitch();
+
+//main
 function main_page() {
 	var wnd_height = $(window).height();
 	var el = $('.main');
@@ -102,6 +115,20 @@ function faq() {
 	});
 }
 faq();
+
+//footer nav
+$('.js-footer-nav').bind('click', function(){
+	if (!$(this).hasClass('is-open')) {
+		$(this).addClass('is-open');
+		$(this).text('Скрыть');
+		$('.footer__nav').slideDown(200);
+	}
+	else{
+		$(this).removeClass('is-open');
+		$(this).text('Раскрыть');
+		$('.footer__nav').slideUp(200);
+	}
+});
 
 //click document
 $(document).click(function() {

@@ -7,18 +7,78 @@ html, body
 	height: 100%
 body
 	+f
-	font-weight: normal 
+	font-weight: normal
 	font-size: 14px
 	line-height: 1.4
 	&::-webkit-scrollbar
 		width: 10px
-		background: red
-	&::-webkit-scrollbar-track
-		background: green
 	&::-webkit-scrollbar-thumb
 		background: $red
 	&::-webkit-scrollbar-track-piece
 		background: white
+	//blue
+	&.blue-style
+		.header
+			background: $blue
+		&::-webkit-scrollbar-thumb
+			background: $blue
+		.header__category-current
+			background: $blueh
+		.header__category-list
+			a
+				border-top-color: $blue
+				background: $blueh
+				&:hover
+					background: $blue 
+		.find-salon
+			&:hover
+				background: $blueh 
+		.header__phone
+			&:hover
+				background: $blueh
+		.header__phone-form-in
+			background: $blueh
+		.header__phone-form-in .btn
+			background: $blue 
+		.language
+			li
+				&.is-active, &:hover
+					a
+						color: $blue 
+		.slider_asks, .slider_events, .slider_product, .slider__big, .slider_events-main
+			background: $blue
+			&:hover
+				background: $blueh 	
+			.slider__prev, .slider__next
+				&:hover
+					background: $blue 
+		.slider__prev
+			i
+				+s(arr-slider-prev-blue)
+		.slider__next
+			i
+				+s(arr-slider-next-blue)	
+		.slider_many
+			.slider__next, .slider__prev
+				background: $blue 
+				i
+					+s(arr-slider-next-white)
+				&:hover
+					background: $blueh 
+					i
+						+s(arr-slider-next-white)
+			.slider__prev
+				i		
+					+s(arr-slider-prev-white)	
+				&:hover
+					i
+						+s(arr-slider-prev-white)
+
+	//red
+	&.red-style
+		$color: $red
+	&.green-style
+		$color: $red
 // resets
 a img, fieldset 
 	border: none
@@ -108,7 +168,7 @@ table
 	+s(ico-pdf)
 //header
 .header
-	background: $red
+	background: $color
 	.logo
 		top: 30px
 		left: 27px
@@ -123,6 +183,8 @@ table
 		height: 110px
 		line-height: 110px
 		text-align: center 
+		&:hover
+			background: $redh 
 .header__in
 	position: relative
 	height: 110px 
@@ -171,6 +233,9 @@ table
 		.header__category-list
 			li
 				height: 110px
+		.header__category-current
+			i
+				+rotate(-180deg)
 .header__category-current
 	width: 320px
 	height: 110px
@@ -185,6 +250,7 @@ table
 		position: absolute
 		top: 45px
 		right: 28px
+		+tr(all .2s linear)
 		+s(header-category)
 .header__category-list
 	position: absolute
@@ -216,10 +282,14 @@ table
 	height: 110px
 	line-height: 110px
 	font-size: 0
+	+tr(background .2s linear)
 	cursor: default
 	&:hover
+		background: $redh 
 		.header__phone-form
 			height: 198px 
+		.header__phone-in
+			border-color: transparent
 .header__phone-in
 	display: inline-block
 	padding: 5px 30px 10px
@@ -259,12 +329,12 @@ table
 	.btn
 		width: 100%
 		height: 46px
-		background: $red
+		background: $color
 
 //nav
 .nav
 	margin-bottom: 40px	 
-	background: $red
+	background: $color
 .nav__list
 	width: 1188px
 	margin: 0 auto 
@@ -301,7 +371,7 @@ table
 			border-left: 1px solid rgba(255,255,255,.3) 
 			+tr(opacity .2s linear)
 		&:hover
-			background: $redh 
+			background: $colorh 
 			padding: 0 36px 0 35px
 			&:before
 				opacity: 0 
@@ -328,6 +398,9 @@ table
 	strong, a
 		color: #dadada
 		font-weight: normal
+	a
+		&:hover
+			color: $colorh 
 	&:first-child
 		border: none
 		padding: 10px 20px 0 0 
@@ -346,20 +419,34 @@ table
 		margin-left: 10px
 		&:first-child
 			margin: 0
+		&:hover
+			opacity: .7 
 .footer__fb
 	+s(fb)
 .footer__tw
 	+s(tw)
 .footer__enter
-	button
+	padding: 10px 20px
+	i
+		display: inline-block
 		+s(footer-enter)
+	&:hover  
+		background: #fff
+		color: #333  
+		strong
+			color: #333 
+		i
+			+s(footer-enter-h)
 .footer__created
 	span
 		font-size: 11px
 	a
+		position: relative
 		display: block
 		+s(vintage)
 		+ht
+		&:hover
+			+s(vintage-h)				
 .footer__top
 	padding-bottom: 30px
 	border-bottom: 1px solid #474544 
@@ -399,6 +486,7 @@ table
 	float: left
 	width: 138px
 	height: 35px
+	margin-top: 5px
 	padding: 0 35px 0 15px
 	border: 1px solid #5b5a58
 	text-align: left
@@ -411,6 +499,33 @@ table
 		top: 15px
 		right: 15px 
 		+arr(8,4,#BEBDBD,b) 
+.footer__nav
+	display: none
+	padding-top: 33px
+	clear: both
+	+clr
+	ul
+		float: left
+		width: 170px
+		padding-right: 28px
+		line-height: 1.1
+		&:first-child
+			li
+				margin-bottom: 15px
+				&:first-child
+					height: auto
+					margin-bottom: 15px
+	li
+		margin-bottom: 7px 
+		&:first-child
+			height: 32px
+	a
+		font-size: 11px
+		color: #9b9a99
+	strong
+		display: block
+		text-transform: uppercase
+		color: #fff 
 
 //select
 .select
