@@ -208,14 +208,31 @@
 		right: 0
 	.slider__prev
 		left: 0
+	.slider__next, .slider__prev
+		background: $red
+		i
+			+s(arr-slider-next-white)
+		&:hover
+			background: $redh 
+			i
+				+s(arr-slider-next-white)
+	.slider__prev
+		i		
+			+s(arr-slider-prev-white)	
+		&:hover
+			i
+				+s(arr-slider-prev-white)
 	.slider__in
 		white-space: nowrap
 		font-size: 0 
 		overflow: hidden
 	.slider__item
 		display: inline-block
-		margin-right: 25px
-		vertical-align: top
+		font-size: 0 
+		img
+			display: inline-block
+			vertical-align: top
+			margin-right: 25px
 		
 //slider_product
 .slider_product
