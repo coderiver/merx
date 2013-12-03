@@ -73,6 +73,143 @@ body
 				&:hover
 					i
 						+s(arr-slider-prev-white)
+		.more
+			button
+				background: $blue 
+				&:hover
+					background: $blueh
+		.cart__title
+			a
+				color: $blue
+		.cart__price-total
+			strong
+				color: $blue 
+		.box__title, .box__in-title, .box__price
+			color: $blue
+		.product__price, .catalog__product-price
+			strong
+				color: $blue 
+		.menu__link
+			background: $blue
+			&:hover
+				background: $blueh
+		.partnership__select-head
+			background: $blue
+		.partnership__list
+			a
+				background: $blueh
+				&:hover
+					background: $blue 
+			a
+				border-top-color: $blue 
+		.slider_category
+			.slider__prev, .slider__next
+				background: $blue
+				i
+					display: inline-block
+					+s(arr-slider-prev-white)
+				&:hover
+					background: white
+					i
+						+s(arr-slider-prev-gray) 
+			.slider__next
+				i
+					+s(arr-slider-next-white)
+				&:hover
+					background: white
+					i
+						+s(arr-slider-next-gray)
+		.slider_category
+			.slider__link
+				a
+					color: $blue 
+		.share__fb
+			+s(share-fb-blue)
+		.share__tw
+			+s(share-tw-blue)
+		.share__gp
+			+s(share-gp-blue)
+		.share__list
+			a
+				&:hover
+					background: $blue
+		.pagination 
+			a
+				color: $blue
+		.pagination__link	
+			&:hover
+				background: $blue
+				color: white
+		.pagination__prev
+			i
+				+s(pagination-prev-blue)
+		.pagination__next
+			i
+				+s(pagination-next-blue)
+		.content
+			table
+				th
+					background: $blue 
+		.pager
+			a
+				color: $blue
+				&.is-active, &:hover
+					background: $blue
+					color: white 
+			.pager__prev, .pager__next
+				+tr(all 0 linear)
+			.pager__prev
+				+s(arr-slider-prev-blue)
+				&:hover
+					+s(arr-slider-prev-blue)
+			.pager__next
+				+s(arr-slider-next-blue)
+				&:hover
+					+s(arr-slider-next-blue)
+		.faq__head 
+			color: $blue
+			&:before
+				background: $blue
+		.faq__item
+			&.is-active
+				.faq__head
+					&:before
+						background: $blueh 
+		.brands__in
+			li
+				&:hover
+					span
+						background: $blue 
+		.map__el-in
+			background: $blue 
+		.map__point
+			+s(map-point-blue)
+		.slider__section .slider__section-el
+			color: $blue 
+		.slider__prev, .slider__next
+			background: $blue
+			i
+				+s(arr-slider-prev-white)
+			&:hover
+				background: white
+				i
+					+s(arr-slider-prev-gray)
+		.slider__next
+			i
+				+s(arr-slider-next-white)
+			&:hover
+				i
+					+s(arr-slider-next-gray)
+		.info-salons
+			.btn-list
+				a
+					background: $blue
+					&:hover
+						background: $blueh 
+		.info-example__price
+			color: $blue 
+
+		
 
 	//red
 	&.red-style
@@ -570,6 +707,8 @@ table
 		padding: 10px 15px
 		background: #FFF 
 		border-top: 1px solid #e9f0f4 
+		&:hover
+			background: #e9f0f4 
 		
 //btn
 .btn

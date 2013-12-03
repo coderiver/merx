@@ -323,6 +323,9 @@
 		+fl
 		color: #FFF
 		text-transform: uppercase
+		+tr(background .2s linear)
+		&:hover
+			background: $redh 
 		
 .content
 	margin-bottom: 30px
@@ -388,6 +391,15 @@
 		height: 21px
 		line-height: 21px 
 		text-align: center
+		+tr(background .2s linear)
+		&:hover
+			background: $red 
+			.share__fb
+				+s(share-fb-h)
+			.share__tw
+				+s(share-tw-h)
+			.share__gp
+				+s(share-gp-h)
 	i
 		display: inline-block
 		vertical-align: middle
@@ -411,9 +423,11 @@
 .pagination + .title-border
 	margin-top: 50px
 .pagination__prev, .pagination__next
-	h
+	+tr(color .2s linear)
 	i
 		float: left
+	&:hover
+		color: #333 
 .pagination__prev
 	float: left
 	i
@@ -428,6 +442,12 @@
 		+s(pagination-next)
 .pagination__link
 	display: inline-block
+	padding: 0 20px
+	vertical-align: middle
+	+tr(all .2s linear)
+	&:hover
+		background: $red
+		color: #FFF  
 	
 .about
 	height: 560px - 175px
@@ -485,7 +505,7 @@
 	margin-bottom: 25px
 	line-height: 1
 	font-size: 25px
-	color: #302E8A
+	color: $red
 .box__text
 	color: #333 
 .box__in
@@ -752,6 +772,8 @@
 .search-prod__row
 	padding-bottom: 20px
 	+clr
+.search-prod__in 
+	display: none
 .search-prod__item
 	float: left
 	width: 270px
@@ -1295,14 +1317,26 @@
 		padding: 0 7px
 		line-height: 35px
 		vertical-align: middle
+		+tr(all .2s linear)
 		color: $red 
-		&.is-active
+		&.is-active, &:hover
 			background: $red
 			color: #fff  
+	.pager__prev, .pager__next
+		padding: 0
+		+tr(all 0 linear)
 	.pager__prev
+		padding: 0
+		margin-right: 10px
 		+s(arr-slider-prev-red)
+		&:hover
+			+s(arr-slider-prev-red)
 	.pager__next
+		padding: 0
+		margin-left: 10px
 		+s(arr-slider-next-red)
+		&:hover
+			+s(arr-slider-next-red)
 
 //
 .info-salons
@@ -1314,7 +1348,12 @@
 			&:first-child
 				margin: 0
 		a
-			background: $red 
+			background: $red
+			+tr(background .2s linear)
+			span
+				color: #FFF 
+			&:hover
+				background: $redh 
 .info-salons__in
 	padding: 20px
 	background: #dbe5ea  
@@ -1380,7 +1419,7 @@
 	cursor: pointer	
 	text-decoration: underline
 	+fl
-	font-size: 19px
+	font-size: 20px
 	color: $red 	
 	&:before, &:after
 		content: ""

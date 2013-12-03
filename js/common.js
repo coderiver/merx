@@ -68,6 +68,22 @@ function menu() {
 }
 menu();
 
+//search-type
+$('.js-search-type a').bind('click', function(){
+	var item = $(this).attr('href');
+	if (!$(this).hasClass('is-active')) {
+		$(this).parents('.search-prod').find('.search-prod__in').slideUp();
+		$('.' + item).slideDown();
+		$(this).parents('.search-prod__type').find('a').removeClass('is-active');
+		$(this).addClass('is-active');
+	};	
+	return false;
+});
+$('.search-prod__slide').bind('click', function(){
+	$('.search-prod__drop').slideToggle();
+	$(this).toggleClass('is-active');
+});
+
 //select
 function select() {
 	var el = $('.js-select');
