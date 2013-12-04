@@ -9,6 +9,8 @@
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.hoverIntent.js"></script>
+	<script src="js/jquery.cycle2.min.js"></script>
+	<script src="js/jquery.cycle2.carousel.min.js"></script>
 	<script src="js/common.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 	<script>
@@ -28,9 +30,39 @@
 	google.maps.event.addDomListener(window, 'load', initialize);
 	</script>
 </head>
-<body>
+<body class="blue-style">
 <!-- BEGIN .wrap -->
 <section class="wrap">
+	<!-- BEGIN .mob-header -->
+	<div class="mob-header">
+		<div class="mob-header__top">
+			<ul class="language">
+				<li class="is-active"><a href="#">РУС</a></li>
+				<li><a href="#">УКР</a></li>
+				<li><a href="#">ENG</a></li>
+			</ul>
+			<div class="mob-header__phone">+38 (044) 461 79 59</div>
+		</div>
+		<div class="mob-header__middle">
+			<a class="logo" href="#">MERX<i class="logo__pic"></i></a>
+			<button class="mob-header__btn-menu js-mob-nav"></button>
+		</div>
+		<div class="mob-header__salon">
+			<a href="#"><i><em></em></i><span>Найти Салон</span></a>
+		</div>
+	</div>
+	<!-- END .mob-header -->
+	<!-- BEGIN .mob-nav -->
+	<div class="mob-nav">
+		<ul>
+			<li><a href="#"><span>Кухни</span></a></li>
+			<li><a href="#"><span>Мебель для дома</span></a></li>
+			<li><a href="#"><span>Офисная мебель</span></a></li>			
+			<li><a href="#"><span>Мебель и оборудование для HoReCa</span></a></li>
+			<li><a href="#"><span>Итальянская и французская мебель</span></a></li>
+		</ul>
+	</div>
+	<!-- END .mob-nav -->
 	<!-- BEGIN .header -->
 	<header class="header">
 		<div class="header__in">
@@ -83,7 +115,7 @@
 	</div>
 	<!-- END .substrate -->
 	<!-- BEGIN .container -->
-	<div class="container container_mod">
+	<div class="container container_mod container_map">
 		<div class="l">
 			<div class="l__col-3">
 				<!-- BEGIN .nav-inner -->
@@ -134,6 +166,7 @@
 				</div>
 			</div>					
 			<div class="sorting__item">
+				<div class="sorting__label"></div>
 				<div class="select js-select">
 					<div class="select__value">Option</div>
 					<ul class="select__options">
@@ -166,7 +199,6 @@
 		</div>
 		<!-- END .sorting -->	
 	</div>
-	<!-- END .container -->
 	<!-- BEGIN .map -->
 	<div class="map">
 		<div class="map__el" style="top: 30%; left: 30%;">
@@ -217,7 +249,7 @@
 			</div>
 			<div class="map__point"></div>
 		</div>
-		<div id="map-canvas" style="width: 100%; height: 670px"></div>
+		<div id="map-canvas"></div>
 	</div>
 	<!-- END .map -->
 	<div class="container">
@@ -262,18 +294,20 @@
 		</ul>
 		<!-- END .menu -->
 	</div>
+	<!-- END .container -->
 	<!-- BEGIN .footer -->
 	<footer class="footer">
 		<div class="footer__in">
 			<div class="footer__top">
 				<div class="footer__map">
 					<div class="footer__map-title">Карта сайта</div>
+					<button class="footer__map-btn js-footer-nav">Развернуть</button>
 				</div>
 				<div class="search-form">
 					<input type="text" placeholder="Поиск по сайту">
 					<button><i></i></button>
 				</div>
-				<nav class="footer__nav" style="display: block">
+				<nav class="footer__nav">
 					<ul>
 						<li><a href="#"><strong>Главная</strong></a></li>
 						<li><a href="#"><strong>О компании</strong></a></li>

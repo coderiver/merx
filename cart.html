@@ -13,9 +13,39 @@
 	<script src="js/jquery.cycle2.carousel.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
-<body>
+<body class="blue-style">
 <!-- BEGIN .wrap -->
 <section class="wrap">
+	<!-- BEGIN .mob-header -->
+	<div class="mob-header">
+		<div class="mob-header__top">
+			<ul class="language">
+				<li class="is-active"><a href="#">РУС</a></li>
+				<li><a href="#">УКР</a></li>
+				<li><a href="#">ENG</a></li>
+			</ul>
+			<div class="mob-header__phone">+38 (044) 461 79 59</div>
+		</div>
+		<div class="mob-header__middle">
+			<a class="logo" href="#">MERX<i class="logo__pic"></i></a>
+			<button class="mob-header__btn-menu js-mob-nav"></button>
+		</div>
+		<div class="mob-header__salon">
+			<a href="#"><i><em></em></i><span>Найти Салон</span></a>
+		</div>
+	</div>
+	<!-- END .mob-header -->
+	<!-- BEGIN .mob-nav -->
+	<div class="mob-nav">
+		<ul>
+			<li><a href="#"><span>Кухни</span></a></li>
+			<li><a href="#"><span>Мебель для дома</span></a></li>
+			<li><a href="#"><span>Офисная мебель</span></a></li>			
+			<li><a href="#"><span>Мебель и оборудование для HoReCa</span></a></li>
+			<li><a href="#"><span>Итальянская и французская мебель</span></a></li>
+		</ul>
+	</div>
+	<!-- END .mob-nav -->
 	<!-- BEGIN .header -->
 	<header class="header">
 		<div class="header__in">
@@ -69,43 +99,7 @@
 	<!-- END .substrate -->
 	<!-- BEGIN .container -->
 	<div class="container">
-		<div class="l">
-			<div class="l__col-3">
-				<!-- BEGIN .nav-inner -->
-				<nav class="nav-inner">
-					<ul>
-						<li><a href="#">О компании</a></li>
-						<li><a href="#">Производство</a></li>
-						<li><a href="#">Салоны</a></li>
-						<li class="is-active"><a href="#">Сотрудничество</a></li>
-						<li><a href="#">Социальная ответственность</a></li>
-						<li><a href="#">События</a></li>
-						<li><a href="#">Контакты</a></li>    
-					</ul>
-				</nav>
-				<!-- END .nav-inner -->
-				<!-- BEGIN .slider -->
-				<div class="slider slider_asks js-slider">
-					<button class="slider__prev"><i></i></button>
-					<button class="slider__next"><i></i></button>
-					<div class="slider__title">Частые вопросы</div>
-					<div class="slider__in">
-						<div class="slider__item">
-							<div class="slider__text">Что можно делать на столешне из кварца и чем она лучше дсп и акриловых?</div>
-							<a class="btn" href="#">Прочитать ответ</a>
-						</div>
-						<div class="slider__item">
-							<div class="slider__text">Что можно делать на столешне из кварца и чем она лучше дсп и акриловых?</div>
-							<a class="btn" href="#">Прочитать ответ</a>
-						</div>
-						<div class="slider__item">
-							<div class="slider__text">Что можно делать на столешне из кварца и чем она лучше дсп и акриловых?</div>
-							<a class="btn" href="#">Прочитать ответ</a>
-						</div>
-					</div>
-				</div>
-				<!-- END .slider -->
-			</div>
+		<div class="l">			
 			<div class="l__col-4">
 				<!-- BEGIN .bc -->
 				<div class="bc">
@@ -120,26 +114,26 @@
 				<div class="title">Корзина</div>
 				<!-- BEGIN .cart -->
 				<div class="cart">
-					<table class="cart__table">
-						<tr>
-							<td>
+					<div class="cart__table">
+						<div class="cart__row">
+							<div class="cart__cell">
 								<div class="cart__pic">
 									<a href="#"><img src="http://placehold.it/190x190" alt=""/></a>
 								</div>
-							</td>
-							<td>
+							</div>
+							<div class="cart__cell">
 								<div class="cart__title">
 									<a href="#">Кофемашина Lavacio MN-200</a>
 								</div>
-							</td>
-							<td>
+							</div>
+							<div class="cart__cell">
 								<div class="cart__label">Цена:</div>
 								<div class="cart__price">
 									<strong>24 000</strong>
 									<span>грн</span>
 								</div>
-							</td>
-							<td>
+							</div>
+							<div class="cart__cell">
 								<div class="cart__label">Количество:</div>
 								<div class="field">
 									<div class="field__input">
@@ -147,37 +141,37 @@
 									</div>
 									<div class="field__label">шт</div>
 								</div>
-							</td>
-							<td>
+							</div>
+							<div class="cart__cell">
 								<div class="cart__label">Всего:</div>
 								<div class="cart__price cart__price-total">
 									<strong>24 000</strong>
 									<span>грн</span>
 								</div>
-							</td>
-							<td>
+							</div>
+							<div class="cart__cell">
 								<button class="cart__btn-delete"></button>
-							</td>
-						</tr>
-						<tr>
-							<td>
+							</div>
+						</div>
+						<div class="cart__row">
+							<div class="cart__cell">
 								<div class="cart__pic">
 									<a href="#"><img src="http://placehold.it/190x190" alt=""/></a>
 								</div>
-							</td>
-							<td>
+							</div>
+							<div class="cart__cell">
 								<div class="cart__title">
 									<a href="#">Кофемашина Lavacio MN-200</a>
 								</div>
-							</td>
-							<td>
+							</div>
+							<div class="cart__cell">
 								<div class="cart__label">Цена:</div>
 								<div class="cart__price">
 									<strong>24 000</strong>
 									<span>грн</span>
 								</div>
-							</td>
-							<td>
+							</div>
+							<div class="cart__cell">
 								<div class="cart__label">Количество:</div>
 								<div class="field">
 									<div class="field__input">
@@ -185,37 +179,37 @@
 									</div>
 									<div class="field__label">шт</div>
 								</div>
-							</td>
-							<td>
+							</div>
+							<div class="cart__cell">
 								<div class="cart__label">Всего:</div>
 								<div class="cart__price cart__price-total">
 									<strong>24 000</strong>
 									<span>грн</span>
 								</div>
-							</td>
-							<td>
+							</div>
+							<div class="cart__cell">
 								<button class="cart__btn-delete"></button>
-							</td>
-						</tr>
-						<tr>
-							<td>
+							</div>
+						</div>
+						<div class="cart__row">
+							<div class="cart__cell">
 								<div class="cart__pic">
 									<a href="#"><img src="http://placehold.it/190x190" alt=""/></a>
 								</div>
-							</td>
-							<td>
+							</div>
+							<div class="cart__cell">
 								<div class="cart__title">
 									<a href="#">Кофемашина Lavacio MN-200</a>
 								</div>
-							</td>
-							<td>
+							</div>
+							<div class="cart__cell">
 								<div class="cart__label">Цена:</div>
 								<div class="cart__price">
 									<strong>24 000</strong>
 									<span>грн</span>
 								</div>
-							</td>
-							<td>
+							</div>
+							<div class="cart__cell">
 								<div class="cart__label">Количество:</div>
 								<div class="field">
 									<div class="field__input">
@@ -223,19 +217,19 @@
 									</div>
 									<div class="field__label">шт</div>
 								</div>
-							</td>
-							<td>
+							</div>
+							<div class="cart__cell">
 								<div class="cart__label">Всего:</div>
 								<div class="cart__price cart__price-total">
 									<strong>24 000</strong>
 									<span>грн</span>
 								</div>
-							</td>
-							<td>
+							</div>
+							<div class="cart__cell">
 								<button class="cart__btn-delete"></button>
-							</td>
-						</tr>
-					</table>
+							</div>
+						</div>
+					</div>
 					<div class="cart__btns">
 						<button class="btn cart__btn-catalog"><i></i><span>Вернуться в каталог</span></button>
 						<button class="btn cart__btn-recalc"><i></i><span>ПерЕсчитать</span></button>
@@ -281,6 +275,42 @@
 				</div>
 				<!-- END .cart -->
 			</div>
+			<div class="l__col-3">
+				<!-- BEGIN .nav-inner -->
+				<nav class="nav-inner">
+					<ul>
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Производство</a></li>
+						<li><a href="#">Салоны</a></li>
+						<li class="is-active"><a href="#">Сотрудничество</a></li>
+						<li><a href="#">Социальная ответственность</a></li>
+						<li><a href="#">События</a></li>
+						<li><a href="#">Контакты</a></li>    
+					</ul>
+				</nav>
+				<!-- END .nav-inner -->
+				<!-- BEGIN .slider -->
+				<div class="slider slider_asks js-slider">
+					<button class="slider__prev"><i></i></button>
+					<button class="slider__next"><i></i></button>
+					<div class="slider__title">Частые вопросы</div>
+					<div class="slider__in">
+						<div class="slider__item">
+							<div class="slider__text">Что можно делать на столешне из кварца и чем она лучше дсп и акриловых?</div>
+							<a class="btn" href="#">Прочитать ответ</a>
+						</div>
+						<div class="slider__item">
+							<div class="slider__text">Что можно делать на столешне из кварца и чем она лучше дсп и акриловых?</div>
+							<a class="btn" href="#">Прочитать ответ</a>
+						</div>
+						<div class="slider__item">
+							<div class="slider__text">Что можно делать на столешне из кварца и чем она лучше дсп и акриловых?</div>
+							<a class="btn" href="#">Прочитать ответ</a>
+						</div>
+					</div>
+				</div>
+				<!-- END .slider -->
+			</div>
 		</div>
 	</div>
 	<!-- END .container -->
@@ -290,12 +320,13 @@
 			<div class="footer__top">
 				<div class="footer__map">
 					<div class="footer__map-title">Карта сайта</div>
+					<button class="footer__map-btn js-footer-nav">Развернуть</button>
 				</div>
 				<div class="search-form">
 					<input type="text" placeholder="Поиск по сайту">
 					<button><i></i></button>
 				</div>
-				<nav class="footer__nav" style="display: block">
+				<nav class="footer__nav">
 					<ul>
 						<li><a href="#"><strong>Главная</strong></a></li>
 						<li><a href="#"><strong>О компании</strong></a></li>

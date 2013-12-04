@@ -1,5 +1,13 @@
 @import "base"
 //styles for main page(class with prefix "m-")
+.m-container
+	width: 1188px
+	margin: 0 auto
+	+rt(1200)
+		width: 960px
+		padding: 0 20px
+	+rt(999)
+		width: auto
 .main
 	background-color: black
 	+cover
@@ -10,6 +18,8 @@
 	left: 0
 	right: 0
 	bottom: 0 
+	+rt(999)
+		display: none
 .sl-category__item
 	background-size: cover	 
 	+tr(opacity .4s linear)
@@ -20,6 +30,8 @@
 	position: relative
 	width: 1188px
 	margin: 0 auto 
+	+rt(1200)
+		width: auto 
 	.find-salon
 		&:hover
 			background: #FFF
@@ -27,6 +39,8 @@
 				color: #333 
 			i
 				+s(map-point-sm-h)
+	+rt(999)
+		display: none
 .logo
 	position: absolute
 	top: 25px
@@ -46,6 +60,8 @@
 	li
 		display: inline-block
 		margin-left: 15px
+		&:first-child
+			margin: 0
 		&.is-active
 			a
 				background: #FFF
@@ -96,15 +112,35 @@
 	position: relative
 	margin-bottom: 50px
 	bottom: auto
+	+rt(999)
+		margin: -29px 0 50px
+		border-bottom: 1px solid #e9e9e8
 	.menu__title
 		padding-top: 20px
 		span
 			color: #333
+		+rt(999)	
+			height: auto
+			padding: 10px 0
+			margin-bottom: 2px
+			border: 1px solid #e9e9e8
+			border-width: 1px 0
+			line-height: 1.2 
 	.menu__item-in
 		display: block
 		cursor: pointer
 		&:before
 			border-color: #e2e2e2
+		+rt(999)
+			height: auto
+			padding: 0
+			&:before
+				display: none
+	.menu__item
+		+rt(999)
+			display: block
+			width: auto
+			text-align: center
 .menu-sl
 	position: relative
 	height: 645px 
@@ -117,6 +153,10 @@
 		&.is-hover
 			&:before
 				opacity: 1
+	+rt(1200)
+		margin: -84px 0 25px -20px
+	+rt(999)
+		display: none
 .menu__item
 	position: relative
 	display: inline-block
@@ -176,6 +216,8 @@
 		font-size: 16px
 		font-weight: bold
 		color: #FFF
+		+rt(1200)
+			font-size: 13px
 .menu__link	
 	display: inline-block
 	height: 29px
@@ -209,5 +251,7 @@
 		background: #fff 
 		i
 			+s(arr-down-red)
+	+rt(999)
+		display: none
 
 

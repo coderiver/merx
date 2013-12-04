@@ -9,11 +9,43 @@
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.hoverIntent.js"></script>
+	<script src="js/jquery.cycle2.min.js"></script>
+	<script src="js/jquery.cycle2.carousel.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
-<body>
+<body class="blue-style">
 <!-- BEGIN .wrap -->
 <section class="wrap">
+	<!-- BEGIN .mob-header -->
+	<div class="mob-header">
+		<div class="mob-header__top">
+			<ul class="language">
+				<li class="is-active"><a href="#">РУС</a></li>
+				<li><a href="#">УКР</a></li>
+				<li><a href="#">ENG</a></li>
+			</ul>
+			<div class="mob-header__phone">+38 (044) 461 79 59</div>
+		</div>
+		<div class="mob-header__middle">
+			<a class="logo" href="#">MERX<i class="logo__pic"></i></a>
+			<button class="mob-header__btn-menu js-mob-nav"></button>
+		</div>
+		<div class="mob-header__salon">
+			<a href="#"><i><em></em></i><span>Найти Салон</span></a>
+		</div>
+	</div>
+	<!-- END .mob-header -->
+	<!-- BEGIN .mob-nav -->
+	<div class="mob-nav">
+		<ul>
+			<li><a href="#"><span>Кухни</span></a></li>
+			<li><a href="#"><span>Мебель для дома</span></a></li>
+			<li><a href="#"><span>Офисная мебель</span></a></li>			
+			<li><a href="#"><span>Мебель и оборудование для HoReCa</span></a></li>
+			<li><a href="#"><span>Итальянская и французская мебель</span></a></li>
+		</ul>
+	</div>
+	<!-- END .mob-nav -->
 	<!-- BEGIN .header -->
 	<header class="header">
 		<div class="header__in">
@@ -67,22 +99,7 @@
 	<!-- END .substrate -->
 	<!-- BEGIN .container -->
 	<div class="container">
-		<div class="l">
-			<div class="l__col-3">
-				<!-- BEGIN .nav-inner -->
-				<nav class="nav-inner">
-					<ul>
-						<li><a href="#">О компании</a></li>
-						<li><a href="#">Производство</a></li>
-						<li><a href="#">Салоны</a></li>
-						<li class="is-active"><a href="#">Сотрудничество</a></li>
-						<li><a href="#">Социальная ответственность</a></li>
-						<li><a href="#">События</a></li>
-						<li><a href="#">Контакты</a></li>    
-					</ul>
-				</nav>
-				<!-- END .nav-inner -->
-			</div>
+		<div class="l">			
 			<div class="l__col-4">
 				<!-- BEGIN .bc -->
 				<div class="bc">
@@ -168,6 +185,21 @@
 				</ul>
 				<!-- END .menu -->
 			</div>
+			<div class="l__col-3">
+				<!-- BEGIN .nav-inner -->
+				<nav class="nav-inner">
+					<ul>
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Производство</a></li>
+						<li><a href="#">Салоны</a></li>
+						<li class="is-active"><a href="#">Сотрудничество</a></li>
+						<li><a href="#">Социальная ответственность</a></li>
+						<li><a href="#">События</a></li>
+						<li><a href="#">Контакты</a></li>    
+					</ul>
+				</nav>
+				<!-- END .nav-inner -->
+			</div>
 		</div>
 	</div>
 	<!-- END .container -->
@@ -177,12 +209,13 @@
 			<div class="footer__top">
 				<div class="footer__map">
 					<div class="footer__map-title">Карта сайта</div>
+					<button class="footer__map-btn js-footer-nav">Развернуть</button>
 				</div>
 				<div class="search-form">
 					<input type="text" placeholder="Поиск по сайту">
 					<button><i></i></button>
 				</div>
-				<nav class="footer__nav" style="display: block">
+				<nav class="footer__nav">
 					<ul>
 						<li><a href="#"><strong>Главная</strong></a></li>
 						<li><a href="#"><strong>О компании</strong></a></li>

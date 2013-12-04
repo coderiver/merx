@@ -13,9 +13,39 @@
 	<script src="js/jquery.cycle2.carousel.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
-<body>
+<body class="blue-style">
 <!-- BEGIN .wrap -->
 <section class="wrap">
+	<!-- BEGIN .mob-header -->
+	<div class="mob-header">
+		<div class="mob-header__top">
+			<ul class="language">
+				<li class="is-active"><a href="#">РУС</a></li>
+				<li><a href="#">УКР</a></li>
+				<li><a href="#">ENG</a></li>
+			</ul>
+			<div class="mob-header__phone">+38 (044) 461 79 59</div>
+		</div>
+		<div class="mob-header__middle">
+			<a class="logo" href="#">MERX<i class="logo__pic"></i></a>
+			<button class="mob-header__btn-menu js-mob-nav"></button>
+		</div>
+		<div class="mob-header__salon">
+			<a href="#"><i><em></em></i><span>Найти Салон</span></a>
+		</div>
+	</div>
+	<!-- END .mob-header -->
+	<!-- BEGIN .mob-nav -->
+	<div class="mob-nav">
+		<ul>
+			<li><a href="#"><span>Кухни</span></a></li>
+			<li><a href="#"><span>Мебель для дома</span></a></li>
+			<li><a href="#"><span>Офисная мебель</span></a></li>			
+			<li><a href="#"><span>Мебель и оборудование для HoReCa</span></a></li>
+			<li><a href="#"><span>Итальянская и французская мебель</span></a></li>
+		</ul>
+	</div>
+	<!-- END .mob-nav -->
 	<!-- BEGIN .header -->
 	<header class="header">
 		<div class="header__in">
@@ -73,56 +103,7 @@
 	<!-- END .substrate -->
 	<!-- BEGIN .container -->
 	<div class="container">
-		<div class="l">
-			<div class="l__col-3">
-				<!-- BEGIN .nav-inner -->
-				<nav class="nav-inner">
-					<ul>
-						<li><a href="#">О компании</a></li>
-						<li><a href="#">Производство</a></li>
-						<li><a href="#">Салоны</a></li>
-						<li class="is-active"><a href="#">Сотрудничество</a></li>
-						<li><a href="#">Социальная ответственность</a></li>
-						<li><a href="#">События</a></li>
-						<li><a href="#">Контакты</a></li>    
-					</ul>
-				</nav>
-				<!-- END .nav-inner -->
-				<!-- BEGIN .slider -->
-				<div class="slider slider_events js-slider">
-					<button class="slider__prev"><i></i></button>
-					<button class="slider__next"><i></i></button>
-					<div class="slider__title">События</div>
-					<div class="slider__in">
-						<div class="slider__item">
-							<a href="#">
-								<div class="slider__pic"><img src="http://placehold.it/270x270" alt=""/></div>
-								<div class="slider__text">Выставка в Милане 15.07.2013</div>
-							</a>							
-						</div>
-						<div class="slider__item">
-							<a href="#">
-								<div class="slider__pic"><img src="http://placehold.it/270x270" alt=""/></div>
-								<div class="slider__text">Выставка в Милане 15.07.2013</div>
-							</a>							
-						</div>
-					</div>
-				</div>
-				<!-- END .slider -->
-				<!-- BEGIN .subscribe -->
-				<div class="subscribe">
-					<div class="subscribe__title">Поделитесь этой страницей</div>
-					<ul class="subscribe__social">
-						<li><a class="subscribe__fb" href="#"></a></li>
-						<li><a class="subscribe__tw" href="#"></a></li>
-					</ul>
-					<div class="subscribe__form">
-						<input type="text" placeholder="или введите Email">
-						<button class="btn">отправить</button>
-					</div>
-				</div>
-				<!-- END .subscribe -->
-			</div>
+		<div class="l">			
 			<div class="l__col-4">
 				<!-- BEGIN .bc -->
 				<div class="bc bc_white">
@@ -135,7 +116,7 @@
 				</div>
 				<!-- END .bc -->
 				<!-- BEGIN .slider -->
-				<div class="slider slider_section">
+				<div class="slider slider_section js-slider">
 					<div class="slider__in">
 						<div class="slider__item">
 							<div class="slider__section">
@@ -143,15 +124,14 @@
 								<div class="slider__section-sub">Чудесное сочетвание класических линий с раскошным минимализмом</div>
 							</div>
 						</div>
+						<div class="slider__item">
+							<div class="slider__section">
+								<div class="slider__section-el">123</div>
+								<div class="slider__section-sub">Чудесное сочетвание класических линий с раскошным минимализмом</div>
+							</div>
+						</div>
 					</div>
-					<div class="slider__pager">
-						<span class="is-active"></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
+					<div class="slider__pager"></div>
 					<div class="slider__show-all"><a href="#">Смотреть весь каталог</a></div>
 				</div>
 				<!-- END .slider -->
@@ -217,6 +197,55 @@
 				</ul>
 				<!-- END .btn-list -->
 			</div>
+			<div class="l__col-3">
+				<!-- BEGIN .nav-inner -->
+				<nav class="nav-inner">
+					<ul>
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Производство</a></li>
+						<li><a href="#">Салоны</a></li>
+						<li class="is-active"><a href="#">Сотрудничество</a></li>
+						<li><a href="#">Социальная ответственность</a></li>
+						<li><a href="#">События</a></li>
+						<li><a href="#">Контакты</a></li>    
+					</ul>
+				</nav>
+				<!-- END .nav-inner -->
+				<!-- BEGIN .slider -->
+				<div class="slider slider_events js-slider">
+					<button class="slider__prev"><i></i></button>
+					<button class="slider__next"><i></i></button>
+					<div class="slider__title">События</div>
+					<div class="slider__in">
+						<div class="slider__item">
+							<a href="#">
+								<div class="slider__pic"><img src="http://placehold.it/270x270" alt=""/></div>
+								<div class="slider__text">Выставка в Милане 15.07.2013</div>
+							</a>							
+						</div>
+						<div class="slider__item">
+							<a href="#">
+								<div class="slider__pic"><img src="http://placehold.it/270x270" alt=""/></div>
+								<div class="slider__text">Выставка в Милане 15.07.2013</div>
+							</a>							
+						</div>
+					</div>
+				</div>
+				<!-- END .slider -->
+				<!-- BEGIN .subscribe -->
+				<div class="subscribe">
+					<div class="subscribe__title">Поделитесь этой страницей</div>
+					<ul class="subscribe__social">
+						<li><a class="subscribe__fb" href="#"></a></li>
+						<li><a class="subscribe__tw" href="#"></a></li>
+					</ul>
+					<div class="subscribe__form">
+						<input type="text" placeholder="или введите Email">
+						<button class="btn">отправить</button>
+					</div>
+				</div>
+				<!-- END .subscribe -->
+			</div>
 		</div>
 	</div>
 	<!-- END .container -->
@@ -226,12 +255,13 @@
 			<div class="footer__top">
 				<div class="footer__map">
 					<div class="footer__map-title">Карта сайта</div>
+					<button class="footer__map-btn js-footer-nav">Развернуть</button>
 				</div>
 				<div class="search-form">
 					<input type="text" placeholder="Поиск по сайту">
 					<button><i></i></button>
 				</div>
-				<nav class="footer__nav" style="display: block">
+				<nav class="footer__nav">
 					<ul>
 						<li><a href="#"><strong>Главная</strong></a></li>
 						<li><a href="#"><strong>О компании</strong></a></li>

@@ -9,6 +9,8 @@
 	background: #e9f0f4
 	+cover
 	z-index: 5 
+	+rt(999)
+		display: none
 .substrate__top
 	position: relative
 	height: 64px
@@ -37,6 +39,8 @@
 		text-transform: uppercase
 		color: #333
 		+fl
+	+rt(999)
+		display: none
 .nav-inner_drop
 	position: relative
 	margin: 0
@@ -99,6 +103,8 @@
 		margin: 0 10px 5px
 		+arr(4,6,#607782,r)
 		vertical-align: bottom
+	+rt(999)
+		display: none
 .bc_white
 	a, span
 		color: #FFF 
@@ -108,6 +114,8 @@
 .btn-list
 	margin-bottom: 30px
 	+clr
+	+rt(999)
+		margin-bottom: 10px
 	li
 		float: left
 		width: 49%
@@ -117,13 +125,25 @@
 		&.is-active
 			background: #607782
 			span
-				color: #fff  
+				color: #fff 
+		+rt(999)
+			width: 100%
+			margin: 0 0 10px
+			&:first-child
+				margin: 0 0 10px 
 	a
 		display: block
 		height: 74px
+		padding: 0 10px
 		font-size: 0		 
 		line-height: 74px
 		text-align: center
+		background: $red
+		+tr(background .2s linear)
+		span
+			color: #FFF 
+		&:hover
+			background: $redh
 	.ico
 		margin-right: 12px 
 	span
@@ -133,29 +153,36 @@
 		font-size: 20px
 		color: #363432
 		text-transform: uppercase
+		line-height: 1.2
 .btn-list_down
 	margin: 30px 0 0 0
 		
 
 .designer
 	min-height: 560px
-	margin-bottom: 30px 		
+	margin-bottom: 30px 	
+	+rt(999)
+		min-height: 0	
 .design
 	margin-bottom: 60px
 	overflow: hidden
 .design__people
 	margin: 0 -30px 45px 0
+	+rt(999)
+		margin: 0
 	li
 		position: relative
 		float: left
-		width: 276px
-		margin: 0 26px 26px 0
+		width: 280px
+		margin: 0 20px 20px 0
+		overflow: hidden
 		&:hover
 			span
-				height: 276px
-				line-height: 276px 
+				height: 280px
+				line-height: 280px 
 	img, a
 		display: block
+		width: 100%
 	span
 		position: absolute
 		bottom: 0
@@ -168,6 +195,20 @@
 		line-height: 60px
 		color: #FFF 
 		+tr(all .2s linear)
+	+rt(1200)
+		li
+			width: 235px
+			&:hover
+				span
+					height: 235px
+					line-height: 235px
+	+rt(999)
+		li
+			width: 300px
+			&:hover
+				span
+					height: 300px
+					line-height: 300px
 		
 //article
 .article
@@ -175,19 +216,33 @@
 .article__wrap
 	margin: 0 -30px 0 0
 	font-size: 0
+	+rt(999)
+		margin: 0
+		text-align: center
 .article__box
 	position: relative
 	display: inline-block
 	width: 300px
 	margin: 0 20px 30px 0
 	vertical-align: top
+	overflow: hidden
 	&:hover
 		.article__pic
 			opacity: .7 
+	+rt(1200)
+		width: 250px
+	+rt(999)
+		width: 300px
+		margin: 0 0 20px
+		text-align: left
 .article__box_width_2
 	width: 560px
 	.article__category
 		max-width: 540px
+	+rt(1200)
+		width: 480px
+	+rt(999)
+		width: 300px
 .article__pic
 	height: 240px 
 	+tr(opacity .2s linear)
@@ -222,11 +277,32 @@
 .cart__table
 	margin-bottom: 40px
 	width: 100%
-	td
+	.cart__row
+		position: relative
+		display: table-row
+		+rt(999)
+			display: block
+			margin-bottom: 10px
+			padding: 0 10px
+			background: #dbe5ea 
+	.cart__cell
+		display: table-cell
 		padding: 0 0 15px 20px
 		vertical-align: top
+		+rt(999)
+			display: block
+			padding: 10px 10px 10px 0
+			border-bottom: 1px solid #c1ced5 
 		&:first-child
 			padding: 0 0 15px 
+			+rt(999)
+				display: none
+		&:nth-child(2),
+		&:nth-child(5),
+		&:nth-child(6)			
+			border: none
+		&:nth-child(6)
+			padding: 0 
 	.field__input, .field__label
 		display: inline-block
 		vertical-align: middle
@@ -237,9 +313,16 @@
 			height: 24px
 			padding: 0 5px
 			background: #DBE5EA
+			+rt(999)
+				background: #E9F0F4 
 	.field__label
 		font-size: 10px
 		text-transform: uppercase
+	.cart__label, .cart__price, .field
+		+rt(999)
+			display: inline-block
+			margin: 0 10px 0 0
+			vertical-align: middle
 .cart__pic
 	width: 190px
 	border: 1px solid #dce0e3
@@ -255,8 +338,13 @@
 	margin-bottom: 10px
 	text-transform: uppercase
 	font-size: 12px 
+	+rt(999)
+		display: inline-block
+		margin: 0 10px 0 0
+		vertical-align: middle
 .cart__price 
 	font-size: 0
+	white-space: nowrap
 	strong, span
 		display: inline-block
 		vertical-align: middle
@@ -274,6 +362,10 @@
 		color: $red 
 .cart__btn-delete
 	+s(cart-delete)
+	+rt(999)
+		position: absolute
+		top: 10px
+		right: 10px
 .cart__btns
 	margin-bottom: 60px
 	+clr
@@ -289,18 +381,32 @@
 		top: 15px
 		left: 45px 
 		+s(cart-back) 
+	+rt(999)
+		display: none
 .cart__btn-recalc
 	float: right
 	i
 		+s(cart-recalc) 
+	+rt(999)
+		float: none
+		width: 100%
 .cart__order
 	margin-bottom: 40px
 	+clr
+	+rt(999)
+		margin: 0
 .cart__order-column
-	float: left
-	width: 425px
+	overflow: hidden
+	+rt(999)
+		display: none
 	&:first-child
+		float: left
+		width: 425px
 		margin-right: 30px
+		+rt(999)
+			float: none
+			display: block
+			width: 100%
 	.field
 		margin-bottom: 15px
 	.btn
@@ -420,14 +526,16 @@
 		color: $red
 		text-transform: uppercase
 		font-size: 10px 
+	.pagination__prev, .pagination__next
+		+tr(color .2s linear)
+		i
+			float: left
+		&:hover
+			color: #333 
+		+rt(999)
+			+ht
 .pagination + .title-border
 	margin-top: 50px
-.pagination__prev, .pagination__next
-	+tr(color .2s linear)
-	i
-		float: left
-	&:hover
-		color: #333 
 .pagination__prev
 	float: left
 	i
@@ -451,8 +559,14 @@
 	
 .about
 	height: 560px - 175px
-	padding-top: 175px 
 	margin-bottom: 30px 
+	padding-top: 175px
+	+rt(999)
+		height: auto
+		padding: 0
+		background: url(../img/main-pic-1.jpg)
+		+cover	 
+		margin: -10px -10px 20px
 .about__title
 	position: relative
 	padding: 0 0 5px 25px 
@@ -469,36 +583,74 @@
 		left: 2px
 		bottom: 0
 		border-left: 1px solid rgb(255,255,255) 
-		border-left: 1px solid rgba(255,255,255,.55) 
+		border-left: 1px solid rgba(255,255,255,.55)
+	+rt(999)
+		padding: 20px 10px
+		&:before
+			display: none 
 .about__title-name
 	font-size: 90px
+	+rt(999)
+		font-size: 60px
 .about__title-desc
 	font-size: 24px 
+	+rt(999)
+		font-size: 15px
 	
 .box-wrap
 	overflow: hidden
 .box-wrap__in
 	margin: 0 -40px 10px 0
 	overflow: hidden
+	+rt(999)
+		text-align: center
+		margin: 0
 .box
 	position: relative
 	float: left
 	margin: 0 20px 20px 0
+	overflow: hidden
 	img
 		display: block
+		+rt(999)
+			width: 100%
+	+rt(999)
+		float: none
+		margin: 0 0 20px
+		display: inline-block
+		vertical-align: top
+		text-align: left
 .box_width_1
-	width: 280
+	width: 280px
+	+rt(1200)
+		width: 235px
+	+rt(999)
+		width: 300px
 .box_width_2
-	width: 580
+	width: 580px
+	+rt(1200)
+		width: 490px 
+	+rt(999)
+		width: 300px
 .box_height_1
-	width: 240
+	height: 240px
+	+rt(999)
+		height: auto
 .box_height_2
-	width: 500
+	height: 500px
+	+rt(999)
+		height: auto
 .box__content
-	width: 220px
 	height: 180px
 	padding: 30px
 	background: #e9f0f4 
+	+rt(1200)
+		height: 220px 
+		padding: 10px
+	+rt(999)
+		height: auto
+		padding: 0
+		margin-bottom: 20px
 .box__content_less
 	width: 210px
 .box__title
@@ -506,6 +658,8 @@
 	line-height: 1
 	font-size: 25px
 	color: $red
+	+rt(999)
+		margin-bottom: 10px
 .box__text
 	color: #333 
 .box__in
@@ -516,12 +670,28 @@
 	padding: 20px
 	background: #FFF  
 	text-align: center
+	+rt(1200)
+		right: 0
+		left: 0
+	+rt(999)
+		position: relative
+		left: auto
+		right: auto
+		bottom: auto
+		padding: 10px 0 
+		background: none 
+		text-align: left
 .box__in-title
 	margin-bottom: 20px
 	+fl
 	font-size: 60px 
 	color: $red 
 	line-height: 1
+	+rt(999)
+		margin-bottom: 10px
+		padding-bottom: 10px
+		font-size: 30px
+		border-bottom: 1px solid #c1ced5 
 .box__category, .box__place
 	font-size: 10px
 	text-transform: uppercase
@@ -540,9 +710,16 @@
 		left: 0
 	&:before
 		right: 0
+	+rt(999)
+		padding: 0
+		&:after, &:before
+			display: none
 .box__place
 	margin-bottom: 10px
 	padding: 0 7px
+	+rt(999)
+		padding: 0
+		margin-bottom: 5px
 .box__price
 	font-size: 17px
 	color: $red 
@@ -554,29 +731,53 @@
 .sorting
 	margin-bottom: 30px
 	+clr
+	+rt(999)
+		margin-bottom: 20px
 .sorting_salons
 	.sorting__item
 		width: auto
+		+rt(999)
+			float: none
+			+clr
 	.sorting__label	
 		float: left
 		margin: 0 20px 0 0
 		height: 36px
 		line-height: 36px
+		+rt(999)
+			width: 100px
+			min-height: 2px
+			margin: 0 10px 0 0
 	.select
 		float: left
 		width: 270px
+		+rt(1200)
+			width: 210px
+		+rt(999)
+			width: 190px
+
 .sorting__item
 	float: left
 	width: 280px
 	margin-left: 20px
 	&:first-child
 		margin: 0
+	+rt(1200)
+		width: 235px
+	+rt(999)
+		float: none
+		width: auto
+		margin: 0 0 10px 
+		&:first-child
+			margin: 0 0 10px
 .sorting__item_link
 	float: right
 	a
 		color: #233C48 
 		line-height: 1
 		border-bottom: 2px solid 
+	.sorting__label
+		margin: 0
 .sorting__label
 	margin-bottom: 10px
 	font-size: 11px
@@ -587,9 +788,56 @@
 .catalog
 	margin-bottom: 10px
 	overflow: hidden
+.catalog_adv 
+	.catalog__item	
+		width: 235px
+		height: 235px
+		.catalog__product
+			display: none
+	+rt(999)
+		text-align: center
+		.catalog__item
+			width: 300px
+			height: 300px			
+			margin: 0 0 20px
+.catalog_products
+	+rt(1200) 
+		.catalog__item
+			height: auto
+			box-shadow: none
+			img
+				box-shadow: 0 0 0 1px #dce0e3
+		.catalog__product
+			width: 100%
+		.catalog__product-in
+			width: 100%
+			height: auto
+			padding: 10px 0
+			background: none
+			text-align: left 
+		.catalog__product-title, .catalog__product-price
+			position: relative
+			top: auto
+			left: auto
+			bottom: auto
+			right: auto
+			text-align: left
+		.catalog__product-title
+			color: #333 
+		.catalog__product-price
+			span
+				width: 115px
+				height: 33px
+				line-height: 33px
+				text-align: center
+				background: #333
+				
 .catalog__in
 	margin: 0 -25px 20px 0
 	font-size: 0
+	+rt(999)
+		margin: 0
+		text-align: center
 .catalog__item
 	position: relative
 	display: inline-block
@@ -619,6 +867,33 @@
 			width: 300px
 		.catalog__product
 			width: 280px
+	+rt(1200)
+		width: 365px
+		height: 365px
+		img
+			width: 100%
+		& > a
+			width: 365px
+		.catalog__list
+			display: none
+		&:hover
+			.catalog__title
+				span
+					height: 335px
+			.catalog__product
+				width: 365px
+	+rt(999)
+		width: 300px
+		height: 300px
+		background: none 
+		& > a
+			width: 300px
+		&:hover
+			.catalog__title
+				span
+					height: 300px
+			.catalog__product
+				width: 300px
 .catalog__list
 	position: absolute
 	top: 0
@@ -640,6 +915,9 @@
 	a
 		color: #FFF
 		text-decoration: underline	
+	+rt(1200)
+		left: 365px
+		min-height: 365px
 .catalog__title
 	position: absolute
 	bottom: 0
@@ -658,6 +936,14 @@
 		vertical-align: middle
 		line-height: 1.2
 		+tr(all .2s linear)
+	+rt(1200)
+		width: 365px
+		span
+			width: 335px
+	+rt(999)
+		width: 300px
+		span
+			width: 300px
 .catalog__product
 	position: absolute
 	top: 0
@@ -667,6 +953,10 @@
 	width: 0
 	overflow: hidden
 	+tr(width .2s linear)
+	+rt(1200)	
+		position: relative
+		width: auto
+		background: none 
 .catalog__product-in
 	position: relative
 	width: 280px
@@ -704,12 +994,15 @@
 			font-size: 10px
 			text-transform: uppercase
 			color: #333 
+		+rt(999)
+			padding: 0
+			background: none
 	span
 		margin-left: 20px
 		font-size: 10px
 		text-transform: uppercase
 		color: #FFF 
-.catalog__product__title
+.catalog__product-title
 	position: absolute
 	bottom: 70px
 	left: 35px
@@ -728,6 +1021,12 @@
 	.btn
 		float: right
 		margin-left: 10px
+		+rt(999)
+			float: none
+			margin: 0
+			width: 100%
+	+rt(999)	
+		padding: 0
 .cart-stats__title
 	position: relative
 	float: left
@@ -738,9 +1037,17 @@
 	line-height: 64px 
 	i
 		position: absolute
-		top: 21px
+		top: 50%
 		left: 30px
+		margin-top: -10px
 		+s(cart-stats-ico) 
+	+rt(999)
+		margin: 0
+		float: none
+		height: 30px
+		line-height: 30px 
+		padding: 0
+		text-align: center
 .cart-stats__value	
 	height: 36px
 	line-height: 36px
@@ -772,6 +1079,8 @@
 .search-prod__row
 	padding-bottom: 20px
 	+clr
+	+rt(999)
+		padding: 0
 .search-prod__in 
 	display: none
 .search-prod__item
@@ -783,12 +1092,20 @@
 	.btn
 		width: 100%
 		margin-top: 22px
+	+rt(1200)
+		width: 225px 
+	+rt(999)
+		float: none
+		width: 100%
+		margin: 0
+		padding-bottom: 20px
 .search-prod__label
 	margin-bottom: 7px
 	font-size: 11px
 	text-transform: uppercase
 	color: #617883 
-.search-prod__head
+.search-prod__head	
+	position: relative
 	padding-bottom: 20px
 	font-size: 11px
 	text-transform: uppercase
@@ -812,9 +1129,14 @@
 			cursor: default
 	span
 		margin: 0 10px
+	+rt(999)
+		float: none
+		padding-top: 20px
+		clear: both
 .search-prod__slide	
-	position: relative
-	float: right
+	position: absolute
+	top: 0
+	right: 0
 	padding-right: 40px
 	cursor: pointer
 	i
@@ -836,9 +1158,19 @@
 		padding: 0 35px
 		+ph(#8ca4b0)
 		font-size: 13px
+		+rt(1200)
+			width: 440px
+		+rt(999)
+			width: 70%
+			padding: 0 10px
+			+box
 	button
 		float: left
-		width: 270px
+		width: 310px
+		+rt(1200)
+			width: 200px
+		+rt(999)
+			width: 30%
 		
 .subscribe
 	width: 245px
@@ -879,8 +1211,13 @@
 .product__slider
 	float: left
 	margin-right: 30px
+	+rt(999)
+		float: none
+		margin-bottom: 20px
 .product__info
 	overflow: hidden
+	+rt(999)
+		margin-bottom: 20px
 .product__price
 	margin-bottom: 30px
 	padding-left: 30px
@@ -916,14 +1253,20 @@
 		margin-left: 50px
 		font-size: 16px
 		text-transform: uppercase
-		color: #302e8a 
+		color: #302e8a
+	+rt(999)
+		margin-bottom: 20px
 .product__buy
 	margin-bottom: 35px
 	.btn
-		width: 100%
+		width: 100% 
+	+rt(999)
+		margin-bottom: 20px
 .product__parameters
 	padding: 15px 30px 
 	background: #FFF 
+	+rt(999)
+		padding: 10px
 .product__table
 	width: 100%
 	margin-bottom: 30px
@@ -939,7 +1282,10 @@
 		
 .video
 	margin-bottom: 30px
-	
+	overflow: hidden
+	img
+		width: 100%
+
 .back-link
 	height: 12px
 	margin-bottom: 50px
@@ -960,17 +1306,22 @@
 		top: 0
 		left: 0
 		+s(arr-slider-prev-red)
+	+rt(999)
+		background: #e9f0f4 
 
 
 .brands
-	margin-bottom: 60px
+	margin-bottom: 30px
 	overflow: hidden
 .brands__in
 	margin: 0 -30px 20px 0
-	overflow: hidden
+	font-size: 0
+	+rt(999)
+		margin: 0 0 20px
+		text-align: center
 	li
 		position: relative
-		float: left
+		display: inline-block
 		width: 276px
 		height: 276px
 		margin: 0 26px 26px 0
@@ -978,6 +1329,7 @@
 		box-shadow: 0 0 0 1px #dce0e3 inset
 		text-align: center
 		line-height: 276px - 58px 
+		vertical-align: top
 		+gpu
 		a
 			display: block
@@ -1005,10 +1357,22 @@
 			span
 				background: $red 
 				color: #FFF 
+		+rt(1200)
+			width: 235px
+			height: 235px
+			margin: 0 20px 20px 0
+			line-height: 235px - 58px
+		+rt(999)
+			width: 300px
+			height: 300px
+			margin: 0 0 20px
+			line-height: 300px - 58px 
 
 .partnership
-	width: 420px
+	max-width: 420px
 	margin-bottom: 30px
+	+rt(999)
+		margin-bottom: 20px
 .partnership__title
 	margin-bottom: 15px
 	font-size: 16px
@@ -1063,6 +1427,11 @@
 	position: relative
 	margin-bottom: 20px
 	z-index: 8
+#map-canvas
+	width: 100%
+	height: 670px
+	+rt(999)
+		height: 480px 
 .map__el
 	position: absolute
 	min-width: 32px
@@ -1133,11 +1502,22 @@
 		margin-bottom: 10px
 	.title-border__in
 		padding-bottom: 10px
+	+rt(999)
+		display: block
+		width: 100%
+		margin: 0
+		&:first-child
+			margin: 0 
 .contacts__item-bg
 	padding: 15px 20px
 	background: #dbe5ea 
+	+rt(999)
+		padding: 10px
+		margin: 0 -10px
 .contacts__item
 	padding: 15px 20px 15px 0
+	+rt(999)
+		padding: 10px 0
 .contacts__mail
 	a
 		color: #617883
@@ -1159,9 +1539,19 @@
 	display: inline-block
 	width: 580px
 	vertical-align: top
+	+rt(1200)
+		width: 470px
+	+rt(999)
+		display: block
+		width: auto
 	&:first-child
 		width: 270px
 		margin-right: 30px  
+		+rt(1200)
+			width: 250px
+		+rt(999)
+			width: auto
+			margin: 0
 	.field
 		margin-bottom: 30px
 .callback__footer
@@ -1187,16 +1577,32 @@
 		padding-top: 15px
 	.l
 		margin: 0
+	+rt(1200)
+		padding: 0 10px
+	+rt(999)
+		padding: 0
 .diller__discount
 	margin-bottom: 35px
 	+clr
+	+rt(999)
+		margin-bottom: 15px
 	li
 		float: left
 		width: 280px
 		padding: 15px 45px 
 		background: #dae5ec 
 		&:first-child
-			margin-right: 40px 
+			margin-right: 40px
+		+rt(1200)
+			width: 200px
+			min-height: 80px 
+		+rt(999)	
+			float: none 
+			width: auto
+			min-height: 0
+			margin: 0 0 10px
+			&:first-child
+				margin: 0 0 10px
 	strong
 		display: block
 		margin-bottom: 5px
@@ -1210,10 +1616,14 @@
 .diller__content
 	padding: 30px 50px
 	background: #fff 
+	+rt(1200)
+		padding: 20px
 .diller__block
 	padding: 25px 40px 
 	margin-bottom: 35px
 	background: #FFF 
+	+rt(1200)
+		padding: 20px
 .diller__reminder
 	p
 		font-size: 13px
@@ -1261,15 +1671,20 @@
 		text-align: center
 		vertical-align: middle
 		line-height: 1.1  
+	+rt(1200)
+		display: none
 .diller__tabs-nav
 	display: table
 	width: 100%
 	margin-bottom: 10px
+	+rt(999)
+		display: none
 	ul
 		display: table-row
 	li
 		display: table-cell
 		border-left: 1px solid #c2cfd5
+		vertical-align: top
 		&:first-child
 			border: none
 	a
@@ -1281,10 +1696,15 @@
 		color: #233C48
 		text-transform: uppercase 
 		text-align: center
+		vertical-align: middle
 		&.is-active
 			background: #E9F0F4 
 			color: #607782
 			cursor: default
+	span
+		display: inline-block
+		vertical-align: middle
+		line-height: 1.2
 .diller__tabs-date
 	margin-bottom: 30px
 	span
@@ -1346,14 +1766,7 @@
 			width: 100%
 			margin: 0
 			&:first-child
-				margin: 0
-		a
-			background: $red
-			+tr(background .2s linear)
-			span
-				color: #FFF 
-			&:hover
-				background: $redh 
+				margin: 0		 
 .info-salons__in
 	padding: 20px
 	background: #dbe5ea  
@@ -1443,6 +1856,10 @@
 	img
 		float: left
 		margin: 0 30px 0 0
+		+rt(999)
+			float: none
+			display: block
+			margin: 0 0 15px
 		
 
 //portfolio
@@ -1451,17 +1868,27 @@
 .portfolio__item
 	margin-bottom: 50px
 	+clr
+	+rt(999)
+		margin-bottom: 15px
 .portfolio__slider
 	float: left
 	width: 420px 
 	margin-right: 40px
 	.slider
 		margin: 0
+	+rt(1200)
+		width: 340px
+	+rt(999)
+		float: none
+		width: 300px
+		margin: 0 0 20px
 .portfolio__details
 	float: left
 	width: 420px
 	.content
 		margin: 0
+	+rt(1200)
+		width: 340px	
 .portfolio__title
 	padding: 10px 0
 	+fl

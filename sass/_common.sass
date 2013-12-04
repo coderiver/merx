@@ -6,6 +6,7 @@
 html, body 
 	height: 100%
 body
+	overflow-x: hidden 
 	+f
 	font-weight: normal
 	font-size: 14px
@@ -18,6 +19,17 @@ body
 		background: white
 	//blue
 	&.blue-style
+		.mob-header__middle
+			background: $blue 
+		.mob-header__salon
+			em
+				+s(mob-header-map-point-blue)
+		.mob-header__btn-menu
+			+s(mob-menu-ico-blue)
+		.mob-header__top
+			.language
+				a
+					color: $blue 	
 		.header
 			background: $blue
 		&::-webkit-scrollbar-thumb
@@ -102,7 +114,7 @@ body
 					background: $blue 
 			a
 				border-top-color: $blue 
-		.slider_category
+		.slider_category, .slider_big
 			.slider__prev, .slider__next
 				background: $blue
 				i
@@ -184,22 +196,8 @@ body
 			background: $blue 
 		.map__point
 			+s(map-point-blue)
-		.slider__section .slider__section-el
+		.slider_section .slider__section-el
 			color: $blue 
-		.slider__prev, .slider__next
-			background: $blue
-			i
-				+s(arr-slider-prev-white)
-			&:hover
-				background: white
-				i
-					+s(arr-slider-prev-gray)
-		.slider__next
-			i
-				+s(arr-slider-next-white)
-			&:hover
-				i
-					+s(arr-slider-next-gray)
 		.info-salons
 			.btn-list
 				a
@@ -208,14 +206,222 @@ body
 						background: $blueh 
 		.info-example__price
 			color: $blue 
+		.back-link
+			i
+				+s(arr-slider-prev-blue)
+		.title-border__link
+			color: $blue 
+		.btn-list 
+			a
+				background: $blue
+				&:hover
+					background: $blueh
 
+
+
+
+
+	//green
+	&.green-style
+		.mob-header__middle
+			background: $green
+		.mob-header__salon
+			em
+				+s(mob-header-map-point-green)
+		.mob-header__btn-menu
+			+s(mob-menu-ico-green)
+		.mob-header__top
+			.language
+				a
+					color: $blue 
+		.header
+			background: $green
+		&::-webkit-scrollbar-thumb
+			background: $green
+		.header__category-current
+			background: $greenh
+		.header__category-list
+			a
+				border-top-color: $green
+				background: $greenh
+				&:hover
+					background: $green 
+		.find-salon
+			&:hover
+				background: $greenh 
+		.header__phone
+			&:hover
+				background: $greenh
+		.header__phone-form-in
+			background: $greenh
+		.header__phone-form-in .btn
+			background: $green 
+		.language
+			li
+				&.is-active, &:hover
+					a
+						color: $green
+		.slider_asks, .slider_events, .slider_product, .slider__big, .slider_events-main
+			background: $green
+			&:hover
+				background: $greenh 	
+			.slider__prev, .slider__next
+				&:hover
+					background: $green 
+		.slider__prev
+			i
+				+s(arr-slider-prev-green)
+		.slider__next
+			i
+				+s(arr-slider-next-green)	
+		.slider_many
+			.slider__next, .slider__prev
+				background: $green 
+				i
+					+s(arr-slider-next-white)
+				&:hover
+					background: $greenh 
+					i
+						+s(arr-slider-next-white)
+			.slider__prev
+				i		
+					+s(arr-slider-prev-white)	
+				&:hover
+					i
+						+s(arr-slider-prev-white)
+		.more
+			button
+				background: $green 
+				&:hover
+					background: $greenh
+		.cart__title
+			a
+				color: $green
+		.cart__price-total
+			strong
+				color: $green 
+		.box__title, .box__in-title, .box__price
+			color: $green
+		.product__price, .catalog__product-price
+			strong
+				color: $green 
+		.menu__link
+			background: $green
+			&:hover
+				background: $greenh
+		.partnership__select-head
+			background: $green
+		.partnership__list
+			a
+				background: $greenh
+				&:hover
+					background: $green 
+			a
+				border-top-color: $green 
+		.slider_category, .slider_big
+			.slider__prev, .slider__next
+				background: $green
+				i
+					display: inline-block
+					+s(arr-slider-prev-white)
+				&:hover
+					background: white
+					i
+						+s(arr-slider-prev-gray) 
+			.slider__next
+				i
+					+s(arr-slider-next-white)
+				&:hover
+					background: white
+					i
+						+s(arr-slider-next-gray)
+		.slider_category
+			.slider__link
+				a
+					color: $green 
+		.share__fb
+			+s(share-fb-green)
+		.share__tw
+			+s(share-tw-green)
+		.share__gp
+			+s(share-gp-green)
+		.share__list
+			a
+				&:hover
+					background: $green
+		.pagination 
+			a
+				color: $green
+		.pagination__link	
+			&:hover
+				background: $green
+				color: white
+		.pagination__prev
+			i
+				+s(pagination-prev-green)
+		.pagination__next
+			i
+				+s(pagination-next-green)
+		.content
+			table
+				th
+					background: $green 
+		.pager
+			a
+				color: $green
+				&.is-active, &:hover
+					background: $green
+					color: white 
+			.pager__prev, .pager__next
+				+tr(all 0 linear)
+			.pager__prev
+				+s(arr-slider-prev-green)
+				&:hover
+					+s(arr-slider-prev-green)
+			.pager__next
+				+s(arr-slider-next-green)
+				&:hover
+					+s(arr-slider-next-green)
+		.faq__head 
+			color: $green
+			&:before
+				background: $green
+		.faq__item
+			&.is-active
+				.faq__head
+					&:before
+						background: $greenh 
+		.brands__in
+			li
+				&:hover
+					span
+						background: $green 
+		.map__el-in
+			background: $green 
+		.map__point
+			+s(map-point-blue)
+		.slider_section .slider__section-el
+			color: $green 
+		.info-salons
+			.btn-list
+				a
+					background: $green
+					&:hover
+						background: $greenh 
+		.info-example__price
+			color: $green 
+		.back-link
+			i
+				+s(arr-slider-prev-green)
+		.title-border__link
+			color: $green
+		.btn-list 
+			a
+				background: $green
+				&:hover
+					background: $greenh
 		
 
-	//red
-	&.red-style
-		$color: $red
-	&.green-style
-		$color: $red
 // resets
 a img, fieldset 
 	border: none
@@ -243,6 +449,11 @@ table
 .container, .footer__in, .header__in
 	width: 1188px
 	margin: 0 auto
+	+rt(1200)
+		width: 1000px
+	+rt(999)
+		width: auto
+		padding: 0 10px
 .container
 	position: relative
 	z-index: 10 
@@ -251,6 +462,11 @@ table
 		margin-bottom: 15px
 	.bc
 		margin: 0
+	+rt(999)
+		background: #e9f0f4
+.container_map
+	+rt(999)
+		margin-top: -50px
 .title
 	margin-bottom: 28px
 	padding-bottom: 15px
@@ -285,9 +501,14 @@ table
 .title__in
 	display: table
 .title-border
+	position: relative
 	margin-bottom: 30px
 	border-bottom: 1px solid #e9e9e8
 	font-size: 0 
+.title-border_mob
+	display: none
+	+rt(999)
+		display: block
 .title-border__in
 	display: inline-block
 	padding-bottom: 20px 
@@ -295,6 +516,12 @@ table
 	border-bottom: 1px solid #707070 
 	font-size: 16px
 	text-transform: uppercase 
+.title-border__link
+	position: absolute
+	top: 3px
+	right: 0
+	font-size: 14px
+	color: $red 
 //ico
 .ico
 	display: inline-block
@@ -311,6 +538,8 @@ table
 		left: 27px
 		padding: 0
 		border: none
+		+rt(1200)
+			left: 17px
 	.language
 		top: 45px
 	.find-salon
@@ -322,6 +551,11 @@ table
 		text-align: center 
 		&:hover
 			background: $redh 
+		+rt(1200)
+			left: 480px
+			width: 150px 
+	+rt(999)
+		display: none
 .header__in
 	position: relative
 	height: 110px 
@@ -373,8 +607,10 @@ table
 		.header__category-current
 			i
 				+rotate(-180deg)
+	+rt(1200)
+		left: 230px
+		width: 250px
 .header__category-current
-	width: 320px
 	height: 110px
 	background: #9a1a0b
 	span
@@ -427,6 +663,8 @@ table
 			height: 198px 
 		.header__phone-in
 			border-color: transparent
+	+rt(1200)
+		left: 630px
 .header__phone-in
 	display: inline-block
 	padding: 5px 30px 10px
@@ -445,6 +683,8 @@ table
 		font-size: 9px		
 		text-transform: uppercase
 		color: #FFF  
+	+rt(1200)
+		padding: 5px 15px 10px
 .header__phone-form
 	position: absolute
 	top: 100%
@@ -472,11 +712,17 @@ table
 .nav
 	margin-bottom: 40px	 
 	background: $color
+	+rt(1200)
+		margin-bottom: 20px
+	+rt(999)
+		display: none
 .nav__list
 	width: 1188px
 	margin: 0 auto 
 	white-space: nowrap
 	font-size: 0
+	+rt(1200)
+		width: 960px 
 	li
 		position: relative
 		display: inline-block
@@ -499,6 +745,8 @@ table
 		line-height: 80px
 		text-transform: uppercase
 		+tr(background .2s linear)
+		+rt(1200)
+			padding: 0 20px 
 		&:before
 			content: ""
 			position: absolute
@@ -510,6 +758,8 @@ table
 		&:hover
 			background: $colorh 
 			padding: 0 36px 0 35px
+			+rt(1200)
+				padding: 0 21px 0 20px
 			&:before
 				opacity: 0 
 .nav__list-last
@@ -522,6 +772,10 @@ table
 .footer__row
 	padding: 35px 0 74px
 	+clr
+	+rt(999)
+		padding: 20px 10px 0
+		margin: 0 -10px
+		background: #2A2826 
 .footer__cell
 	float: left
 	min-height: 50px
@@ -541,13 +795,31 @@ table
 	&:first-child
 		border: none
 		padding: 10px 20px 0 0 
+	+rt(1200)
+		padding: 10px 50px 0 20px
+	+rt(999)
+		padding: 0
+		margin-bottom: 20px
+		border: none
+		&:first-child
+			padding: 0
+			border: none
 .footer__cell_right
 	float: right
 	padding: 5px 0 0 0
 	border: none
+	+rt(999)
+		float: none
+		padding: 20px 0
+		margin: 0
+		border-top: 1px solid #403e3c  
+		text-align: center
+		clear: both
 .footer__logo
 	float: left	
 	+s(logo-small)
+	+rt(999)
+		display: none
 .footer__social
 	padding: 5px 0 0 15px
 	font-size: 0
@@ -558,6 +830,8 @@ table
 			margin: 0
 		&:hover
 			opacity: .7 
+	+rt(999)
+		display: none
 .footer__fb
 	+s(fb)
 .footer__tw
@@ -574,40 +848,69 @@ table
 			color: #333 
 		i
 			+s(footer-enter-h)
+	+rt(999)
+		display: none
+.footer__mail
+	+rt(999)
+		padding: 10px 0 10px 10px
+		border-left: 1px solid #474544
+.footer__phone
+	+rt(999)
+		padding: 10px 10px 10px 0
 .footer__created
 	span
+		display: block
 		font-size: 11px
 	a
 		position: relative
-		display: block
+		display: inline-block
+		vertical-align: top
 		+s(vintage)
 		+ht
 		&:hover
 			+s(vintage-h)				
 .footer__top
+	position: relative
 	padding-bottom: 30px
 	border-bottom: 1px solid #474544 
 	+clr
+	+rt(999)
+		padding: 70px 0 20px 
+		border: none
 .search-form
+	position: relative
 	float: right
+	width: 274px
 	height: 38px
 	border: 1px solid #5b5a58
 	font-size: 0
 	white-space: nowrap
 	input
-		width: 210px
+		width: 267px
 		height: 38px
-		padding-left: 15px
+		padding: 0 55px 0 15px
 		background: none
 		font-size: 11px
 		color: #BEBDBD
+		+box
 		+ph(#bebdbd)
 	button
+		position: absolute
+		top: 0
+		right: 0
 		width: 40px 
 		height: 38px
 		i
 			display: inline-block
 			+s(search-btn)
+	+rt(999)
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		width: auto
+		input
+			width: 100%
 .footer__map
 	float: left
 .footer__map-title
@@ -618,6 +921,8 @@ table
 	+fl
 	font-size: 29px
 	color: #989797 
+	+rt(999)
+		font-size: 24px
 .footer__map-btn
 	position: relative
 	float: left
@@ -636,6 +941,8 @@ table
 		top: 15px
 		right: 15px 
 		+arr(8,4,#BEBDBD,b) 
+	+rt(999)
+		width: auto
 .footer__nav
 	display: none
 	padding-top: 33px
@@ -643,15 +950,21 @@ table
 	+clr
 	ul
 		float: left
-		width: 170px
+		width: 16.5%
 		padding-right: 28px
 		line-height: 1.1
+		+box
 		&:first-child
 			li
 				margin-bottom: 15px
 				&:first-child
 					height: auto
 					margin-bottom: 15px
+		+rt(999)
+			float: none
+			margin-bottom: 20px
+			width: auto
+			padding: 0
 	li
 		margin-bottom: 7px 
 		&:first-child
@@ -759,3 +1072,111 @@ table
 		+box
 .field__label	
 	display: block
+
+//mob-header
+.mob-header
+	position: relative
+	display: none
+	background: #FFF 
+	z-index: 500 
+	+rt(999)
+		display: block
+.mob-header_main
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+.mob-header__top
+	position: relative
+	height: 42px
+	.language
+		top: 14px
+		left: 10px
+		li
+			&:hover, &.is-active
+				a
+					background: #EBEBEB 
+			&.is-active
+				a
+					color: #707070 
+		a
+			color: $red 
+.mob-header__phone
+	position: absolute
+	top: 9px
+	right: 10px
+	+fl
+	font-size: 18px
+	color: #202020 
+.mob-header__middle
+	position: relative
+	height: 100px
+	background: $red  
+	.logo
+		top: 27px
+		left: 20px
+		padding: 0
+		border: none
+.mob-header__btn-menu
+	position: absolute
+	top: 26px 
+	right: 13px
+	+s(mob-menu-ico)
+.mob-header__salon
+	padding: 15px 10px
+	a
+		position: relative
+		display: block		
+		height: 57px
+		padding-left: 62px 
+		border: 1px solid #dcdcdc
+		line-height: 57px
+		+fl
+		font-size: 24px
+		text-align: center
+		color: #333 
+	i
+		position: absolute
+		top: 0
+		left: 0
+		width: 62px
+		height: 57px
+		border-right: 1px solid #dcdcdc 
+		font-size: 0
+		em
+			display: inline-block
+			vertical-align: middle
+			+s(mob-header-map-point)
+.mob-nav
+	display: none
+	position: absolute
+	top: 231px
+	left: 0px
+	right: 0px
+	padding: 0 20px
+	background: #333	
+	z-index: 500 
+	li
+		&:first-child
+			a
+				border: none
+	a
+		display: block
+		width: 100%
+		height: 90px
+		border-top: 1px solid rgba(255,255,255,.3) 
+		line-height: 90px 
+		text-align: center
+	span
+		display: inline-block
+		vertical-align: middle
+		font-size: 16px
+		color: #FFF
+		text-transform: uppercase
+		font-weight: bold
+		line-height: 1.2
+.mob-nav_main
+	background: rgba(0,0,0,.6) 
+	top: 275px
+	left: 10px
+	right: 10px

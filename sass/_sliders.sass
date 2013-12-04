@@ -2,9 +2,11 @@
 //slider
 .slider
 	position: relative
+	overflow: hidden
 .slider__item
 	img
 		display: block
+		height: 100%
 .slider__title
 	position: absolute
 	top: 20px
@@ -29,6 +31,8 @@
 	font-size: 22px
 	color: #fff 
 	line-height: 1.1
+	+rt(1200)
+		font-size: 20px
 .slider__prev, .slider__next
 	position: absolute
 	left: 20px
@@ -53,6 +57,15 @@
 	&:hover
 		i
 			+s(arr-slider-next-gray)
+
+//slider main
+.slider_main
+	+rt(1200)
+		width: 670px	
+	.slider__item
+		right: 0
+		overflow: hidden
+
 //
 .slider_category	
 	text-align: center
@@ -89,6 +102,9 @@
 	.slider__article-date
 		font-size: 10px
 		color: #A0A7AB
+	+rt(999)
+		img
+			width: 100%
 //
 .slider_asks
 	padding: 65px 15px 20px 
@@ -105,6 +121,8 @@
 		font-size: 11px
 		text-transform: uppercase
 		color: #fff 
+	+rt(999)
+		display: none
 .slider_asks, .slider_events, .slider_product, .slider__big, .slider_events-main
 	background: $red
 	&:hover
@@ -132,6 +150,9 @@
 		&:hover
 			i
 				+s(slider-next-white-sm)
+	.slider__title
+		+rt(999)
+			display: none
 .slider_asks, .slider_events, .slider_events-main
 	margin-bottom: 30px
 	background: $red
@@ -198,6 +219,9 @@
 		right: 0
 		i
 			+s(arr-slider-next-gray)
+	+rt(999)
+		img
+			width: 100%
 
 //slider_many
 .slider_many
@@ -233,17 +257,35 @@
 			display: inline-block
 			vertical-align: top
 			margin-right: 25px
+	+rt(1200)
+		padding: 0 60px
+		.slider__item
+			img
+				margin-right: 1px
+	+rt(999)
+		padding: 0
+		.slider__item
+			width: 100%
+			text-align: center
+			img
+				border: none
 		
 //slider_product
 .slider_product
 	width: 515px
-	height: 410px
 	.slider__prev, .slider__next
 		bottom: 30px
 	.slider__prev
 		left: 30px
 	.slider__next
 		left: 69px 
+	+rt(1200)
+		width: 345px
+	.slider__item
+		img
+			+rt(1200)
+				width: 100%
+		 
 		
 //slider_section
 .slider_section
@@ -257,7 +299,7 @@
 		position: absolute
 		left: 0
 		bottom: 125px 
-		max-width: 450px 
+		min-width: 450px 
 		padding: 20px
 		background: #FFF  
 		text-align: center
@@ -298,7 +340,7 @@
 			vertical-align: top
 			border-radius: 50%
 			cursor: pointer
-			&.is-active
+			&.cycle-pager-active
 				background: none  
 				cursor: default
 	.slider__show-all
@@ -312,6 +354,8 @@
 			text-transform: uppercase
 			color: #FFF
 			font-size: 12px 
+	+rt(999)
+		display: none
 
 .slider_big
 	position: relative
@@ -326,4 +370,6 @@
 	.slider__next
 		left: auto
 		right: 0
+	+rt(999)
+		display: none
 	
