@@ -39,12 +39,12 @@ function sliders() {
 			el_item = $(this).find('.slider__item');
 			el_in = $(this).find('.slider__in');
 			el_in.cycle({
-					fx: 'fade',
-			    timeout: 0,
-			    prev: el_prev,
-			    next: el_next,
-			    pager: el_pager,
-			    slides: el_item
+				fx: 'fade',
+			  timeout: 0,
+			  prev: el_prev,
+			  next: el_next,
+			  pager: el_pager,
+			  slides: el_item
 			});
 		});
 	};
@@ -62,11 +62,27 @@ function sliders() {
 			el_item = $(this).find('.slider__item');
 			el_in = $(this).find('.slider__in');
 			el_in.cycle({
-					fx: el_animate,
-			    timeout: 0,
-			    prev: el_prev,
-			    next: el_next,
-			    slides: el_item
+				fx: el_animate,
+			  timeout: 0,
+			  prev: el_prev,
+			  next: el_next,
+			  slides: el_item
+			});
+		});
+	};
+	var el_popup = $('.js-popup-gallery');
+	if (el_popup.length > 0) {
+		el_popup.each(function(){
+			el_next = $(this).find('.p-gallery__next');
+			el_prev = $(this).find('.p-gallery__prev');
+			el_in = $(this).find('.p-gallery__in');
+			el_items = $(this).find('.p-gallery__item');
+			el_in.cycle({
+				fx: 'fade',
+			  timeout: 0,
+			  prev: el_prev,
+			  next: el_next,
+			  slides: el_items
 			});
 		});
 	};

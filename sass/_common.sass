@@ -435,6 +435,7 @@ textarea, button, select, input
 	border: none
 	outline: none
 	+f
+	font-size: 12px
 button 
 	background: none 
 	line-height: 1
@@ -1052,6 +1053,18 @@ table
 		+s(btn-file)
 	
 //form
+.field
+	&.is-error
+		.field__message
+			display: block
+		.field__input
+			input
+				border: 1px solid $red
+.field__message
+	display: none
+	margin-bottom: 3px
+	font-size: 12px
+	color: $red 
 .field__input
 	display: block
 	input
