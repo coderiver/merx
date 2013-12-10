@@ -184,14 +184,36 @@ function faq() {
 	var el = $('.js-faq');
 	var item = el.find('.faq__item');
 	el.find('.faq__content').hide();
-	item.first().addClass('is-active');
-	item.first().find('.faq__content').show();
-	item.bind('click', function(){
-		$(this).toggleClass('is-active');
-		$(this).find('.faq__content').slideToggle();
+	var hash = window.location.hash;
+	$(hash).addClass('is-active');
+	$(hash).find('.faq__content').show();
+	item.find('.faq__head').bind('click', function(){
+		var el_this = $(this);
+		el_this.parent().toggleClass('is-active');
+		var pos_top = $(this).parent().offset().top;
+		$('body').animate({scrollTop: pos_top}, 500, function() {
+			el_this.next().slideToggle();	
+			var el_id = el_this.parent().attr('id');	
+			window.location.hash = el_id;		
+		});		
 	});
 }
 faq();
+
+//map
+function map() {
+	var el = $('.js-map');
+	var point = el.find('.map__point');
+	var head = el.find('.map__el-head');
+	point.bind('click', function() {
+		el.find('.map__el-in').slideUp();
+		$(this).prev().slideDown();
+	});
+	head.bind('click', function() {
+		$(this).parent().slideUp();
+	});
+}
+map();
 
 //footer nav
 $('.js-footer-nav').bind('click', function(){

@@ -498,9 +498,9 @@
 	font-size: 0
 .share__title, .share__list
 	display: inline-block
-	vertical-align: top
+	vertical-align: middle
 .share__title	
-	margin: 5px 20px 0 0 
+	margin: 0 20px 0 0 
 	font-size: 10px
 	text-transform: uppercase
 .share__list
@@ -546,7 +546,8 @@
 	.pagination__prev, .pagination__next
 		+tr(color .2s linear)
 		i
-			float: left
+			display: inline-block
+			vertical-align: middle
 		&:hover
 			color: #333 
 		+rt(999)
@@ -556,13 +557,11 @@
 .pagination__prev
 	float: left
 	i
-		float: left
 		margin-right: 30px
 		+s(pagination-prev)
 .pagination__next
 	float: right
 	i
-		float: right
 		margin-left: 30px
 		+s(pagination-next)
 .pagination__link
@@ -814,16 +813,25 @@
 		height: 36px
 		line-height: 36px
 		+rt(999)
+			float: none
+			display: inline-block
 			width: 100px
+			height: auto
+			vertical-align: middle
 			min-height: 2px
 			margin: 0 10px 0 0
+			line-height: 1.2
 	.select
 		float: left
 		width: 270px
 		+rt(1200)
 			width: 210px
 		+rt(999)
+			float: none
+			display: inline-block
 			width: 190px
+			vertical-align: middle
+			
 
 .sorting__item
 	float: left
@@ -842,9 +850,11 @@
 .sorting__item_link
 	float: right
 	a
-		color: #233C48 
+		color: #617883
 		line-height: 1
-		border-bottom: 2px solid 
+		border-bottom: 2px solid
+		&:hover
+			color: #233C48
 	.sorting__label
 		margin: 0
 .sorting__label
@@ -1518,6 +1528,7 @@
 .map
 	position: relative
 	margin-bottom: 20px
+	overflow: hidden
 	z-index: 8
 #map-canvas
 	width: 100%
@@ -1531,13 +1542,18 @@
 .map__point
 	margin: 0 auto
 	+s(map-point)
+	cursor: pointer
 .map__el-in
+	display: none
+	position: absolute
+	bottom: 20px
+	left: -249px
 	width: 530px 
-	margin-bottom: -30px
-	background: #e52914 
+	background: #e52914
 .map__el-head
 	background: #FFF 
 	font-size: 0
+	cursor: pointer
 .map__el-pic, .map__el-title
 	display: inline-block
 	width: 50%
@@ -1932,13 +1948,13 @@
 		content: ""
 		position: absolute
 	&:before
-		top: 3px
+		top: 5px
 		left: 0
 		width: 23px
 		height: 19px
 		background: $red
 	&:after
-		top: 8px
+		top: 10px
 		left: 9px
 		+s(faq-arr) 
 		+tr(all .2s linear)
