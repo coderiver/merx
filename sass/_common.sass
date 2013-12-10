@@ -93,6 +93,8 @@ body
 		.cart__title
 			a
 				color: $blue
+				&:hover
+					color: #617883
 		.cart__price-total
 			strong
 				color: $blue 
@@ -216,6 +218,21 @@ body
 				background: $blue
 				&:hover
 					background: $blueh
+		.article__box
+			&:hover
+				.article__in
+					background: $blue
+		.cart__btns, .cart__order-column
+			.btn
+				background: $blue
+				&:hover
+					background: $blueh 
+		.btn
+			&:hover
+				background: $blue
+		.box__content, .box__in
+			&:hover
+				background: $blue
 
 
 
@@ -297,6 +314,8 @@ body
 		.cart__title
 			a
 				color: $green
+				&:hover
+					color: #617883
 		.cart__price-total
 			strong
 				color: $green 
@@ -420,6 +439,16 @@ body
 				background: $green
 				&:hover
 					background: $greenh
+		.article__box
+			&:hover
+				.article__in
+					background: $green
+		.btn
+			&:hover
+				background: $green
+		.box__content, .box__in
+			&:hover
+				background: $green
 		
 
 // resets
@@ -476,8 +505,10 @@ table
 	+fl
 	font-weight: 100
 	font-size: 44px 
-	letter-spacing: -3px 
+	letter-spacing: -1px 
 	line-height: 1.1
+	+rt(999)
+		font-size: 25px 
 .title__level-2
 	font-size: 36px 
 .title__types
@@ -550,6 +581,7 @@ table
 		height: 110px
 		line-height: 110px
 		text-align: center 
+		+gpu
 		&:hover
 			background: $redh 
 		+rt(1200)
@@ -664,6 +696,8 @@ table
 			height: 198px 
 		.header__phone-in
 			border-color: transparent
+			strong
+				border: none
 	+rt(1200)
 		left: 630px
 .header__phone-in
@@ -707,7 +741,11 @@ table
 	.btn
 		width: 100%
 		height: 46px
-		background: $color
+		background: $red
+		opacity: 1
+		+tr(opacity .2s linear) 
+		&:hover
+			opacity: .7 
 
 //nav
 .nav
@@ -799,12 +837,8 @@ table
 	+rt(1200)
 		padding: 10px 50px 0 20px
 	+rt(999)
-		padding: 0
-		margin-bottom: 20px
-		border: none
-		&:first-child
-			padding: 0
-			border: none
+		float: none
+		padding-top: 0
 .footer__cell_right
 	float: right
 	padding: 5px 0 0 0
@@ -819,8 +853,6 @@ table
 .footer__logo
 	float: left	
 	+s(logo-small)
-	+rt(999)
-		display: none
 .footer__social
 	padding: 5px 0 0 15px
 	font-size: 0
@@ -832,7 +864,7 @@ table
 		&:hover
 			opacity: .7 
 	+rt(999)
-		display: none
+		padding: 0
 .footer__fb
 	+s(fb)
 .footer__tw
@@ -850,14 +882,7 @@ table
 		i
 			+s(footer-enter-h)
 	+rt(999)
-		display: none
-.footer__mail
-	+rt(999)
-		padding: 10px 0 10px 10px
-		border-left: 1px solid #474544
-.footer__phone
-	+rt(999)
-		padding: 10px 10px 10px 0
+		display: inline-block
 .footer__created
 	span
 		display: block
@@ -899,11 +924,14 @@ table
 		position: absolute
 		top: 0
 		right: 0
-		width: 40px 
+		width: 40px
 		height: 38px
 		i
 			display: inline-block
 			+s(search-btn)
+		&:hover
+			i
+				+s(search-btn-h)
 	+rt(999)
 		position: absolute
 		top: 0
@@ -914,6 +942,9 @@ table
 			width: 100%
 .footer__map
 	float: left
+	+rt(999)
+		float: none
+		overflow: hidden
 .footer__map-title
 	float: left
 	height: 40px
@@ -923,6 +954,7 @@ table
 	font-size: 29px
 	color: #989797 
 	+rt(999)
+		margin: 0
 		font-size: 24px
 .footer__map-btn
 	position: relative
@@ -943,6 +975,7 @@ table
 		right: 15px 
 		+arr(8,4,#BEBDBD,b) 
 	+rt(999)
+		float: right
 		width: auto
 .footer__nav
 	display: none
@@ -963,20 +996,34 @@ table
 					margin-bottom: 15px
 		+rt(999)
 			float: none
-			margin-bottom: 20px
+			margin-bottom: 30px
 			width: auto
 			padding: 0
+			&:first-child
+				li
+					margin-bottom: 10px
+					&:first-child
+						height: auto
+						margin-bottom: 10px
 	li
 		margin-bottom: 7px 
 		&:first-child
 			height: 32px
+			+rt(999)
+				height: auto
 	a
 		font-size: 11px
 		color: #9b9a99
+		+tr(color .2s linear)
+		&:hover
+			color: #fff 
+			strong
+				color: $red 
 	strong
 		display: block
 		text-transform: uppercase
 		color: #fff 
+		+tr(color .2s linear)
 
 //select
 .select
@@ -1032,11 +1079,14 @@ table
 	+fl
 	text-transform: uppercase
 	color: #FFF  
+	+tr(background .2s linear)
 	span, i
 		display: inline-block
 		vertical-align: middle
 	i
 		margin-right: 12px
+	&:hover
+		background: $red 
 .btn_big
 	height: 56px 
 	font-size: 23px 
@@ -1127,7 +1177,7 @@ table
 	background: $red  
 	.logo
 		top: 27px
-		left: 20px
+		left: 10px
 		padding: 0
 		border: none
 .mob-header__btn-menu
@@ -1155,15 +1205,16 @@ table
 		width: 62px
 		height: 57px
 		border-right: 1px solid #dcdcdc 
-		font-size: 0
 		em
-			display: inline-block
-			vertical-align: middle
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -13px 0 0 -10px 
 			+s(mob-header-map-point)
-.mob-nav
+.mob-nav, .mob-nav-main
 	display: none
 	position: absolute
-	top: 231px
+	top: 142px
 	left: 0px
 	right: 0px
 	padding: 0 20px
@@ -1188,8 +1239,19 @@ table
 		text-transform: uppercase
 		font-weight: bold
 		line-height: 1.2
-.mob-nav_main
+.mob-nav
+	z-index: 900 
+.mob-nav-main
+	position: relative
+	top: auto
+	left: auto
+	right: auto
+	display: block
 	background: rgba(0,0,0,.6) 
-	top: 275px
-	left: 10px
-	right: 10px
+	margin: 275px 10px 45px
+	
+
+
+
+
+
