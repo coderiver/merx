@@ -73,6 +73,8 @@
 		position: relative
 		display: inline-block
 		width: 560px
+		+rt(999)
+			width: 100%
 	.slider__link	
 		height: 60px
 		background: #FFF 
@@ -299,10 +301,32 @@
 .slider_section
 	position: relative
 	margin-bottom: 25px
+	.slider__prev, .slider__next
+		display: none
+		top: 50%
+		bottom: auto
+		width: 40px
+		height: 56px
+		margin-top: -28px
+		background: rgba(0,0,0,.3) 
+		+rt(999)
+			display: block
+	.slider__prev
+		left: 0
+		i
+			+s(arr-slider-prev-white-sm)
+	.slider__next
+		left: auto
+		right: 0
+		i
+			+s(arr-slider-next-white-sm)
 	.slider__in
 		position: relative
 	.slider__item
+		width: 100%
 		height: 560px
+		+rt(999)
+			height: 470px
 	.slider__section
 		position: absolute
 		left: 0
@@ -311,12 +335,24 @@
 		padding: 20px
 		background: #FFF  
 		text-align: center
+		+tr(background .2s linear)
+		&:hover
+			background: $red
+			.slider__section-sub, .slider__section-el
+				color: #FFF 
+		+rt(999)
+			bottom: 40px
+			right: 0
+			min-width: 0
+			padding: 10px
 	.slider__section-el
 		margin-bottom: 20px
 		+fl
 		font-size: 60px 
 		color: $red 
 		line-height: 1
+		+rt(999)
+			font-size: 24px
 	.slider__section-sub
 		position: relative
 		font-size: 10px
@@ -333,6 +369,14 @@
 			left: 0
 		&:before
 			right: 0
+		+rt(999)
+			padding: 5px 0 0 0
+			&:before
+				display: none
+			&:after
+				top: -5px
+				right: 0
+				width: auto				
 	.slider__pager
 		position: absolute
 		left: 0
@@ -351,6 +395,8 @@
 			&.cycle-pager-active
 				background: none  
 				cursor: default
+		+rt(999)
+			display: none
 	.slider__show-all
 		position: absolute
 		bottom: 50px
@@ -362,8 +408,6 @@
 			text-transform: uppercase
 			color: #FFF
 			font-size: 12px 
-	+rt(999)
-		display: none
 
 .slider_big
 	position: relative
@@ -379,5 +423,11 @@
 		left: auto
 		right: 0
 	+rt(999)
-		display: none
-	
+		margin: -65px -10px 20px
+		height: 480px  
+		.slider__prev, .slider__next
+			width: 40px
+			height: 56px
+			margin-top: -28px
+			background: rgba(0,0,0,.3) 
+

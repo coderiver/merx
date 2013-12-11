@@ -17,6 +17,7 @@ body
 		background: $red
 	&::-webkit-scrollbar-track-piece
 		background: white
+
 	//blue
 	&.blue-style
 		.mob-header__middle
@@ -230,12 +231,31 @@ body
 		.btn
 			&:hover
 				background: $blue
-		.box__content, .box__in
+		.box__content, .box__in, .slider__section
 			&:hover
 				background: $blue
-
-
-
+		.slider_section
+			.slider__prev
+				i
+					+s(arr-slider-prev-white-sm)
+			.slider__next
+				i
+					+s(arr-slider-next-white-sm)
+		.header__user-in
+			.btn
+				background: $blueh
+				&:hover
+					background: $blue
+		.diller__nav
+			a
+				background: $blue 
+				&:hover
+					background: $blueh
+		.menu_inner
+			.menu__item-in
+				&:hover
+					span
+						color: $blue
 
 
 	//green
@@ -446,10 +466,32 @@ body
 		.btn
 			&:hover
 				background: $green
-		.box__content, .box__in
+		.box__content, .box__in, .slider__section
 			&:hover
 				background: $green
-		
+		.slider_section
+			.slider__prev
+				i
+					+s(arr-slider-prev-white-sm)
+			.slider__next
+				i
+					+s(arr-slider-next-white-sm)
+		.header__user-in
+			.btn
+				background: $greenh
+				&:hover
+					background: $green
+		.diller__nav
+			a
+				background: $green 
+				&:hover
+					background: $greenh
+		.menu_inner
+			.menu__item-in
+				&:hover
+					span
+						color: $green
+
 
 // resets
 a img, fieldset 
@@ -476,6 +518,9 @@ table
 	border-spacing: 0
 	border-collapse: collapse
 // common styles
+.wrap
+	+rt(999)
+		background: #e9f0f4
 .container, .footer__in, .header__in
 	width: 1188px
 	margin: 0 auto
@@ -492,8 +537,6 @@ table
 		margin-bottom: 15px
 	.bc
 		margin: 0
-	+rt(999)
-		background: #e9f0f4
 .container_map
 	+rt(999)
 		margin-top: -50px
@@ -523,13 +566,21 @@ table
 				color: #7f96a2 
 	a
 		display: block
-		padding-bottom: 8px
-		border-bottom: 2px solid #627983 
+		padding-bottom: 5px
+		border-bottom: 2px solid //#627983 
 		font-family: Arial, Tahoma, sans-serif 
 		font-size: 12px
 		text-transform: uppercase
 		color: #233C48 
 		letter-spacing: 0		
+		&:hover
+			color: #7f96a2
+	+rt(999)
+		float: none
+		margin: 5px 0 15px
+		overflow: hidden
+		li
+			margin: 0 10px 0 0 
 .title__in
 	display: table
 .title-border
@@ -613,6 +664,7 @@ table
 	a
 		position: relative
 		display: inline-block
+		max-width: 250px
 		padding-left: 20px
 		margin-right: 60px 
 		font-size: 12px
@@ -624,6 +676,10 @@ table
 		top: 0
 		left: 0
 		+s(header-user)
+	.btn
+		background: $redh
+		&:hover
+			background: $red 
 .header__category
 	position: absolute
 	top: 0

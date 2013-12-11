@@ -22,6 +22,14 @@
 	bottom: 0 
 	+rt(999)
 		display: none
+.sl-category_mod
+	.sl-category__item		
+		+tr(opacity 0 linear)
+		opacity: 1
+	+rt(999)
+		display: block
+		.sl-category__item
+			display: block
 .sl-category__item
 	background-size: cover	 
 	+tr(opacity .4s linear)
@@ -131,8 +139,13 @@
 	.menu__item-in
 		display: block
 		cursor: pointer
+		span
+			+tr(color .2s linear)
 		&:before
 			border-color: #e2e2e2
+		&:hover
+			span
+				color: $red 
 		+rt(999)
 			height: auto
 			padding: 0

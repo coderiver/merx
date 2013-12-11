@@ -11,6 +11,11 @@
 	z-index: 5 
 	+rt(999)
 		display: none
+.substrate_section
+	+rt(999)
+		display: block
+		top: 230px
+		height: 480px
 .substrate__top
 	position: relative
 	height: 64px
@@ -480,6 +485,8 @@
 	table
 		width: 100%
 		margin: 30px 0
+		+rt(999)
+			display: none
 		td, th
 			padding: 10px
 			border: 1px solid #dbe5ea
@@ -509,10 +516,10 @@
 		margin-right: 2px
 		vertical-align: top
 	a
-		display: block
+		display: table-cell
 		width: 18px
 		height: 21px
-		line-height: 21px 
+		vertical-align: middle
 		text-align: center
 		+tr(background .2s linear)
 		&:hover
@@ -559,11 +566,15 @@
 	i
 		margin-right: 30px
 		+s(pagination-prev)
+		+rt(999)
+			margin: 0
 .pagination__next
 	float: right
 	i
 		margin-left: 30px
 		+s(pagination-next)
+		+rt(999)
+			margin: 0
 .pagination__link
 	display: inline-block
 	padding: 0 20px
@@ -712,8 +723,7 @@
 		padding: 10px
 	+rt(999)
 		height: auto
-		padding: 0
-		margin-bottom: 20px
+		padding: 10px
 .box__content_less
 	width: 210px
 .box__title
@@ -1777,10 +1787,13 @@
 		width: 300px
 		height: 66px
 		padding: 0 35px
+		background: $red 
 		font-size: 20px
 		text-align: center
 		vertical-align: middle
 		line-height: 1.1  
+		&:hover
+			background: $redh 
 	+rt(1200)
 		display: none
 .diller__tabs-nav
@@ -1807,6 +1820,9 @@
 		text-transform: uppercase 
 		text-align: center
 		vertical-align: middle
+		+tr(background .2s linear)
+		&:hover
+			background: #E9F0F4 
 		&.is-active
 			background: #E9F0F4 
 			color: #607782
@@ -1841,6 +1857,8 @@
 	padding-left: 35px
 	background: #fff 
 	vertical-align: top
+	+rt(999)
+		background: #e9f0f4 
 	a
 		display: inline-block
 		height: 35px
