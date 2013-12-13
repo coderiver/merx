@@ -190,26 +190,33 @@ $('.js-mob-nav').bind('click', function(){
 //select
 function select() {
 	var el = $('.js-select');
-	var el_title = el.find('.select__value');
-	var item = el.find('.select__options li');
-	var list = el.find('.select__options');
-	el_title.click(function() {
-		el.removeClass('is-open');
-		list.hide();
-		$(this).parent().toggleClass('is-open');
-		$(this).next().toggle();
-	});
-	item.click(function() {
+	el.find('.select__value').bind('click', function(){		
+		if ($(this).parent().hasClass('is-open')) {
+			$(this).parent().removeClass('is-open');
+			$(this).next().hide();
+		}
+		else {
+			el.removeClass('is-open');
+			el.find('.select__options').hide();
+			$(this).parent().addClass('is-open');
+			$(this).next().slideDown();
+		}
+	})
+	el.find('.select__options li').bind('click', function(){
 		var val = $(this).text();
 		$(this).parent().prev().html(val);
 		$(this).parent().next().val(val);
 		$(this).parent().hide();
+		$(this).parent().parent().removeClass('is-open');
+	})
+	el.click(function(event){
+		event.stopPropagation();
+	});
+	$(document).click(function() {
+		el.find('.select__options').hide();
 		el.removeClass('is-open');
 	});
-	el.click(function(event){
-	  event.stopPropagation();
-	});
-};
+}
 select();
 
 //calculate
@@ -284,11 +291,6 @@ function popup() {
 	});
 }
 popup();
-
-//click document
-$(document).click(function() {
-	$('.js-select').removeClass('is-open');
-});
 
 $(window).resize(function() {
 	main_page();

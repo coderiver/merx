@@ -1150,10 +1150,9 @@ table
 	color: #838281
 	cursor: pointer
 	+no-sel
+	z-index: 500 
 	&.is-open
-		z-index: 900 
-		.select__options
-			display: block
+		z-index: 510 
 		.select__value
 			&:after
 				+rotate(-180deg)
