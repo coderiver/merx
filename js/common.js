@@ -285,17 +285,6 @@ function popup() {
 }
 popup();
 
-//catalog
-function mob_catalog() {
-	var el = $('.js-mob-catalog');
-	var item = el.find('.catalog__item');
-	item.bind('click', function(){
-		$(this).find('.catalog__title').fadeOut();
-		$(this).find('.catalog__list').fadeIn();
-	});
-}
-mob_catalog();
-
 //click document
 $(document).click(function() {
 	$('.js-select').removeClass('is-open');
