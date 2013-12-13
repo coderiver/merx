@@ -6,7 +6,6 @@
 .slider__item
 	img
 		display: block
-		height: 100%
 .slider__title
 	position: absolute
 	top: 20px
@@ -126,8 +125,6 @@
 		color: #fff 
 	.slider__item
 		height: auto
-	+rt(999)
-		display: none
 .slider_asks, .slider_events, .slider_product, .slider__big, .slider_events-main
 	background: $red
 	&:hover
@@ -218,6 +215,9 @@
 		bottom: auto
 		background: rgb(255,255,255) 
 		background: rgba(255,255,255,.5) 
+		+tr(background .2s linear)
+		&:hover
+			background: #fff 
 	.slider__prev
 		left: 0
 		i
@@ -283,10 +283,19 @@
 	width: 515px
 	.slider__prev, .slider__next
 		bottom: 30px
+		+rt(999)
+			top: 50%
+			bottom: auto
+			margin-top: -21px 
 	.slider__prev
 		left: 30px
+		+rt(999)
+			left: 0
 	.slider__next
 		left: 69px 
+		+rt(999)
+			left: auto
+			right: 0
 	+rt(1200)
 		width: 345px
 	+rt(999)
@@ -382,6 +391,7 @@
 		left: 0
 		bottom: 55px 		
 		+ht
+		z-index: 200
 		span
 			display: inline-block
 			width: 10px
@@ -401,6 +411,7 @@
 		position: absolute
 		bottom: 50px
 		left: 275px
+		z-index: 200
 		a
 			display: block
 			padding-bottom: 2px
@@ -408,6 +419,8 @@
 			text-transform: uppercase
 			color: #FFF
 			font-size: 12px 
+			&:hover
+				color: #7f96a2 
 
 .slider_big
 	position: relative

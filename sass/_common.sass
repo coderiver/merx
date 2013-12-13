@@ -256,7 +256,21 @@ body
 				&:hover
 					span
 						color: $blue
-
+		.product__buy
+			.btn
+				background: $blue 
+				&:hover
+					background: $blueh 
+		.p-message
+			.content
+				a
+					color: $blue
+					&:hover
+						color: $blueh 
+			.btn
+				background: $blue
+				&:hover
+					background: $blueh 
 
 	//green
 	&.green-style
@@ -491,6 +505,43 @@ body
 				&:hover
 					span
 						color: $green
+		.product__buy
+			.btn
+				background: $green 
+				&:hover
+					background: $greenh 
+		.p-message
+			.content
+				a
+					color: $green
+					&:hover
+						color: $greenh 
+			.btn
+				background: $green
+				&:hover
+					background: $greenh 
+
+
+
+	//blue and green
+	&.blue-style, &.green-style				
+		.slider_category
+			.slider__prev, .slider__next
+				width: 40px
+				height: 56px
+				margin-top: -28px
+				background: rgba(0,0,0,.3) 
+				+rt(999)
+					display: block
+				.slider__prev
+					left: 0
+					i
+						+s(arr-slider-prev-white-sm)
+				.slider__next
+					left: auto
+					right: 0
+					i
+						+s(arr-slider-next-white-sm)
 
 
 // resets
@@ -599,6 +650,8 @@ table
 	border-bottom: 1px solid #707070 
 	font-size: 16px
 	text-transform: uppercase 
+	span, a
+		color: #617883 
 .title-border__link
 	position: absolute
 	top: 3px
@@ -890,11 +943,14 @@ table
 	&:first-child
 		border: none
 		padding: 10px 20px 0 0 
+		+rt(999)
+			float: none
 	+rt(1200)
 		padding: 10px 50px 0 20px
 	+rt(999)
-		float: none
-		padding-top: 0
+		width: 50%
+		padding: 0px 10px 0 10px
+		+box
 .footer__cell_right
 	float: right
 	padding: 5px 0 0 0
@@ -902,8 +958,7 @@ table
 	+rt(999)
 		float: none
 		padding: 20px 0
-		margin: 0
-		border-top: 1px solid #403e3c  
+		margin: 0 auto
 		text-align: center
 		clear: both
 .footer__logo
@@ -939,6 +994,13 @@ table
 			+s(footer-enter-h)
 	+rt(999)
 		display: inline-block
+		padding: 0 10px
+		&:hover
+			background: none
+			strong
+				color: #fff  
+			i
+				+s(footer-enter)
 .footer__created
 	span
 		display: block

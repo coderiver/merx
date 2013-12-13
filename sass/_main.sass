@@ -14,7 +14,7 @@
 	overflow: hidden
 	+rt(999)
 		height: auto !important
-.sl-category, .sl-category__item
+.sl-category, .sl-category__item, .sl-category__bg
 	position: absolute
 	top: 0
 	left: 0
@@ -30,12 +30,14 @@
 		display: block
 		.sl-category__item
 			display: block
-.sl-category__item
+.sl-category__item, .sl-category__bg
 	background-size: cover	 
 	+tr(opacity .4s linear)
 	opacity: 0
 	&.is-active
 		opacity: 1 
+.sl-category__bg
+	opacity: 1 
 .main__in
 	position: relative
 	width: 1188px

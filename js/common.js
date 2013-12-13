@@ -118,7 +118,7 @@ function slider_section() {
 		el_in = el_section.find('.slider__in');		
 		el_in.cycle({
 			fx: 'fade',
-		  timeout: 0,
+		  timeout: 4000,
 		  prev: el_prev,
 		  next: el_next,
 		  pager: el_pager,
@@ -126,7 +126,7 @@ function slider_section() {
 		});
 		el_section_pic.cycle({
 			fx: 'fade',
-		  timeout: 0,
+		  timeout: 4000,
 		  prev: el_prev,
 		  next: el_next,
 		  pager: el_pager,
@@ -141,16 +141,27 @@ slider_section();
 function menu() {
 	var el = $('.js-sl-category');
 	var item = $('.menu__item-in');
+	var menu = $('.menu');
+	var bg = $('.sl-category__bg');
 	item.hoverIntent(nav_1, nav_2);
 	function nav_1() {
-		$(this).addClass('is-hover').next().fadeIn();
-		var item = $(this).attr('data-item');
+		bg.fadeOut(400);
+		$(this).addClass('is-hover').next().fadeIn(400);
+		var pic = $(this).attr('data-item');
 		el.find('.sl-category__item').removeClass('is-active');
-		$('.'+ item).addClass('is-active');
+		$('.'+ pic).addClass('is-active');
 	};
 	function nav_2() {
-		$(this).removeClass('is-hover').next().fadeOut();		
-		$('.sl-category__item').removeClass('is-active');
+		bg.fadeOut(400);
+		$(this).removeClass('is-hover').next().fadeOut(400);		
+	};
+	menu.hoverIntent(nav_3, nav_4);
+	function nav_3() {
+		bg.fadeOut(400);
+	};
+	function nav_4() {		
+		bg.fadeIn(400);
+		if (!menu.parent().hasClass('menu-sl')) {$('.sl-category__item').removeClass('is-active');};
 	};
 }
 menu();
@@ -236,9 +247,8 @@ function map() {
 	var el = $('.js-map');
 	var point = el.find('.map__point');
 	var head = el.find('.map__el-head');
-	point.bind('click', function() {
-		el.find('.map__el-in').slideUp();
-		$(this).prev().slideDown();
+	point.bind('click', function() {		
+		$(this).prev().slideToggle();
 	});
 	head.bind('click', function() {
 		$(this).parent().slideUp();
@@ -259,6 +269,32 @@ $('.js-footer-nav').bind('click', function(){
 		$('.footer__nav').slideUp(200);
 	}
 });
+
+//popup
+function popup() {
+	var btn = $('.js-popup');
+	var btn_close = $('.js-popup-close');
+	var el = $('.popup');
+	btn.bind('click', function(){
+		var popup = $(this).attr('data-popup');
+		$('#' + popup).fadeIn();
+	});
+	btn_close.bind('click', function(){		
+		el.fadeOut();
+	});
+}
+popup();
+
+//catalog
+function mob_catalog() {
+	var el = $('.js-mob-catalog');
+	var item = el.find('.catalog__item');
+	item.bind('click', function(){
+		$(this).find('.catalog__title').fadeOut();
+		$(this).find('.catalog__list').fadeIn();
+	});
+}
+mob_catalog();
 
 //click document
 $(document).click(function() {

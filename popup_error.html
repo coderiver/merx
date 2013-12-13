@@ -14,10 +14,11 @@
 	<script src="js/common.js"></script>
 </head>
 <body>
-<div class="popup">
+<button class="js-popup" data-popup="popup-error" style="font-size: 50px">я кнопка!</button>
+<div id="popup-error" class="popup">
 	<div class="popup__in">
 		<div class="p-error">
-			<button class="p-error__close"></button>
+			<button class="p-close js-popup-close"></button>
 			<div class="p-error__logo"><i></i></div>
 			<div class="p-error__title">Ошибка</div>
 			<div class="content">
