@@ -28,7 +28,9 @@
 .nav-inner
 	margin-bottom: 30px
 	li
-		border-bottom: 1px solid #e9f0f4 
+		border-top: 1px solid #e9f0f4 
+		&:first-child
+			border: none
 		&.is-active, &:hover
 			a
 				background: #333
@@ -605,7 +607,7 @@
 	+rt(999)
 		height: auto
 		padding: 0
-		background: url(../img/main-pic-1.jpg)
+		background: url(../img/main-pic-bg.jpg)
 		+cover	 
 		margin: -10px -10px 20px
 .about__title
@@ -836,12 +838,18 @@
 		width: auto
 		+rt(999)
 			float: none
+			white-space: nowrap
+			font-size: 0
 			+clr
+	.sorting__label, .select
+		float: none
+		display: inline-block
+		vertical-align: middle
 	.sorting__label	
-		float: left
 		margin: 0 20px 0 0
 		height: 36px
 		line-height: 36px
+		white-space: normal
 		+rt(999)
 			float: none
 			display: inline-block
@@ -852,8 +860,8 @@
 			margin: 0 10px 0 0
 			line-height: 1.2
 	.select
-		float: left
 		width: 270px
+		white-space: normal
 		+rt(1200)
 			width: 210px
 		+rt(999)
@@ -877,6 +885,9 @@
 		margin: 0 0 10px 
 		&:first-child
 			margin: 0 0 10px
+.sorting__item_no-label
+	+rt(999)
+		margin-left: 110px
 .sorting__item_link
 	float: right
 	a
@@ -887,6 +898,8 @@
 			color: #233C48
 	.sorting__label
 		margin: 0
+	+rt(999)
+		display: none
 .sorting__label
 	margin-bottom: 10px
 	font-size: 11px
@@ -1565,11 +1578,11 @@
 	margin-bottom: 20px
 	overflow: hidden
 	z-index: 8
+	+rt(999)
+		display: none
 #map-canvas
 	width: 100%
 	height: 670px
-	+rt(999)
-		height: 480px 
 .map__el
 	position: absolute
 	min-width: 32px
@@ -1631,7 +1644,24 @@
 	text-transform: uppercase
 	font-size: 13px
 	color: #fff 
+.map-list
+	display: none
+	margin-bottom: 30px
+	background: #dbe5ea 
+	+rt(999)
+		display: block
+	li
+		border-top: 1px solid #e9f0f4
+		&:first-child
+			border: none 
+	a
+		display: block
+		padding: 10px
+		font-size: 16px
+		color: #607782 
 
+
+//contacts
 .contacts__row
 	margin-bottom: 30px
 	font-size: 0
@@ -1990,6 +2020,9 @@
 	+fl
 	font-size: 20px
 	color: $red 	
+	&:hover
+		opacity: .9 
+		text-decoration: none
 	&:before, &:after
 		content: ""
 		position: absolute
@@ -2079,37 +2112,74 @@
 	bottom: 0
 	width: 1188px
 	margin-left: -594px
+	+rt(1200)
+		width: auto
+		left: 0
+		right: 0
+		margin: 0
 .popup__close
 	position: absolute
 	right: 0
-	top: 45px
-	+s(popup-close)
+	top: 45px	
 	z-index: 200 
+	font-size: 0
+	z-index: 200 
+	i
+		display: inline-block
+		vertical-align: middle
+		+s(popup-close)
 	&:hover
 		opacity: .5 
+	+rt(1200)
+		top: 10px
+		right: 10px
+		padding: 10px
+		background: rgba(0,0,0,.3) 
+		i
+			+s(p-gallery-close-mob)
 .p-gallery
 	position: absolute
 	top: 50%
 	left: 0
 	right: 0
 	margin-top: -300px
+	+rt(1200)
+		top: 10px
+		left: 10px
+		right: 10px
+		margin: 0
 .p-gallery__item
 	width: 100%
 	text-align: center
+	+rt(1200)
+		img
+			width: 100%
 .p-gallery__prev, .p-gallery__next
 	position: absolute
 	top: 50%
 	margin-top: -35px
 	z-index: 200
+	font-size: 0
+	i
+		display: inline-block
+		vertical-align: middle
 	&:hover
 		opacity: .5 
+	+rt(1200)
+		padding: 10px
+		background: rgba(0,0,0,.3) 
 .p-gallery__prev
 	left: 0
-	+s(p-gallery-prev)
+	i
+		+s(p-gallery-prev)
+		+rt(1200)
+			+s(arr-slider-prev-white-sm)
 .p-gallery__next
 	right: 0
-	+s(p-gallery-next)
-
+	i
+		+s(p-gallery-next)
+		+rt(1200)
+			+s(arr-slider-next-white-sm)
 .p-message
 	position: absolute
 	top: 50%
@@ -2118,9 +2188,16 @@
 	padding: 40px
 	margin: -150px 0 0 -275px
 	background: #fff
+	.title-border
+		padding-right: 40px
+		+rt(1200)
+			margin-bottom: 20px
 	.title-border__in
 		+fl
 		font-size: 36px
+		+rt(1200)
+			font-size: 18px
+			padding-bottom: 10px
 	.content
 		a
 			text-decoration: underline
@@ -2133,7 +2210,13 @@
 		font-size: 16px
 		&:hover
 			background: $redh 
-
+	+rt(1200)
+		top: 10px
+		left: 10px
+		right: 10px
+		width: auto
+		padding: 10px
+		margin: 0
 .p-error
 	position: absolute
 	top: 50%
@@ -2143,11 +2226,24 @@
 	margin: -130px 0 0 -220px
 	background: #fff
 	text-align: center
+	+rt(999)
+		top: 10px
+		left: 10px
+		right: 10px
+		width: auto
+		padding: 20px 20px 5px 
+		margin: 0		
 .p-close
 	position: absolute
 	top: 20px
 	right: 20px
 	+s(p-error-close)
+	z-index: 200 
+	&:hover
+		opacity: .7 
+	+rt(1200)
+		top: 10px
+		right: 10px
 .p-error__logo
 	margin-bottom: 10px
 	font-size: 0

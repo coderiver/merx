@@ -14,6 +14,7 @@
 	overflow: hidden
 	+rt(999)
 		height: auto !important
+		background-image: url(../img/main-pic-bg.jpg) 
 .sl-category, .sl-category__item, .sl-category__bg
 	position: absolute
 	top: 0
@@ -31,11 +32,28 @@
 		.sl-category__item
 			display: block
 .sl-category__item, .sl-category__bg
-	background-size: cover	 
+	+cover 
 	+tr(opacity .4s linear)
 	opacity: 0
 	&.is-active
 		opacity: 1 
+.sl-category__item-left, .sl-category__item-right
+	position: absolute
+	top: 0
+	bottom: 0
+	+cover 
+.sl-category__item-left
+	left: 0
+	right: 50%
+	margin-right: -119px
+	+rt(1200)
+		margin-right: -96px
+.sl-category__item-right
+	right: 0
+	left: 50%
+	margin-left: 119px
+	+rt(1200)
+		margin-left: 96px
 .sl-category__bg
 	opacity: 1 
 .main__in
@@ -43,7 +61,7 @@
 	width: 1188px
 	margin: 0 auto 
 	+rt(1200)
-		width: auto 
+		width: 960px
 	.find-salon
 		&:hover
 			background: #FFF

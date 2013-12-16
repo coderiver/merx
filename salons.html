@@ -16,6 +16,7 @@
 	<script>
 	function initialize() {
 	  var mapOptions = {
+	  	scrollwheel: false,
 	    zoom: 13,
 	    center: new google.maps.LatLng(59.939950, 30.322811),
 	    disableDefaultUI: true,
@@ -159,14 +160,13 @@
 						<li>Option 3</li>
 						<li>Option 4</li>
 						<li>Option 5</li>
-						<li>Option 6</li>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
 						<li>Option 7</li>
 					</ul>
 					<input class="select__input" type="hidden">
 				</div>
 			</div>					
-			<div class="sorting__item">
-				<div class="sorting__label"></div>
+			<div class="sorting__item sorting__item_no-label">
 				<div class="select js-select">
 					<div class="select__value">Option</div>
 					<ul class="select__options">
@@ -200,6 +200,18 @@
 		<!-- END .sorting -->	
 	</div>
 	<!-- BEGIN .map -->
+	<ul class="map-list">
+		<li><a href="#">г. Киев, ул. Соломенская, 1<br>Центр мебели MERX</a></li>
+		<li><a href="#">г. Киев, ул. Соломенская, 1<br>Центр мебели MERX</a></li>
+		<li><a href="#">г. Киев, ул. Соломенская, 1<br>Центр мебели MERX</a></li>
+		<li><a href="#">г. Киев, ул. Соломенская, 1<br>Центр мебели MERX</a></li>
+		<li><a href="#">г. Киев, ул. Соломенская, 1<br>Центр мебели MERX</a></li>
+		<li><a href="#">г. Киев, ул. Соломенская, 1<br>Центр мебели MERX</a></li>
+		<li><a href="#">г. Киев, ул. Соломенская, 1<br>Центр мебели MERX</a></li>
+		<li><a href="#">г. Киев, ул. Соломенская, 1<br>Центр мебели MERX</a></li>
+		<li><a href="#">г. Киев, ул. Соломенская, 1<br>Центр мебели MERX</a></li>
+		<li><a href="#">г. Киев, ул. Соломенская, 1<br>Центр мебели MERX</a></li>
+	</ul>
 	<div class="map js-map">
 		<div class="map__el" style="bottom: 50%; left: 30%;">
 			<div class="map__el-in">
@@ -247,7 +259,7 @@
 			</div>
 			<div class="map__point"></div>
 		</div>
-		<div class="map__el" style="bottom: 10%; left: 50%;">			
+		<div class="map__el" style="bottom: 10%; left: 50%;">
 			<div class="map__el-in">
 				<div class="map__el-head">
 					<div class="map__el-pic"><img src="http://placehold.it/270x180" alt=""/></div>
