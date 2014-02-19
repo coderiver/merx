@@ -12,6 +12,30 @@ function classwitch() {
 }
 classwitch();
 
+
+
+//js-pictures-load
+function pictures_load () {
+	var el = $('.js-pictures-load');
+	el.find('img').each(function(){
+		var width = $(this).attr('width');
+		width = parseInt(width);
+		var height = $(this).attr('height');
+		height = parseInt(height);
+		var src = $(this).attr('src');
+		console.log(width+'_'+height);
+		if (width > height) {
+			el.next().append('<div class="sl-category__item" style="background-image: url('+src+')"></div>');
+		}
+		else{
+			el.next().append('<div class="sl-category__item bg-size-contain" style="background-image: url('+src+')"></div>');
+		}
+	});
+}
+pictures_load();
+
+
+
 //main
 function main_page() {
 	var wnd_height = $(window).height();
