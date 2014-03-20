@@ -670,20 +670,20 @@ table
 .header
 	background: $color
 	.logo
-		top: 30px
+		top: 11px
 		left: 27px
 		padding: 0
 		border: none
 		+rt(1200)
 			left: 17px
 	.language
-		top: 45px
+		top: 25px
 	.find-salon
 		top: 0
 		left: 590px
 		width: 180px
-		height: 110px
-		line-height: 110px
+		height: 64px
+		line-height: 64px
 		text-align: center 
 		+gpu
 		&:hover
@@ -695,7 +695,7 @@ table
 		display: none
 .header__in
 	position: relative
-	height: 110px 
+	height: 64px 
 .header_diller
 	.header__category
 		left: 405px
@@ -738,14 +738,14 @@ table
 	top: 0
 	left: 270px
 	width: 320px
-	height: 110px
+	height: 64px
 	+fl
 	text-transform: uppercase
 	color: #FFF 
 	&:hover
 		.header__category-list
 			li
-				height: 110px
+				height: 64px
 		.header__category-current
 			i
 				+rotate(-180deg)
@@ -753,17 +753,17 @@ table
 		left: 230px
 		width: 250px
 .header__category-current
-	height: 110px
+	height: 64px
 	background: #9a1a0b
 	span
 		display: table-cell
 		width: 205px
-		height: 110px
+		height: 64px
 		padding: 0 75px 0 35px 
 		vertical-align: middle
 	i
 		position: absolute
-		top: 45px
+		top: 25px
 		right: 28px
 		+tr(all .2s linear)
 		+s(header-category)
@@ -780,7 +780,7 @@ table
 	a
 		display: table-cell
 		width: 250px
-		height: 110px
+		height: 64px
 		border-top: 1px solid #c52d1c 
 		background: #9A1A0B 
 		padding: 0 35px
@@ -794,8 +794,7 @@ table
 	position: absolute
 	top: 0
 	left: 770px
-	height: 110px
-	line-height: 110px
+	padding: 15px 0 14px
 	font-size: 0
 	+tr(background .2s linear)
 	cursor: default
@@ -810,16 +809,17 @@ table
 	+rt(1200)
 		left: 630px
 .header__phone-in
-	display: inline-block
-	padding: 5px 30px 10px
+	padding: 0 30px
 	border:  1px solid rgba(255,255,255,.23)
 	border-width: 0 1px
 	line-height: 1.4
 	vertical-align: middle
 	span
 		display: block
+		margin-bottom: 5px
 		+fl
-		font-size: 24px
+		font-size: 18px
+		line-height: 1
 		color: #FFF 
 	strong
 		border-bottom: 1px dotted

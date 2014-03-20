@@ -1,0 +1,595 @@
+<!doctype html>
+<!--[if IE 8]><html lang="ru-RU" class="ie8"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<link href='http://fonts.googleapis.com/css?family=Roboto:100,300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.hoverIntent.js"></script>
+	<script src="js/jquery.cycle2.min.js"></script>
+	<script src="js/jquery.cycle2.carousel.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	<script>
+	function initialize() {
+	  var mapOptions = {
+	  	scrollwheel: false,
+	    zoom: 13,
+	    center: new google.maps.LatLng(59.939950, 30.322811),
+	    disableDefaultUI: true,
+	 		zoomControl: true,
+			zoomControlOptions: {
+	      style: google.maps.ZoomControlStyle.DEFAULT
+	    },
+	    mapTypeId: google.maps.MapTypeId.ROADMAP
+	  }
+	  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+</head>
+<body class="blue-style">
+<!-- BEGIN .wrap -->
+<section class="wrap">
+	<!-- BEGIN .mob-header -->
+	<div class="mob-header">
+		<div class="mob-header__top">
+			<ul class="language">
+				<li class="is-active"><a href="#">РУС</a></li>
+				<li><a href="#">УКР</a></li>
+				<li><a href="#">ENG</a></li>
+			</ul>
+			<div class="mob-header__phone">+38 (044) 461 79 59</div>
+		</div>
+		<div class="mob-header__middle">
+			<a class="logo" href="#">MERX<i class="logo__pic"></i></a>
+			<button class="mob-header__btn-menu js-mob-nav"></button>
+		</div>
+		<div class="mob-header__salon">
+			<a href="#"><i><em></em></i><span>Найти Салон</span></a>
+		</div>
+	</div>
+	<!-- END .mob-header -->
+	<!-- BEGIN .mob-nav -->
+	<div class="mob-nav">
+		<ul>
+			<li><a href="#"><span>Кухни</span></a></li>
+			<li><a href="#"><span>Мебель для дома</span></a></li>
+			<li><a href="#"><span>Офисная мебель</span></a></li>			
+			<li><a href="#"><span>Мебель и оборудование для HoReCa</span></a></li>
+			<li><a href="#"><span>Итальянская и французская мебель</span></a></li>
+		</ul>
+	</div>
+	<!-- END .mob-nav -->
+	<!-- BEGIN .header -->
+	<header class="header">
+		<div class="header__in">
+			<a class="logo" href="#">MERX<i class="logo__pic"></i></a>
+			<div class="header__category">
+				<div class="header__category-current">
+					<span>кухни</span><i></i>
+				</div>
+				<ul class="header__category-list">
+					<li><a href="#">кухни</a></li>
+					<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+					<li><a href="#">кухни</a></li>
+					<li><a href="#">кухни</a></li>
+					<li><a href="#">кухни</a></li>
+				</ul>
+			</div>
+			<div class="header__phone">
+				<div class="header__phone-in">
+					<span>(044) 234 3434</span>
+					<strong>заказать звонок</strong>
+				</div>	
+				<div class="header__phone-form">
+					<div class="header__phone-form-in">
+						<div class="field">
+							<div class="field__input">
+								<input type="text" placeholder="Номер телефона">
+							</div>
+						</div>
+						<div class="field">
+							<div class="field__input">
+								<input type="text" placeholder="Имя">
+							</div>
+						</div>
+						<button class="btn">Заказать</button>
+					</div>					
+				</div>			
+			</div>
+			<a class="find-salon" href="#"><i></i><span>Найти салон</span></a>
+			<ul class="language">
+				<li class="is-active"><a href="#">РУС</a></li>
+				<li><a href="#">УКР</a></li>
+				<li><a href="#">ENG</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- END .header -->
+	<!-- BEGIN .substrate -->
+	<div class="substrate">
+		<div class="substrate__top"></div>
+	</div>
+	<!-- END .substrate -->
+	<!-- BEGIN .container -->
+	<div class="container container_mod container_map">
+		<div class="l">
+			<div class="l__col-3">
+				<!-- BEGIN .nav-inner -->
+				<nav class="nav-inner nav-inner_drop">
+					<div class="nav-inner__title">меню<i></i></div>
+					<ul class="nav-inner__list">
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Производство</a></li>
+						<li><a href="#">Салоны</a></li>
+						<li><a href="#">Сотрудничество</a></li>
+						<li><a href="#">Социальная ответственность</a></li>
+						<li><a href="#">События</a></li>
+						<li><a href="#">Контакты</a></li>    
+					</ul>
+				</nav>
+				<!-- END .nav-inner -->
+			</div>
+			<div class="l__col-4">
+				<!-- BEGIN .bc -->
+				<div class="bc">
+					<ul>
+						<li><a href="#">Главная</a><i></i></li>
+						<li><a href="#">Кухни</a><i></i></li>
+						<li><a href="#">дизайн</a><i></i></li>
+						<li><span>Дизайнеры и архитекторы</span></li>
+					</ul>
+				</div>
+				<!-- END .bc -->
+				<!-- salons-sort -->
+				<ul class="salons-sort">
+					<li><button><i class="salons-sort__map"></i><span>на карте</span></button></li>
+					<li><button class="is-active"><i class="salons-sort__list"></i><span>списком</span></button></li>
+				</ul>
+			</div>
+		</div>
+		<div class="title">Салоны</div>
+		<!-- BEGIN .sorting -->
+		<div class="sorting sorting_salons">
+			<div class="sorting__item">
+				<div class="sorting__label">я нахожусь</div>
+				<div class="select js-select">
+					<div class="select__value">Option</div>
+					<ul class="select__options">
+						<li>Option 1</li>
+						<li>Option 2</li>
+						<li>Option 3</li>
+						<li>Option 4</li>
+						<li>Option 5</li>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+						<li>Option 7</li>
+					</ul>
+					<input class="select__input" type="hidden">
+				</div>
+			</div>					
+			<div class="sorting__item sorting__item_no-label">
+				<div class="select js-select">
+					<div class="select__value">Option</div>
+					<ul class="select__options">
+						<li>Option 1</li>
+						<li>Option 2</li>
+						<li>Option 3</li>
+						<li>Option 4</li>
+					</ul>
+					<input type="hidden">
+				</div>
+			</div>
+			<div class="sorting__item">
+				<div class="sorting__label">меня интересует</div>
+				<div class="select js-select">
+					<div class="select__value">Option</div>
+					<ul class="select__options">
+						<li>Option 1</li>
+						<li>Option 2</li>
+						<li>Option 3</li>
+						<li>Option 4</li>
+					</ul>
+					<input type="hidden">
+				</div>
+			</div>
+			<div class="sorting__item sorting__item_link">
+				<div class="sorting__label">
+					<a href="#">Все салоны</a>
+				</div>				
+			</div>
+		</div>
+		<!-- END .sorting -->	
+		<!-- salons -->
+		<div class="salons">
+			<div class="salons__wrapper">
+				<div class="salons__item salons__item_white">
+					<div class="salons__pic">
+						<a href="#"><img src="http://placehold.it/140x100" width="140" height="100" alt=""></a>
+						<button class="btn">смотреть на карте</button>
+					</div>
+					<div class="salons__in">
+						<div class="salons__title">ул. Соломенская, 1 Центр мебели MERX</div>
+						<div class="salons__info">
+							<div class="salons__info-item">
+								<ul>
+									<li>Кухонная мебель</li>
+									<li><span>Т:</span>+38 044 584 36 30</li>
+									<li><span>Ф:</span>+38 044 248 80 58</li>
+									<li><span>@:</span><a href="mailto:upr_dskm_solo@MERX.ua">upr_dskm_solo@MERX.ua</a></li>
+									<li><span></span><a href="mailto:katya_solo@MERX.ua">katya_solo@MERX.ua</a></li>
+								</ul>
+							</div>
+							<div class="salons__info-item">
+								<ul>
+									<li>Оборудование и мебель для HoReCa</li>
+									<li><span>Т:</span>+38 (044) 495 53 00</li>
+									<li><span></span>+38 (044) 493 96 02</li>
+									<li><span>Ф:</span>+38 (044) 493 96 02</li>
+									<li><span>@:</span><a href="mailto:upr_dskm_solo@MERX.ua">upr_dskm_solo@MERX.ua</a></li>
+									<li><span></span><a href="mailto:katya_solo@MERX.ua">katya_solo@MERX.ua</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="salons__item salons__item_white">
+					<div class="salons__pic">
+						<a href="#"><img src="http://placehold.it/140x100" width="140" height="100" alt=""></a>
+						<button class="btn">смотреть на карте</button>
+					</div>
+					<div class="salons__in">
+						<div class="salons__title">ул. Соломенская, 1 Центр мебели MERX</div>
+						<div class="salons__info">
+							<div class="salons__info-item">
+								<ul>
+									<li>Кухонная мебель</li>
+									<li><span>Т:</span>+38 044 584 36 30</li>
+									<li><span>Ф:</span>+38 044 248 80 58</li>
+									<li><span>@:</span><a href="mailto:upr_dskm_solo@MERX.ua">upr_dskm_solo@MERX.ua</a></li>
+									<li><span></span><a href="mailto:katya_solo@MERX.ua">katya_solo@MERX.ua</a></li>
+								</ul>
+							</div>
+							<div class="salons__info-item">
+								<ul>
+									<li>Оборудование и мебель для HoReCa</li>
+									<li><span>Т:</span>+38 (044) 495 53 00</li>
+									<li><span></span>+38 (044) 493 96 02</li>
+									<li><span>Ф:</span>+38 (044) 493 96 02</li>
+									<li><span>@:</span><a href="mailto:upr_dskm_solo@MERX.ua">upr_dskm_solo@MERX.ua</a></li>
+									<li><span></span><a href="mailto:katya_solo@MERX.ua">katya_solo@MERX.ua</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="salons__item">
+					<div class="salons__pic">
+						<a href="#"><img src="http://placehold.it/140x100" width="140" height="100" alt=""></a>
+						<button class="btn">смотреть на карте</button>
+					</div>
+					<div class="salons__in">
+						<div class="salons__title">ул. Соломенская, 1 Центр мебели MERX</div>
+						<div class="salons__info">
+							<div class="salons__info-item">
+								<ul>
+									<li>Кухонная мебель</li>
+									<li><span>Т:</span>+38 044 584 36 30</li>
+									<li><span>Ф:</span>+38 044 248 80 58</li>
+									<li><span>@:</span><a href="mailto:upr_dskm_solo@MERX.ua">upr_dskm_solo@MERX.ua</a></li>
+									<li><span></span><a href="mailto:katya_solo@MERX.ua">katya_solo@MERX.ua</a></li>
+								</ul>
+							</div>
+							<div class="salons__info-item">
+								<ul>
+									<li>Оборудование и мебель для HoReCa</li>
+									<li><span>Т:</span>+38 (044) 495 53 00</li>
+									<li><span></span>+38 (044) 493 96 02</li>
+									<li><span>Ф:</span>+38 (044) 493 96 02</li>
+									<li><span>@:</span><a href="mailto:upr_dskm_solo@MERX.ua">upr_dskm_solo@MERX.ua</a></li>
+									<li><span></span><a href="mailto:katya_solo@MERX.ua">katya_solo@MERX.ua</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="salons__item">
+					<div class="salons__pic">
+						<a href="#"><img src="http://placehold.it/140x100" width="140" height="100" alt=""></a>
+						<button class="btn">смотреть на карте</button>
+					</div>
+					<div class="salons__in">
+						<div class="salons__title">ул. Соломенская, 1 Центр мебели MERX</div>
+						<div class="salons__info">
+							<div class="salons__info-item">
+								<ul>
+									<li>Кухонная мебель</li>
+									<li><span>Т:</span>+38 044 584 36 30</li>
+									<li><span>Ф:</span>+38 044 248 80 58</li>
+									<li><span>@:</span><a href="mailto:upr_dskm_solo@MERX.ua">upr_dskm_solo@MERX.ua</a></li>
+									<li><span></span><a href="mailto:katya_solo@MERX.ua">katya_solo@MERX.ua</a></li>
+								</ul>
+							</div>
+							<div class="salons__info-item">
+								<ul>
+									<li>Оборудование и мебель для HoReCa</li>
+									<li><span>Т:</span>+38 (044) 495 53 00</li>
+									<li><span></span>+38 (044) 493 96 02</li>
+									<li><span>Ф:</span>+38 (044) 493 96 02</li>
+									<li><span>@:</span><a href="mailto:upr_dskm_solo@MERX.ua">upr_dskm_solo@MERX.ua</a></li>
+									<li><span></span><a href="mailto:katya_solo@MERX.ua">katya_solo@MERX.ua</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="salons__item">
+					<div class="salons__pic">
+						<a href="#"><img src="http://placehold.it/140x100" width="140" height="100" alt=""></a>
+						<button class="btn">смотреть на карте</button>
+					</div>
+					<div class="salons__in">
+						<div class="salons__title">ул. Соломенская, 1 Центр мебели MERX</div>
+						<div class="salons__info">
+							<div class="salons__info-item">
+								<ul>
+									<li>Кухонная мебель</li>
+									<li><span>Т:</span>+38 044 584 36 30</li>
+									<li><span>Ф:</span>+38 044 248 80 58</li>
+									<li><span>@:</span><a href="mailto:upr_dskm_solo@MERX.ua">upr_dskm_solo@MERX.ua</a></li>
+									<li><span></span><a href="mailto:katya_solo@MERX.ua">katya_solo@MERX.ua</a></li>
+								</ul>
+							</div>
+							<div class="salons__info-item">
+								<ul>
+									<li>Оборудование и мебель для HoReCa</li>
+									<li><span>Т:</span>+38 (044) 495 53 00</li>
+									<li><span></span>+38 (044) 493 96 02</li>
+									<li><span>Ф:</span>+38 (044) 493 96 02</li>
+									<li><span>@:</span><a href="mailto:upr_dskm_solo@MERX.ua">upr_dskm_solo@MERX.ua</a></li>
+									<li><span></span><a href="mailto:katya_solo@MERX.ua">katya_solo@MERX.ua</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="salons__item">
+					<div class="salons__pic">
+						<a href="#"><img src="http://placehold.it/140x100" width="140" height="100" alt=""></a>
+						<button class="btn">смотреть на карте</button>
+					</div>
+					<div class="salons__in">
+						<div class="salons__title">ул. Соломенская, 1 Центр мебели MERX</div>
+						<div class="salons__info">
+							<div class="salons__info-item">
+								<ul>
+									<li>Кухонная мебель</li>
+									<li><span>Т:</span>+38 044 584 36 30</li>
+									<li><span>Ф:</span>+38 044 248 80 58</li>
+									<li><span>@:</span><a href="mailto:upr_dskm_solo@MERX.ua">upr_dskm_solo@MERX.ua</a></li>
+									<li><span></span><a href="mailto:katya_solo@MERX.ua">katya_solo@MERX.ua</a></li>
+								</ul>
+							</div>
+							<div class="salons__info-item">
+								<ul>
+									<li>Оборудование и мебель для HoReCa</li>
+									<li><span>Т:</span>+38 (044) 495 53 00</li>
+									<li><span></span>+38 (044) 493 96 02</li>
+									<li><span>Ф:</span>+38 (044) 493 96 02</li>
+									<li><span>@:</span><a href="mailto:upr_dskm_solo@MERX.ua">upr_dskm_solo@MERX.ua</a></li>
+									<li><span></span><a href="mailto:katya_solo@MERX.ua">katya_solo@MERX.ua</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="salons__info">
+							<div class="salons__info-item">
+								<ul>
+									<li>Кухонная мебель</li>
+									<li><span>Т:</span>+38 044 584 36 30</li>
+									<li><span>Ф:</span>+38 044 248 80 58</li>
+									<li><span>@:</span><a href="mailto:upr_dskm_solo@MERX.ua">upr_dskm_solo@MERX.ua</a></li>
+									<li><span></span><a href="mailto:katya_solo@MERX.ua">katya_solo@MERX.ua</a></li>
+								</ul>
+							</div>
+							<div class="salons__info-item">
+								<ul>
+									<li>Оборудование и мебель для HoReCa</li>
+									<li><span>Т:</span>+38 (044) 495 53 00</li>
+									<li><span></span>+38 (044) 493 96 02</li>
+									<li><span>Ф:</span>+38 (044) 493 96 02</li>
+									<li><span>@:</span><a href="mailto:upr_dskm_solo@MERX.ua">upr_dskm_solo@MERX.ua</a></li>
+									<li><span></span><a href="mailto:katya_solo@MERX.ua">katya_solo@MERX.ua</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="salons__info">
+							<div class="salons__info-item">
+								<ul>
+									<li>Кухонная мебель</li>
+									<li><span>Т:</span>+38 044 584 36 30</li>
+									<li><span>Ф:</span>+38 044 248 80 58</li>
+									<li><span>@:</span><a href="mailto:upr_dskm_solo@MERX.ua">upr_dskm_solo@MERX.ua</a></li>
+									<li><span></span><a href="mailto:katya_solo@MERX.ua">katya_solo@MERX.ua</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END .map -->
+	<div class="container">
+		<div class="title">Перейти в каталог</div>
+		<!-- BEGIN .menu -->
+		<ul class="menu menu_inner">
+			<li class="menu__item">
+				<a class="menu__item-in" href="#">
+					<div class="menu__title">
+						<span>Кухни</span>
+					</div>				
+				</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__item-in" href="#">
+					<div class="menu__title">
+						<span>Мебель для дома</span>
+					</div>
+				</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__item-in" href="#">
+					<div class="menu__title">
+						<span>Кабинет и Офис</span>
+					</div>
+				</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__item-in" href="#">
+					<div class="menu__title">
+						<span>МЕБЕЛЬ И ОБОРУДОВАНИЕ для HORECA и магазинов</span>
+					</div>
+				</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__item-in" href="#">
+					<div class="menu__title">
+						<span>Мебели с Италии и Франции</span>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<!-- END .menu -->
+	</div>
+	<!-- END .container -->
+	<!-- BEGIN .footer -->
+	<footer class="footer">
+		<div class="footer__in">
+			<div class="footer__top">
+				<div class="footer__map">
+					<div class="footer__map-title">Карта сайта</div>
+					<button class="footer__map-btn js-footer-nav">Развернуть</button>
+				</div>
+				<div class="search-form">
+					<input type="text" placeholder="Поиск по сайту">
+					<button><i></i></button>
+				</div>
+				<nav class="footer__nav">
+					<ul>
+						<li><a href="#"><strong>Главная</strong></a></li>
+						<li><a href="#"><strong>О компании</strong></a></li>
+						<li><a href="#"><strong>Производство</strong></a></li>
+						<li><a href="#"><strong>Салоны</strong></a></li>
+						<li><a href="#"><strong>Сотрудничество</strong></a></li>
+						<li><a href="#"><strong>Социальная ответственность</strong></a></li>
+						<li><a href="#"><strong>События</strong></a></li>
+						<li><a href="#"><strong>Контакты</strong></a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><strong>Кухни</strong></a></li>
+						<li><a href="#">Каталог</a></li>
+						<li><a href="#">Где купить</a></li>
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">Распродажа</a></li>
+						<li><a href="#">Дизайн</a></li>
+						<li><a href="#">Почему кухни MERX</a></li>
+						<li><a href="#">Вопросы и Ответы</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><strong>Мебель для дома</strong></a></li>
+						<li><a href="#">Каталог</a></li>
+						<li><a href="#">Где купить</a></li>
+						<li><a href="#">Сервис</a></li>
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">Распродажа</a></li>
+						<li><a href="#">События</a></li>
+						<li><a href="#">Дизайн</a></li>
+						<li><a href="#">Вопросы и Ответы</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><strong>Кабинет и Офис</strong></a></li>
+						<li><a href="#">Каталог</a></li>
+						<li><a href="#">Портфолио</a></li>
+						<li><a href="#">Почему Кабинет и Офис MERX</a></li>
+						<li><a href="#">Сервис</a></li>
+						<li><a href="#">Где купить</a></li>
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">События</a></li>
+						<li><a href="#">Дизайн и Интерьер</a></li>
+						<li><a href="#">Вопросы и ответы</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><strong>Мебель и оборудование для HoReCa и магазинов</strong></a></li>
+						<li><a href="#">Оборудование для HoReCa и магазинов</a></li>
+						<li><a href="#">Мебель для HoReCa и магазинов</a></li>
+						<li><a href="#">Наши обьекты</a></li>
+						<li><a href="#">Производители</a></li>
+						<li><a href="#">Сервис</a></li>
+						<li><a href="#">Где купить</a></li>
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">События</a></li>
+						<li><a href="#">Вопросы и ответы</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><strong>Мебели из Италии и Франции</strong></a></li>
+						<li><a href="#">Итальянская мебель</a></li>
+						<li><a href="#">Где купить Итальянскую мебель</a></li>
+						<li><a href="#">Country Corner</a></li>
+						<li><a href="#">Где купить Country Corner</a></li>
+						<li><a href="#">Сервис</a></li>
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">Распродажи</a></li>
+						<li><a href="#">События</a></li>
+						<li><a href="#">Дизайн</a></li>
+						<li><a href="#">Вопросы и Ответы</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>			
+			<div class="footer__row">
+				<div class="footer__cell">
+					<a class="footer__logo" href="#"></a>
+				</div>
+				<div class="footer__cell">
+					<div class="footer__phone">
+						<span>Телефон</span>
+						<strong>+38 (044) 461-79-59</strong>
+					</div>
+				</div>
+				<div class="footer__cell">
+					<div class="footer__mail">
+						<span>Email</span>
+						<a href="mailto:info@merx.ua">info@merx.ua</a>
+					</div>
+				</div>
+				<div class="footer__cell">
+					<div class="footer__social">
+						<a class="footer__fb" href="#"></a>
+						<a class="footer__tw" href="#"></a>
+					</div>
+				</div>
+				<a href="#" class="footer__cell footer__enter">
+					<strong>Вход для дилеров</strong>
+					<i></i>
+				</a>
+				<div class="footer__cell footer__cell_right">
+					<div class="footer__created">
+						<strong>Разработка сайта</strong>
+						<a href="#">Vintage</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- END .footer -->
+</section>
+<!-- END .wrap -->
+</body>
+</html>
