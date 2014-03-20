@@ -360,8 +360,24 @@
 		background: rgba(0,0,0,.5) 
 		.slider__section-el
 			color: #fff !important 
+			font-size: 30px
 		.slider__section-sub
-			color: #fff 
+			color: #fff
+			padding: 0
+			&:before
+				display: none
+			&:after
+				top: -10px
+				left: 50%
+				margin-left: -35px
+				border-color: rgba(255,255,255,.2) 
+			+rt(999)
+				&:after
+					top: -10px
+					left: 50%
+					width: 70px
+					margin-left: -35px
+					border-color: rgba(255,255,255,.2) 
 	.slider__section-el
 		margin-bottom: 20px
 		+fl
@@ -429,6 +445,8 @@
 			font-size: 12px 
 			&:hover
 				color: #7f96a2 
+		+rt(999)
+			display: none
 
 .slider_big
 	position: relative
