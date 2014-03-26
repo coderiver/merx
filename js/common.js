@@ -330,8 +330,33 @@ function popup() {
 }
 popup();
 
+//masonry box
+function masonry_box() {	
+	if ($('.js-masonry-box').length) {	
+		var container = document.querySelector('.js-masonry-box');
+		var msnry = new Masonry( container, {
+		  columnWidth: 300,
+		  itemSelector: '.box',
+		  gutter: 10
+		});
+		var window_width = $(window).width();
+		if (window_width < 989) {
+			msnry = new Masonry( container, {
+				columnWidth: 300,
+				itemSelector: '.box',
+				gutter: 10
+			});
+		}
+		else {
+			msnry.destroy();
+		}
+	};
+};
+masonry_box();
+
 $(window).resize(function() {
 	main_page();
+	masonry_box();
 })
 
 });

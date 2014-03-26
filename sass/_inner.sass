@@ -661,16 +661,17 @@
 	float: left
 	margin: 0 20px 20px 0
 	overflow: hidden
+	+rt(999)
+		float: none
+		margin: 0 0 10px
+		display: inline-block
+		vertical-align: top
+		text-align: left
+.box__pic
 	img
 		display: block
 		+rt(999)
 			width: 100%
-	+rt(999)
-		float: none
-		margin: 0 0 20px
-		display: inline-block
-		vertical-align: top
-		text-align: left
 .box_white
 	.box__content
 		background: #FFF 
@@ -686,6 +687,16 @@
 			width: 235px
 		+rt(999)
 			width: 300px
+	&.box_height_2
+		.box__pic
+			+rt(999)
+				width: 300px
+				height: 536px
+	&.box_height_1
+		.box__pic
+			+rt(999)
+				width: 300px
+				height: 257px
 .box_width_2
 	width: 580px
 	+rt(1200)
@@ -698,6 +709,16 @@
 			width: 490px 
 		+rt(999)
 			width: 300px
+	&.box_height_1
+		.box__pic
+			+rt(999)
+				width: 300px
+				height: 124px
+	&.box_height_2
+		.box__pic
+			+rt(999)
+				width: 300px
+				height: 259px
 .box_height_1
 	height: 240px
 	+rt(999)
@@ -789,7 +810,7 @@
 		left: auto
 		right: auto
 		bottom: auto
-		padding: 10px 0 
+		padding: 10px
 		background: none 
 		text-align: left
 .box__in-title
