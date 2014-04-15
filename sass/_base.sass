@@ -142,11 +142,16 @@ $svg: "svg/"
 	&::-webkit-scrollbar-track-piece
 		@content
 //media query
+//, only screen and (min-device-width : 768px)  and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2)
 @mixin rt($media)
 	@if $media == 1200
 		@media only screen and (max-width: 1200px)
 			@content
-	@else if $media == 999
-		@media only screen and (max-width: 999px)
+		@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)
 			@content
 
+	@else if $media == 999
+		@media only screen and (max-width: 720px)
+			@content
+		@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
+			@content
