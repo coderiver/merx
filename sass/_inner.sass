@@ -668,6 +668,8 @@
 		vertical-align: top
 		text-align: left
 .box__pic
+	+rt(999)
+		overflow: hidden
 	img
 		display: block
 		+rt(999)
@@ -680,45 +682,23 @@
 	+rt(1200)
 		width: 235px
 	+rt(999)
-		width: 300px
+		width: auto
 	.box__overlay-in
 		width: 280px
 		+rt(1200)
 			width: 235px
 		+rt(999)
-			width: 300px
-	&.box_height_2
-		.box__pic
-			+rt(999)
-				width: 300px
-				height: 536px
-	&.box_height_1
-		.box__pic
-			+rt(999)
-				width: 300px
-				height: 257px
+			width: 100%
 .box_width_2
 	width: 580px
 	+rt(1200)
 		width: 490px 
 	+rt(999)
-		width: 300px
+		width: 100%
 	.box__overlay-in
 		width: 580px
 		+rt(1200)
 			width: 490px 
-		+rt(999)
-			width: 300px
-	&.box_height_1
-		.box__pic
-			+rt(999)
-				width: 300px
-				height: 124px
-	&.box_height_2
-		.box__pic
-			+rt(999)
-				width: 300px
-				height: 259px
 .box_height_1
 	height: 240px
 	+rt(999)
