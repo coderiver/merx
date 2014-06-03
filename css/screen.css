@@ -2012,6 +2012,6 @@ table { border-spacing: 0; border-collapse: collapse; }
 @media only screen and (max-width: 600px) { .slider_replace { display: block; } }
 .slider_replace img { display: block; width: 100%; }
 
-@media only screen and (max-width: 600px) { .substrate .sl-category { display: none; } }
+@media only screen and (max-width: 600px) { .substrate { display: none; } }
 
-@media only screen and (max-width: 600px) { .slider.slider_big.js-slider-section { display: none; } }
+@media only screen and (max-width: 600px) { .slider.slider_big.js-slider-section, .slider.slider_section.js-slider-section { display: none; } }
