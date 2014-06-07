@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+
+$('.header__category').click(function(event) {
+	$(this).toggleClass('is-clicked');
+});
+
 function classwitch() {
 	$('body').append('<div class="sss" style="position: fixed; top: 0; left: 0; z-index: 100000;"><button data-class="blue-style">blue </button><button data-class="red-style">red </button><button data-class="green-style">green </button></div>')
 	$('.sss button').bind('click', function(){

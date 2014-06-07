@@ -735,6 +735,9 @@ table
 		background: $redh
 		&:hover
 			background: $red 
+a[href^=tel]
+	color:inherit
+	text-decoration:none
 .header__category
 	position: absolute
 	top: 0
@@ -744,7 +747,7 @@ table
 	+fl
 	text-transform: uppercase
 	color: #FFF 
-	&:hover
+	&:hover,&.is-clicked
 		.header__category-list
 			li
 				height: 64px
@@ -808,6 +811,7 @@ table
 			border-color: transparent
 			strong
 				border: none
+
 	+rt(1200)
 		left: 630px
 .header__phone-in
@@ -822,7 +826,9 @@ table
 		+fl
 		font-size: 18px
 		line-height: 1
-		color: #FFF 
+		color: #FFF !important
+		*
+			color: #fff !important 
 	strong
 		border-bottom: 1px dotted
 		font-weight: normal
