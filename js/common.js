@@ -364,4 +364,10 @@ $(window).resize(function() {
 	masonry_box();
 })
 
+	// new main page 
+	var newmain = $('.js-newmain');
+	if (newmain.length) {
+		newmain.addClass('is-visible');
+	};
+
 });

@@ -2576,6 +2576,13 @@
 	.newmain__list-in
 		margin: 0 -5px
 		overflow: hidden
+		+rt(999)
+			width: 474px
+			margin: 0 auto
+		&.is-visible
+			.newmain__item
+				+scale(1)
+				opacity: 1 
 	.newmain__btn-down
 		position: absolute
 		left: 50%
@@ -2601,19 +2608,54 @@
 	.newmain__item
 		position: relative
 		float: left
-		width: 50%
 		height: 200px 
 		margin-bottom: 10px
 		box-sizing: border-box
+		opacity: 0 
+		+scale(.4)
+		+transition(opacity .2s, transform .2s)
 		overflow: hidden
+	.newmain__item_1
+		+transition-delay(.4s)
+		+rt(999)
+			+transition-delay(0)
+	.newmain__item_2
+		+transition-delay(1.2s)
+		+rt(999)
+			+transition-delay(0)
+	.newmain__item_3
+		+transition-delay(1s)
+		+rt(999)
+			+transition-delay(0)
+	.newmain__item_4
+		+transition-delay(.2s)
+		+rt(999)
+			+transition-delay(0)
+	.newmain__item_5
+		+transition-delay(.6s)
+		+rt(999)
+			+transition-delay(0)
+	.newmain__item_6
+		+transition-delay(.8s)
+		+rt(999)
+			+transition-delay(0)
+	.newmain__item_1
+		width: 51%
 		+rt(999)
 			width: 100%
-	.newmain__item_big
-		width: 60%
+	.newmain__item_2
+		width: 49%
 		+rt(999)
 			width: 100%
-	.newmain__item_small
-		width: 40%
+	.newmain__item_3, .newmain__item_6
+		width: 59.5%
+		+rt(999)
+			width: 100%
+		.newmain__title
+			span
+				max-width: 210px
+	.newmain__item_4, .newmain__item_5
+		width: 40.5%
 		+rt(999)
 			width: 100%
 	.newmain__type
@@ -2632,7 +2674,7 @@
 					left: 0
 					right: 0
 					bottom: 0
-					background: rgba(#2D2D2C,.1)
+					background: rgba(#2D2D2C,.4)
 					z-index: 4 
 	.newmain__item-in
 		margin: 0 5px 10px
@@ -2669,10 +2711,15 @@
 		color: #FFF
 		font-size: 18px
 		font-weight: 700  
+		span
+			display: inline-block
+			max-width: 310px
+	.newmain__title_mod
+		padding-bottom: 25px
 	.newmain__link
 		display: inline-block
 		padding: 8px 15px
-		margin-top: 17px
+		margin: 17px 0
 		background: $red
 		font-size: 12px
 		color: #fff  
