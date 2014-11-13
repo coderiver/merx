@@ -2548,9 +2548,135 @@
 
 
 
-
-
-
+// new main page styles
+.newmain
+	position: relative
+	.newmain__header
+		background: $red 
+		+rt(999)
+			display: none
+		.newmain__center
+			position: relative
+			height: 88px
+		.logo
+			top: 24px
+			padding-bottom: 20px
+			border-width: 3px
+		.find-salon 
+			top: 30px
+			left: 255px
+	.newmain__center
+		max-width: 1188px
+		padding: 0 10px
+		margin: 0 auto
+		overflow: hidden
+	.newmain__list
+		padding-top: 10px
+		background: #363432 
+	.newmain__list-in
+		margin: 0 -5px
+		overflow: hidden
+	.newmain__btn-down
+		position: absolute
+		left: 50%
+		bottom: 0
+		width: 68px
+		height: 48px
+		padding-top: 10px
+		background: rgb(0,0,0)  
+		background: rgba(0,0,0,.6) 
+		font-size: 0
+		z-index: 20 
+		+tr(background .2s linear)
+		+gpu
+		i
+			display: inline-block
+			+s(arr-down-white)
+		&:hover
+			background: #fff 
+			i
+				+s(arr-down-red)
+		+rt(999)
+			display: none
+	.newmain__item
+		position: relative
+		float: left
+		width: 50%
+		height: 200px 
+		margin-bottom: 10px
+		box-sizing: border-box
+		overflow: hidden
+		+rt(999)
+			width: 100%
+	.newmain__item_big
+		width: 60%
+		+rt(999)
+			width: 100%
+	.newmain__item_small
+		width: 40%
+		+rt(999)
+			width: 100%
+	.newmain__type
+		position: relative
+		height: 200px
+		+tr(margin-top .4s)
+		overflow: hidden
+		&:first-child
+			+rt(999)
+				display: none
+			.newmain__pic
+				&:before
+					content: ""
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					background: rgba(#2D2D2C,.1)
+					z-index: 4 
+	.newmain__item-in
+		margin: 0 5px 10px
+		overflow: hidden
+		font-size: 0
+		&:hover
+			.newmain__type
+				&:first-child
+					margin-top: -200px
+	.newmain__pic
+		position: absolute
+		top: 0
+		left: 50%
+		width: 800px
+		margin-left: -400px
+		text-align: center
+		z-index: 2 
+		img
+			position: relative
+			z-index: 2 
+	.newmain__content
+		position: absolute
+		left: 20px
+		right: 20px
+		bottom: 20px
+		text-align: right
+		z-index: 4
+		+rt(999)	
+			text-align: left
+	.newmain__content_left
+		text-align: left
+	.newmain__title
+		text-transform: uppercase
+		color: #FFF
+		font-size: 18px
+		font-weight: 700  
+	.newmain__link
+		display: inline-block
+		padding: 8px 15px
+		margin-top: 17px
+		background: $red
+		font-size: 12px
+		color: #fff  
+		vertical-align: top
 
 
 
