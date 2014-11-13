@@ -365,9 +365,16 @@ $(window).resize(function() {
 })
 
 	// new main page 
-	var newmain = $('.js-newmain');
+	var newmain = $('.js-newmain'),
+			newmain_down = newmain.find('.newmain__btn-down');
 	if (newmain.length) {
-		newmain.addClass('is-visible');
+		newmain.find('.newmain__list-in').addClass('is-visible');
 	};
+	newmain_down.on('click', function () {
+		var newmain_height = newmain.height();
+		$('html, body').animate({
+			scrollTop: newmain_height
+		}, 500);
+	});
 
 });
