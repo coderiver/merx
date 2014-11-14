@@ -2577,7 +2577,7 @@
 		margin: 0 -5px
 		overflow: hidden
 		+rt(999)
-			width: 474px
+			max-width: 474px
 			margin: 0 auto
 		&.is-visible
 			.newmain__item
@@ -2663,6 +2663,16 @@
 		height: 200px
 		+tr(margin-top .4s)
 		overflow: hidden
+		+rt(999)
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				background: rgba(#2D2D2C,.4)
+				z-index: 4 
 		&:first-child
 			+rt(999)
 				display: none
@@ -2677,9 +2687,11 @@
 					background: rgba(#2D2D2C,.4)
 					z-index: 4 
 	.newmain__item-in
-		margin: 0 5px 10px
+		margin: 0 5px
 		overflow: hidden
 		font-size: 0
+		+rt(999)
+			margin: 0
 		&:hover
 			.newmain__type
 				&:first-child
