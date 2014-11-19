@@ -1831,9 +1831,13 @@ table { border-spacing: 0; border-collapse: collapse; }
 .newmain .newmain__header { background: #c52d1c; }
 @media only screen and (max-width: 720px) { .newmain .newmain__header { display: none; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) { .newmain .newmain__header { display: none; } }
-.newmain .newmain__header .newmain__center { position: relative; height: 88px; }
-.newmain .newmain__header .logo { top: 24px; padding-bottom: 20px; border-width: 3px; }
-.newmain .newmain__header .find-salon { top: 30px; left: 255px; }
+.newmain .newmain__header .newmain__center { position: relative; height: 58px; }
+.newmain .newmain__header .logo { top: 9px; padding-bottom: 5px; border-width: 3px; }
+.newmain .newmain__header .language { top: 22px; }
+.newmain .newmain__header .find-salon { top: 9px; left: 255px; }
+.newmain .newmain__header .find-salon:hover { background: white; }
+.newmain .newmain__header .find-salon:hover span { color: #333333; }
+.newmain .newmain__header .find-salon:hover i { background: url('../img/icons-s98ac70bdb4.png') 0 -1900px no-repeat; width: 10px; height: 13px; }
 .newmain .newmain__center { max-width: 1188px; padding: 0 10px; margin: 0 auto; overflow: hidden; }
 .newmain .newmain__list { padding-top: 10px; background: #363432; }
 .newmain .newmain__list-in { margin: 0 -5px; overflow: hidden; }
