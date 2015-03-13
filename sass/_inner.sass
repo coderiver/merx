@@ -4,18 +4,21 @@
 	position: absolute
 	top: 64px
 	left: 0
-	width: 100%
+	right: 0
+	min-width: 1024px
 	height: 645px
 	background: #e9f0f4
 	+cover
 	z-index: 5 
 	+rt(999)
+		min-width: 0
+	+rt(500)
 		display: none
 .substrate_section
 	+rt(999)
-		display: block
-		top: 230px
-		height: 480px
+		// display: block
+		// top: 230px
+		// height: 480px
 .substrate__top
 	position: relative
 	height: 50px
@@ -252,7 +255,7 @@
 	position: relative
 	display: inline-block
 	width: 300px
-	margin: 0 20px 30px 0
+	margin: 0 20px 20px 0
 	vertical-align: top
 	overflow: hidden
 	&:hover
@@ -266,8 +269,10 @@
 		width: 250px
 	+rt(999)
 		width: 300px
-		margin: 0 0 20px
+		margin: 0 100px 20px
 		text-align: left
+	+rt(540)
+		margin: 0 0 20px
 .article__box_width_2
 	width: 560px
 	.article__category
@@ -522,7 +527,9 @@
 			font-weight: normal
 			text-align: left
 		td, a
-			color: #617883 
+			color: #617883
+	img
+		max-width: 100%
 
 .share
 	margin-bottom: 60px
@@ -689,7 +696,7 @@
 	+rt(1200)
 		width: 235px
 	+rt(999)
-		width: auto
+		width: 100%
 	.box__overlay-in
 		width: 280px
 		+rt(1200)
@@ -708,6 +715,8 @@
 			width: 490px 
 .box_height_1
 	height: 240px
+	+rt(1200)
+		height: 201px
 	+rt(999)
 		height: auto
 	.box__overlay-in
@@ -716,6 +725,8 @@
 			height: auto
 .box_height_2
 	height: 500px
+	+rt(1200)
+		height: 421px
 	+rt(999)
 		height: auto
 	.box__overlay-in

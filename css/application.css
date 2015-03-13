@@ -311,14 +311,6 @@ html[xmlns] .clearfix {
 	margin-bottom: 30px;
 }
 
-@media only screen and (max-width: 1200px) {
-	.title .title__types {
-		float: none;
-		margin: 5px 0 15px;
-		overflow: hidden;
-	}
-}
-
 @media only screen and (max-width: 999px) {
 	.title .title__types {
 		float: none;
@@ -501,7 +493,7 @@ html[xmlns] .clearfix {
 	position: absolute;
 	top: 64px;
 	left: 0;
-	right: 0;
+	/*right: 0;*/
 	height: 605px;
 	background: #e9f0f4;
 	background-repeat: no-repeat;
