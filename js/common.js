@@ -95,7 +95,7 @@ function sliders() {
 		});
 	};
 	var el_many = $('.js-slider-many');
-	if (el.length > 0) {
+	if (el_many.length > 0) {
 		if ($(window).width() < 999) {
 			el_animate = 'fade';
 		}
